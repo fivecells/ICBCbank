@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bank-parent:war">
+    <output-path>$PROJECT_DIR$/bank-parent/target</output-path>
+    <root id="archive" name="bank-parent-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="bank-parent:war exploded" />
+    </root>
+  </artifact>
+</component>
