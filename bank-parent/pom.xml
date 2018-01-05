@@ -6,6 +6,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>../bank-common</module>
+        <module>../bank-manager</module>
+        <module>../bank-web</module>
     </modules>
     <groupId>com.bank</groupId>
     <artifactId>bank-parent</artifactId>
