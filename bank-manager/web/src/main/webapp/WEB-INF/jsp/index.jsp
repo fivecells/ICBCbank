@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="js/bootstrap-tab/css/bootstrap-tab.css">
 </head>
 <body>
+<div class="container">
 <div class="row">
     <div class="col-md-12 col-xs-12" align="center">
         <div><h2>MoneyBank后台管理平台</h2></div>
@@ -33,6 +34,7 @@
     <div class="col-md-9 col-xs-9" align="center">
         <div id="tabContainer"></div>
     </div>
+</div>
 </div>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
