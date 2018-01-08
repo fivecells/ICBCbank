@@ -3,9 +3,9 @@
 <div style="float: left;padding-top: 10px"><button class="btn btn-success" type="submit" onclick="addFn()">新增</button>&nbsp;</div>
 <div style="float: left;padding-top: 10px"><button class="btn btn-danger" type="submit" onclick="deleteFn()">删除</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 <div style="float: left;padding-top: 2px">
-    <form class="navbar-form navbar-left" role="search" action="#" method="post">
+    <form class="navbar-form navbar-left" role="search" action="userinfo-list" method="post">
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="身份证号">
+            <input type="text" class="form-control" placeholder="身份证号" name="userIdentity">
         </div>
         <button type="submit" class="btn btn-default">查询</button>
     </form>

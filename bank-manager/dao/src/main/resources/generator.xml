@@ -3,7 +3,7 @@
 		"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
 	<!-- 连接mysql驱动包所在位置 -->
-	<classPathEntry location="D:\m\repository\mysql-connector-java-5.0.8-bin.jar" />
+	<classPathEntry location="D:/maven3.5.0/repo/mysql/mysql-connector-java/5.1.40/mysql-connector-java-5.1.40.jar" />
 	<context id="db2tables" targetRuntime="MyBatis3">
 		<commentGenerator>
 			<!--是否去除自动生成的注释 true是,false否-->

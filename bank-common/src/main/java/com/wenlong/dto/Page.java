@@ -3,6 +3,15 @@ package com.wenlong.dto;
 public class Page {
     private Integer offset;
     private Integer limit;
+    private String userIdentity;
+
+    public String getUserIdentity() {
+        return userIdentity;
+    }
+
+    public void setUserIdentity(String userIdentity) {
+        this.userIdentity = userIdentity;
+    }
 
     public Integer getOffset() {
         return offset;

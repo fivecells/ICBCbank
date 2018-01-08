@@ -19,7 +19,7 @@
 <div class="row">
     <div class="col-md-12 col-xs-12" align="center">
         <div><h2>MoneyBank后台管理平台</h2></div>
-        <div style="float: right"><a href="login-waiter">退出登陆</a></div>
+        <div style="float: right"><a href="javascript:void(0);" onclick="Signout();">退出登陆</a></div>
     </div>
     <div class="col-md-3 col-xs-3">
         <div class="container">
@@ -138,6 +138,20 @@
             url: "table-welcome",
         }],
     })
+
+</script>
+
+
+<script type="text/javascript">
+    function Signout(){
+
+        var result=confirm("确定要退出吗？");
+        if(result){
+
+            location.href="${pageContext.request.contextPath}/signOut";
+        }
+
+    }
 
 </script>
 </body>
