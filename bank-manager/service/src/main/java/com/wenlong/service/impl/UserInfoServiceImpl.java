@@ -6,6 +6,7 @@ import com.wenlong.dto.Page;
 import com.wenlong.dto.Result;
 import com.wenlong.pojo.po.Userinfo;
 import com.wenlong.pojo.po.UserinfoExample;
+import com.wenlong.pojo.vo.UserinfoSearch;
 import com.wenlong.service.UserInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +25,7 @@ public class UserInfoServiceImpl implements UserInfoService{
     private UserinfoMapper userInfoDao;
     @Override
     public Result<Userinfo> listUserInfoByPage(Page page) {
-        Result<Userinfo> result = new Result<>();
+        Result<Userinfo> result = new Result<Userinfo>();
         List<Userinfo> list = userIFDao.selectlistUserInfoByPage(page);
         Long count = Long.valueOf(userInfoDao.countByExample(null));
         result.setRows(list);
@@ -49,5 +50,14 @@ public class UserInfoServiceImpl implements UserInfoService{
             e.printStackTrace();
         }
         return i;
+    }
+
+    @Override
+    public Result<Userinfo> listUserInfoBySearch(UserinfoSearch userinfoSearch) {
+        Result<Userinfo> result = new Result<Userinfo>();
+        List<Userinfo> list = userIFDao.selectlistUserInfoBySearch(userinfoSearch);
+        result.setTotal(Long.valueOf(list.size()));
+        result.setRows(list);
+        return result;
     }
 }

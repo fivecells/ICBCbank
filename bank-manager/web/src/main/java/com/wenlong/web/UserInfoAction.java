@@ -3,6 +3,7 @@ package com.wenlong.web;
 import com.wenlong.dto.Page;
 import com.wenlong.dto.Result;
 import com.wenlong.pojo.po.Userinfo;
+import com.wenlong.pojo.vo.UserinfoSearch;
 import com.wenlong.service.UserInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,6 +23,7 @@ public class UserInfoAction {
 
     @Autowired
     private UserInfoService ser;
+//分页和全查询操作
     @ResponseBody
     @RequestMapping("/userinfo-list")
     public Result<Userinfo> userInfoList(Page page) {
@@ -34,12 +36,25 @@ public class UserInfoAction {
         }
         return result;
     }
-
+//删除操作，后台将用户的状态设置为0
     @ResponseBody
     @RequestMapping("/userinfo-delete")
     public int userInfoDelete(@RequestParam("arr[]") List<Integer> userIds){
         int i = 0;
         i = ser.deleteUserInfoById(userIds);
         return i;
+    }
+//模糊查询操作
+    @ResponseBody
+    @RequestMapping("/userinfo-search")
+    public Result<Userinfo> userInfoSearch(UserinfoSearch userinfoSearch){
+        Result<Userinfo> result = null;
+        try {
+            result = ser.listUserInfoBySearch(userinfoSearch);
+        } catch (Exception e) {
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return result;
     }
 }

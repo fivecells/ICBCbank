@@ -12,4 +12,20 @@
 
   order by user_id asc limit #{offset},#{limit}
 </select>
+  <sql id="userinfoSearchWhere">
+    <where>
+      <if test="userinfoSearch != null and userinfoSearch.userName != null and userinfoSearch.userName != '' ">
+        and user_name like concat('%',#{userinfoSearch.userName},'%')
+      </if>
+      <if test="userinfoSearch != null and userinfoSearch.userIdentity != null and userinfoSearch.userIdentity != '' ">
+        and user_identity like concat('%',#{userinfoSearch.userIdentity},'%')
+      </if>
+    </where>
+  </sql>
+  <select id="selectlistUserInfoByPage" resultType="com.wenlong.pojo.po.Userinfo">
+    select <include refid="userinfo"></include> from userinfo order by user_id asc limit #{offset},#{limit}
+  </select>
+  <select id="selectlistUserInfoBySearch" resultType="com.wenlong.pojo.po.Userinfo">
+    select <include refid="userinfo"></include> from userinfo <include refid="userinfoSearchWhere"></include> order by user_id asc
+  </select>
 </mapper>
