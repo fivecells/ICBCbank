@@ -5,8 +5,8 @@
 <configuration>
 
 <!-- setting标签:全局性的开关配置 -->
-<!--<settings>-->
-	<!--<setting name="logImpl" value="LOG4J"/>-->
-<!--</settings>-->
+<settings>
+    <setting name="mapUnderscoreToCamelCase" value="true"/>
+</settings>
 
 </configuration>
