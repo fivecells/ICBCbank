@@ -1,14 +1,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<div style="float: left;padding-top: 10px"><button class="btn btn-info" type="submit" onclick="modifyFn()">修改</button>&nbsp;</div>
-<div style="float: left;padding-top: 10px"><button class="btn btn-success" type="submit" onclick="addFn()">新增</button>&nbsp;</div>
-<div style="float: left;padding-top: 10px"><button class="btn btn-danger" type="submit" onclick="deleteFn()">删除</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<div style="float: left;padding-top: 2px">
-    <form class="navbar-form navbar-left" role="search" action="userinfo-list" method="post">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="身份证号" name="userIdentity">
-        </div>
-        <button type="submit" class="btn btn-default">查询</button>
-    </form>
+<div style="float: left;padding-top: 10px">
+    <button class="btn btn-info" type="submit" onclick="modifyFn()">修改</button>&nbsp;
+</div>
+<div style="float: left;padding-top: 10px">
+    <button class="btn btn-success" type="submit" onclick="addFn()">新增</button>&nbsp;
+</div>
+<div style="float: left;padding-top: 10px">
+    <button class="btn btn-danger" type="submit" onclick="deleteFn()">删除</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<div style="float: left;padding-top: 2px" class="navbar-form navbar-left">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="用户姓名" id="searchName" name="searchName">
+        <input type="text" class="form-control" placeholder="身份证号" id="searchIdentity" name="searchIdentity">
+    </div>
+    <button type="submit" class="btn btn-default" onclick="searchForm()">查询</button>
 </div>
 
 <table id="table"></table>
