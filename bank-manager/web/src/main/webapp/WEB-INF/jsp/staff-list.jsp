@@ -66,7 +66,7 @@ function addFn() {
 function modifyFn() {
     var aa = $('#table').bootstrapTable('getSelections');   //找出被选中的数据行
     if(aa.length==1){
-        $('#tabContainer').data("tabs").addTab({id: node.nodeId, text: '添加用户', closeable: true, url: 'table-add'});
+        alert('OK')
 
     }
     if(aa.length<1){alert("您未选中任何记录")}

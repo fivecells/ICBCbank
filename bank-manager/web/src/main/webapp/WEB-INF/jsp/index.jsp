@@ -41,96 +41,93 @@
 <script src="js/bootstrap-table/dist/locale/bootstrap-table-zh-CN.js"></script>
 <script src="js/bootstrap-tab/js/bootstrap-tab.js"></script>
 <script src="js/moment-with-locales.js"></script>
+<script src="js/common.js"></script>
 <script type="text/javascript">
+    bank.registermenu();
     $(function() {
-        var defaultData = [
-            {
-                text: '父节点 1',
-                href: '#parent1',
-                selectable: false,
-                tags: ['4'],
-                nodes: [
-                    {
-                        text: '子节点 1',
-                        href: '#child1',
-                        selectable: false,
-                        tags: ['2'],
-                        nodes: [
-                            {
-                                text: '孙节点 1',
-                                href: '#grandchild1',
-                                tags: ['0']
-                            },
-                            {
-                                text: '孙节点 2',
-                                href: '#grandchild2',
-                                tags: ['0']
-                            }
-                        ]
-                    },
-                    {
-                        text: '子节点 2',
-                        href: '#child2',
-                        tags: ['0']
-                    }
-                ]
-            },
-            {
-                text: '展示页面',
-                href: '#parent2',
-                tags: ['0'],
-            },
-            {
-                text: '新增页面',
-                href: '#parent3',
-                tags: ['0']
-            },
-            {
-                text: '父节点 4',
-                href: '#parent4',
-                tags: ['0']
-            },
-            {
-                text: '父节点 5',
-                href: '#parent5'  ,
-                tags: ['0']
-            }
-        ];
-        var i = 0;
-        var k = 0;
-        $('#treeview5').treeview({
-            color: "#428bca",
-            expandIcon: 'glyphicon glyphicon-chevron-right',
-            collapseIcon: 'glyphicon glyphicon-chevron-down',
-            nodeIcon: 'glyphicon glyphicon-bookmark',
-            data: defaultData,
-            onNodeSelected: function (event, node) {
-                if (node.text=='展示页面'){
-                    if(i==0){
-                        $('#tabContainer').data("tabs").addTab({id: node.nodeId, text: node.text, closeable: false, url: 'table-list'});
-                        i = 1;
-                    }else {
-                        $('#tabContainer').data("tabs").showTab(node.nodeId);
-                    }
-                }else if(node.text=='新增页面'){
-                    if(k==0){
-                        $('#tabContainer').data("tabs").addTab({id: node.nodeId, text: node.text, closeable: false, url: 'table-add'});
-                        k = 1;
-                    }else {
-                        $('#tabContainer').data("tabs").showTab(node.nodeId);
-                    }
-                }
-
-                else {
-                    console.log(node.text);
-                }
-            }
-        })
+        // var defaultData = [
+        //     {
+        //         text: '父节点 1',
+        //         href: '#parent1',
+        //         selectable: false,
+        //         tags: ['1'],
+        //         nodes: [
+        //             {
+        //                 text: '子节点 1',
+        //                 href: '#child1',
+        //                 selectable: false,
+        //                 tags: ['2'],
+        //
+        //             },
+        //             {
+        //                 text: '子节点 2',
+        //                 href: '#child2',
+        //                 tags: ['3']
+        //             }
+        //         ]
+        //     },
+        //     {
+        //         text: '展示页面',
+        //         href: 'table-list',
+        //         tags: ['4'],
+        //     },
+        //     {
+        //         text: '新增页面',
+        //         href: 'table-add',
+        //         tags: ['5']
+        //     },
+        //     {
+        //         text: '父节点 4',
+        //         href: '#parent4',
+        //         tags: ['6']
+        //     },
+        //     {
+        //         text: '父节点 5',
+        //         href: 'table-list',
+        //         tags: ['7']
+        //     }
+        // ];
+        // var i = 0;
+        // var k = 0;
+        // $('#treeview5').treeview({
+        //     color: "#428bca",
+        //     expandIcon: 'glyphicon glyphicon-chevron-right',
+        //     collapseIcon: 'glyphicon glyphicon-chevron-down',
+        //     nodeIcon: 'glyphicon glyphicon-bookmark',
+        //     data: defaultData,
+        //     onNodeSelected: function (event, node) {
+        //         // if(i==0) {
+        //
+        //         if($('#'+node.tags)[0]==null){
+        //             $('#tabContainer').data("tabs").addTab({id: node.tags, text: node.text, closeable: true, url: node.href});
+        //         }
+        //         // }
+        //         // if (node.text=='展示页面'){
+        //         //     if(i==0){
+        //         //         $('#tabContainer').data("tabs").addTab({id: node.tags, text: node.text, closeable: true, url: 'table-list'});
+        //         //         i = 1;
+        //         //     }else {
+        //         //         $('#tabContainer').data("tabs").showTab(node.nodeId);
+        //         //     }
+        //         // }else if(node.text=='新增页面'){
+        //         //     if(k==0){
+        //         //         $('#tabContainer').data("tabs").addTab({id: node.nodeId, text: node.text, closeable: true, url: 'table-add'});
+        //         //         k = 1;
+        //         //     }else {
+        //         //         $('#tabContainer').data("tabs").showTab(node.nodeId);
+        //         //     }
+        //         // }
+        //         //
+        //         // else {
+        //         //     console.log(node.text);
+        //         // }
+        //     }
+        // })
 
     });
 </script>
 <script>
-
+    bank.registermenu();
     $("#tabContainer").tabs({
         data: [{
             id: 'home',
