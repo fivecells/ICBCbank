@@ -4,14 +4,6 @@
   <sql id="userinfo">
     user_id,user_name,user_pwd,user_identity,user_status,user_created
   </sql>
-<select id="selectlistUserInfoByPage" resultType="com.wenlong.pojo.po.Userinfo">
-  select <include refid="userinfo"></include> from userinfo
-<if test="userIdentity != null">
-  where userIdentity LIKE  %${userIdentity }%
-</if>
-
-  order by user_id asc limit #{offset},#{limit}
-</select>
   <sql id="userinfoSearchWhere">
     <where>
       <if test="userinfoSearch != null and userinfoSearch.userName != null and userinfoSearch.userName != '' ">
