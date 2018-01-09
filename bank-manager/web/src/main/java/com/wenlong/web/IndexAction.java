@@ -86,6 +86,8 @@ public void  SignOut(HttpServletRequest request,HttpServletResponse response){
             logger.error(e.getMessage(), e);
             e.printStackTrace();
         }
+
+        if(!sta.isEmpty()){
         if(loginvo.getPassword().equals(sta.get(0).getStaffPwd())){
 
             /*level为0的普通人员
@@ -125,6 +127,7 @@ public void  SignOut(HttpServletRequest request,HttpServletResponse response){
 
             }
 
+        }
         }
 /*密码错的的情况
 * */
