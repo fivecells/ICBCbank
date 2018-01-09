@@ -24,23 +24,23 @@ var bank ={
                 ]
             },
             {
-                text: '展示页面',
+                text: '用户列表',
                 href: 'table-list',
                 tags: ['4'],
             },
             {
-                text: '新增页面',
+                text: '新增用户',
                 href: 'table-add',
                 tags: ['5']
             },
             {
-                text: '父节点 4',
-                href: '#parent4',
+                text: '职员列表',
+                href: 'staff-list',
                 tags: ['6']
             },
             {
-                text: '父节点 5',
-                href: 'table-list',
+                text: '新增职员',
+                href: 'staff-add',
                 tags: ['7']
             }
         ];
