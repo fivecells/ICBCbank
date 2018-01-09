@@ -57,13 +57,11 @@
 </div>
 <script>
 function addUser(){
-    // $('#tabContainer').data("tabs").addTab({id: 1, text: '用户列表', closeable: true, url: 'table-list'});
+    $('#tabContainer').data("tabs").addTab({id: 1, text: '用户列表', closeable: true, url: 'table-list'});
+    debugger;
     // window.opener=null;
     // window.open('','_self');
     // window.close();
     // open(location, '_self').close();
-    bank.addTab('4','展示商品','table-list');
-    setTimeout("bank.closeTab('5')",2000);
-
 }
 </script>
