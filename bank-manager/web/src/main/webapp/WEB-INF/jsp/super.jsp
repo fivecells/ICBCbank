@@ -48,7 +48,7 @@
 <script src="js/common.js"></script>
 <script src="js/bootstrap-validator/dist/js/bootstrapValidator.js"></script>
 <script>
-    bank.registermenu_1();
+    bank.registermenu_2();
     $("#tabContainer").tabs({
         data: [{
             id: 'home',

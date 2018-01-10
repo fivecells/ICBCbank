@@ -1,9 +1,9 @@
 var bank ={
 
-    registermenu:function () {
+    registermenu_1:function () {
         var _this = this;
         var defaultData = [
-            {
+            /*{
                 text: '父节点 1',
                 href: '#parent1',
                 selectable: false,
@@ -22,7 +22,7 @@ var bank ={
                         tags: ['3']
                     }
                 ]
-            },
+            },*/
             {
                 text: '用户列表',
                 href: 'table-list',
@@ -32,7 +32,26 @@ var bank ={
                 text: '新增用户',
                 href: 'table-add',
                 tags: ['5']
-            },
+            }
+        ];
+        $('#treeview5').treeview({
+            color: "#428bca",
+            expandIcon: 'glyphicon glyphicon-chevron-right',
+            collapseIcon: 'glyphicon glyphicon-chevron-down',
+            nodeIcon: 'glyphicon glyphicon-bookmark',
+            data: defaultData,
+            onNodeSelected: function (event,node) {
+                //从节点中获取node属性
+                var id = node.tags;
+                var text = node.text;
+                var url = node.href;
+                _this.addTab(id,text,url);
+            }
+        });
+    },
+    registermenu_2:function () {
+        var _this = this;
+        var defaultData = [
             {
                 text: '职员列表',
                 href: 'staff-list',

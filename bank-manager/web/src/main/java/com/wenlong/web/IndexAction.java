@@ -91,7 +91,7 @@ public void  SignOut(HttpServletRequest request,HttpServletResponse response){
 
             /*level为0的普通人员
             * */
-            if (sta.get(0).getStaffLevel()==0){
+            if (sta.get(0).getStaffLevel()==1){
                 /*自动登录
 
                 * */
