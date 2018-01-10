@@ -72,8 +72,8 @@ public class UserInfoServiceImpl implements UserInfoService{
     @Override
     public int updateUser(Userinfo userinfo) {
         UserinfoExample example = new UserinfoExample();
-        System.out.println("=========");
-        System.out.println(userinfo.getUserId());
+//        System.out.println("=========");
+//        System.out.println(userinfo.getUserId());
         example.createCriteria().andUserIdEqualTo(userinfo.getUserId());
         int i = userInfoDao.updateByExampleSelective(userinfo, example);
         return i;
