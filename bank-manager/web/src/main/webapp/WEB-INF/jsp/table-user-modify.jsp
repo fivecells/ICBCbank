@@ -88,7 +88,7 @@
 
 
     }
-
+$(function () {
     $('#userUpdateForm').bootstrapValidator({
 
         excluded: [':disabled', ':hidden', ':not(:visible)'],
@@ -122,7 +122,7 @@
          *
          */
         submitHandler: null,
-        field:{
+        fields:{
             userIdentity:{
                 message: '身份证号验证失败',
                 validators:{
@@ -138,10 +138,9 @@
             }
 
         }
-
-
-
     });
+});
+
 
 </script>
 
