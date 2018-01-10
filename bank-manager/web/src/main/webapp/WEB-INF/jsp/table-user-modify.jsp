@@ -171,15 +171,20 @@ $(function () {
                     "userStatus":$('#userStatus').val(), "userId":$('#userId').val()},
                 type: "post",
                 success:function (data) {
+                    if(data>0){
                     alert("修改成功");
+                        bank.closeTab('4');
+                        bank.addTab('4', '用户列表', 'table-list');
+                        setTimeout("bank.closeTab('${userinfo.userId}')", 500);
+                    }else{
+                        alert("修改失败");
+                    }
                 },
                 error:function (data) {
                     alert("修改失败");
                 }
             });
-            bank.closeTab('4');
-            bank.addTab('4', '用户列表', 'table-list');
-            setTimeout("bank.closeTab('${userinfo.userId}')", 500);
+
         }
     });
     $('#userModifyReset').click(function () {

@@ -17,4 +17,6 @@ public interface UserInfoService {
     Userinfo getUserInfoById(Integer userId);
 
     int updateUser(Userinfo userinfo);
+
+    int insertNewUser(Userinfo userinfo);
 }

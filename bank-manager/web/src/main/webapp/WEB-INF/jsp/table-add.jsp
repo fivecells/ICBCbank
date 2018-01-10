@@ -156,8 +156,28 @@
             $('#userAddForm').bootstrapValidator('validate');
             var flag = $('#userAddForm').data('bootstrapValidator').isValid();
             if(flag){
-                bank.addTab('4', '用户列表', 'table-list');
-                setTimeout("bank.closeTab('5')", 2000);
+                $.ajax({
+                    url:"${pageContext.request.contextPath}/insertNewUser.do",
+                    data:{"userIdentity":$('#userIdentity').val(), "userName":$('#userName').val(),
+                        "userStatus":$('#userStatus').val(), "userPwd":$('#userPwd').val()},
+                    type: "post",
+                    success:function (data) {
+                       if(data>0){
+                        alert("修改成功");
+                        //成功后跳回主页
+                           setTimeout("bank.closeTab('5')", 50);
+                           setTimeout( "bank.addTab('4', '用户列表', 'table-list')",500);
+                           setTimeout( "bank.reload({id:'4', text:'用户列表', url:'table-list', closeable: true})",500);
+                       }else{
+                           alert("修改失败");
+                       }
+                    },
+                    error:function (data) {
+                        alert("修改失败");
+                    }
+                });
+
+
             }
         });
 

@@ -70,20 +70,50 @@ public class UserInfoAction {
     @RequestMapping(value="/table-user-modify/{userId}", method = RequestMethod.GET)
     public String getUserInfoById(@PathVariable("userId") Integer userId, Model model){
         Userinfo userinfo = null;
-        userinfo = ser.getUserInfoById(userId);
 
-        model.addAttribute("userinfo", userinfo);
+
+        try {
+            userinfo = ser.getUserInfoById(userId);
+
+            model.addAttribute("userinfo", userinfo);
+        } catch (Exception e) {
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
 
         return "table-user-modify";
     }
+
+//    update用户信息
     @ResponseBody
     @RequestMapping("/updateUser.do")
     public int updateUser(Userinfo userinfo){
         int i = 0;
 
-            i    = ser.updateUser(userinfo);
+        try {
+            i  = ser.updateUser(userinfo);
+        } catch (Exception e) {
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
 
         return i;
 
     }
+//    添加新用户
+    @ResponseBody
+    @RequestMapping("/insertNewUser.do")
+    public int insertNewUser(Userinfo userinfo){
+        int i = 0;
+
+        try {
+            i = ser.insertNewUser(userinfo);
+        } catch (Exception e) {
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+
+        return i ;
+    }
 }
+
