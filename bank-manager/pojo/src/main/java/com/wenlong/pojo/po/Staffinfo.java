@@ -40,4 +40,14 @@ public class Staffinfo {
     public void setStaffLevel(Integer staffLevel) {
         this.staffLevel = staffLevel;
     }
+
+    @Override
+    public String toString() {
+        return "Staffinfo{" +
+                "staffId=" + staffId +
+                ", staffName='" + staffName + '\'' +
+                ", staffPwd='" + staffPwd + '\'' +
+                ", staffLevel=" + staffLevel +
+                '}';
+    }
 }
