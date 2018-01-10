@@ -12,7 +12,7 @@
     <link href="js/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
         span{
-            font-size: 50px;
+            font-size: 18px;
             color: red;
         }
     </style>
