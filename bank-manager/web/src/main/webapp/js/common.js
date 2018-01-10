@@ -61,7 +61,6 @@ var bank ={
     },
 
     addTab:function (id,text,url) {
-
         if($('#'+id)[0]==null){
             $('#tabContainer').data("tabs").addTab({id: id, text: text, closeable: true, url: url});
         }else{
@@ -71,5 +70,11 @@ var bank ={
     },
     closeTab:function (id) {
         $('#tabContainer').data("tabs").remove(id);
+    },
+
+    getCurrentTabId:function(){
+        $('#tabContainer').data("tabs").getCurrentTabId();
     }
+
+
 }

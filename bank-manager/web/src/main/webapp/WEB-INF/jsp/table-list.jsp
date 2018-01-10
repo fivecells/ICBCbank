@@ -30,7 +30,7 @@ $('#table').bootstrapTable({
     showRefresh: true,     //是否显示刷新按钮
     columns: [
         {field: 'cb', checkbox: true},
-        {field: 'userId', title: '用户id', heigh: 20, align: 'left'},
+        {field: 'userId', title: '用户id', height: 20, align: 'left'},
         {field: 'userName', title: '用户姓名'},
         {field: 'userPwd', title: '用户密码'},
         {field: 'userIdentity', title: '身份证号'},
@@ -81,18 +81,27 @@ function deleteFn() {
             );
         }
     } else {
-        alert("您未选中任何记录")
+        alert("您未选中任何记录");
     }
 }
 
 function addFn() {
-    alert('OK')
+    bank.addTab('5','新增用户','table-add');
 }
 
 function modifyFn() {
     var aa = $('#table').bootstrapTable('getSelections');   //找出被选中的数据行
     if (aa.length == 1) {
-        alert('OK')
+        /*$.get(
+            "/userinfo-get",
+            {userId: "aa[0].userId"},
+            function(userinfo){
+
+            }
+        );*/
+
+        bank.addTab( aa[0].userId,'修改用户','table-user-modify');
+
     }
     if (aa.length < 1) {
         alert("您未选中任何记录")

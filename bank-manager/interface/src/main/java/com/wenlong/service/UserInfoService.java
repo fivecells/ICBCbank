@@ -13,4 +13,6 @@ public interface UserInfoService {
     int deleteUserInfoById(List<Integer> userIds);
 
     Result<Userinfo> listUserInfoBySearch(UserinfoSearch userinfoSearch);
+
+    Userinfo getUserInfoById(Integer userId);
 }

@@ -14,13 +14,15 @@
     <link rel="stylesheet" href="js/bootstrap-table/dist/bootstrap-table.css">
     <link rel="stylesheet" href="js/bootstrap-tab/sample/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="js/bootstrap-tab/css/bootstrap-tab.css">
+    <link rel="stylesheet" href="js/bootstrap-validator/dist/css/bootstrapValidator.min.css"/>
 </head>
 <body>
 <div class="container">
 <div class="row">
     <div class="col-md-12 col-xs-12" align="center">
         <div><h2>MoneyBank后台管理平台</h2></div>
-        <div style="float: right"><a href="login-waiter">退出登陆</a></div>
+        <%--退出登录确认--%>
+        <div style="float: right"><a href="javascript:logout()">退出登陆</a></div>
     </div>
     <div class="col-md-3 col-xs-3">
         <div class="container">
@@ -44,6 +46,7 @@
 <script src="js/bootstrap-tab/js/bootstrap-tab.js"></script>
 <script src="js/moment-with-locales.js"></script>
 <script src="js/common.js"></script>
+<script src="js/bootstrap-validator/dist/js/bootstrapValidator.js"></script>
 <script type="text/javascript">
     bank.registermenu();
     $(function() {
@@ -137,6 +140,13 @@
             url: "table-welcome",
         }],
     })
+
+    function logout() {
+        var f = confirm("确定要退出吗?")
+        if(f){
+            location.href = "login-waiter";
+        }
+    }
 
 </script>
 </body>

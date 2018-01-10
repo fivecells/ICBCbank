@@ -3,46 +3,52 @@
     <!-- Default panel contents -->
     <div class="panel-heading"><h3>添加用户</h3></div>
 
-    <form class="form-horizontal">
-        <div class="form-group has-success has-feedback">
-            <label class="control-label col-sm-3" >用户姓名</label>
+    <form class="form-horizontal" id="userAddForm">
+        <div class="form-group has-feedback" style="margin-top: 10px">
+            <label class="control-label col-sm-4" >用户姓名</label>
             <div class="col-sm-5">
-                <input type="text" class="form-control"  aria-describedby="inputSuccess3Status">
+                <input type="text" name="userName" id="userName" class="form-control"  aria-describedby="inputSuccess3Status">
             </div>
         </div>
-        <div class="form-group has-success has-feedback">
-            <label class="control-label col-sm-3" >用户密码</label>
+        <div class="form-group  has-feedback">
+            <label class="control-label col-sm-4" >用户密码</label>
             <div class="col-sm-5">
-                <input type="text" class="form-control"  aria-describedby="inputSuccess3Status">
+                <input type="text" name="userPwd" id="userPwd" class="form-control"  aria-describedby="inputSuccess3Status">
             </div>
         </div>
-        <div class="form-group has-success has-feedback">
-            <label class="control-label col-sm-3" >确认密码</label>
+        <div class="form-group  has-feedback">
+            <label class="control-label col-sm-4" >确认密码</label>
             <div class="col-sm-5">
-                <input type="text" class="form-control"  aria-describedby="inputSuccess3Status">
+                <input type="text" name="rePwd" id="rePwd"  class="form-control"  aria-describedby="inputSuccess3Status">
             </div>
         </div>
-        <div class="form-group has-success has-feedback">
-            <label class="control-label col-sm-3" >身份证号</label>
+        <div class="form-group  has-feedback">
+            <label class="control-label col-sm-4" >身份证号</label>
             <div class="col-sm-5">
-                <input type="text" class="form-control"  aria-describedby="inputSuccess3Status">
+                <input type="text" name="userIdentity" id="userIdentity"  class="form-control"  aria-describedby="inputSuccess3Status">
 
             </div>
         </div>
-        <div class="form-group has-success has-feedback">
-            <label class="control-label col-sm-3" >使用状态</label>
+
+        <div class="form-group  has-feedback">
+            <label class="control-label col-sm-4">使用状态</label>
             <div class="col-sm-5">
-                <input type="text" class="form-control" id="inputSuccess4" aria-describedby="inputSuccess3Status">
+                <select class="form-control" name="userStatus" id="userStatus" aria-describedby="inputSuccess3Status">
+                    <option value="0">流失用户</option>
+                    <option value="1">个人用户</option>
+                    <option value="2">企业用户</option>
+
+                </select>
             </div>
         </div>
-        <div class="form-group has-success has-feedback">
-            <label class="control-label col-sm-3" >联系电话</label>
+        <div class="form-group  has-feedback">
+            <label class="control-label col-sm-4" >联系电话</label>
             <div class="col-sm-5">
                 <input type="text" class="form-control" id="5" aria-describedby="inputSuccess3Status">
             </div>
         </div>
-        <div class="form-group has-success has-feedback">
-            <label class="control-label col-sm-3" for="inputGroupSuccess2">邮箱</label>
+        <div class="form-group  has-feedback">
+            <label class="control-label col-sm-4" for="inputGroupSuccess2">邮箱</label>
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-addon">@</span>
@@ -51,8 +57,8 @@
             </div>
         </div>
 
-        <input class="btn btn-default" type="button" onclick="addUser()" value="保存">
-        <input class="btn btn-default" type="reset" value="重置">
+        <input class="btn btn-default" type="submit" onclick="addUser()" value="保存" style="margin-bottom: 10px; width: 100px">
+        <input class="btn btn-default" type="reset" value="重置" style="margin-bottom: 10px; width: 100px">
     </form>
 </div>
 <script>
@@ -66,4 +72,78 @@ function addUser(){
     setTimeout("bank.closeTab('5')",2000);
 
 }
+
+$('#userAddForm').bootstrapValidator({
+
+    excluded: [':disabled', ':hidden', ':not(:visible)'],
+
+    feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+    },
+
+    live: 'enabled',
+
+    /**
+     * 指定提交的按钮，例如：'.submitBtn' '#submitBtn'
+     * 当表单验证不通过时，该按钮为disabled
+     */
+    submitButtons: 'input[type="submit"]',
+    /**
+     * submitHandler: function(validator, form, submitButton) {
+    *   //validator: 表单验证实例对象
+    *   //form  jq对象  指定表单对象
+    *   //submitButton  jq对象  指定提交按钮的对象
+    * }
+     * 在ajax提交表单时很实用
+     *   submitHandler: function(validator, form, submitButton) {
+            // 实用ajax提交表单
+            $.post(form.attr('action'), form.serialize(), function(result) {
+                // .自定义回调逻辑
+            }, 'json');
+         }
+     *
+     */
+    submitHandler: null,
+    field:{
+        userIdentity:{
+            message: '身份证号验证失败',
+            validators:{
+                notEmpty: {
+                    message:'身份证号不能为空'
+                },
+                regexp: {
+                    regexp: /^\+?[1-9][0-9]*$/,
+                    message: '身份证号只能为数字'
+                }
+            }
+        },
+        userName:{
+            message:'用户名验证失败',
+            validators:{
+                notEmpty: {
+                    message:'用户名不能为空'
+                }
+            }
+        },
+        userPwd:{
+            validators:{
+                notEmpty: {
+                    message:'密码不能为空'
+                }
+            }
+        },
+        rePwd:{
+            validators:{
+                //等于密码
+                identical: {
+                    field: 'userPwd',
+                    message: '两次密码必须相同'
+                }
+            }
+        }
+
+    }
+});
 </script>

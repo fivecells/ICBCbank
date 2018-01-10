@@ -57,4 +57,14 @@ public class UserInfoAction {
         }
         return result;
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/userinfo-get", method = RequestMethod.GET)
+    public Userinfo getUserInfoById(@RequestParam("userId") Integer userId){
+        Userinfo userinfo = null;
+
+        userinfo = ser.getUserInfoById(userId);
+
+        return userinfo;
+    }
 }
