@@ -59,7 +59,7 @@ var bank ={
             }
         });
     },
-
+    //添加一个标签页，传入id，选项卡名字，和访问的地址
     addTab:function (id,text,url) {
 
         if($('#'+id)[0]==null){
@@ -69,7 +69,16 @@ var bank ={
         }
 
     },
+    //传入关闭选项卡的id
     closeTab:function (id) {
         $('#tabContainer').data("tabs").remove(id);
-    }
+    },
+    //重载页面，需要传入对象{id: id, text: text, closeable: true, url: url}；
+    reload:function(obj){
+        $('#tabContainer').data("tabs").reload(obj);
+    },
+    // getCurrentTabId:function(){
+    //     $('#tabContainer').data("tabs").getCurrentTabId();
+    // }
+
 }

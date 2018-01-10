@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div style="float: left;padding-top: 10px"><button class="btn btn-info" type="submit" onclick="modifyFn()">修改</button>&nbsp;</div>
-<div style="float: left;padding-top: 10px"><button class="btn btn-success" type="submit" onclick="addFn()">新增</button>&nbsp;</div>
+<div style="float: left;padding-top: 10px"><button class="btn btn-success" type="submit" onclick="addStaff()">新增</button>&nbsp;</div>
 <div style="float: left;padding-top: 10px"><button class="btn btn-danger" type="submit" onclick="deleteFn()">删除</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 <div style="float: left;padding-top: 2px">
     <form class="navbar-form navbar-left" role="search" action="#" method="post">
@@ -10,11 +10,14 @@
         <button type="submit" class="btn btn-default">查询</button>
     </form>
 </div>
-<table id="table"></table>
+<table id="staff"></table>
 
 <script>//可以实现页码和分类中的下拉框操作是由于jQuery引入的版本号要兼容
-$('#table').bootstrapTable({
-    url: 'userinfo-list',
+$(function(){
+
+})
+$('#staff').bootstrapTable({
+    url: 'staffInfo-list',
     sidePagination: "server",//指定使用后端实现分页功能
     pagination: true,   //开启分页功能，下面会显示页面控件
     showColumns: true,     //是否显示所有的列，能让表头固定在最上面
@@ -25,19 +28,19 @@ $('#table').bootstrapTable({
     showRefresh: true,     //是否显示刷新按钮
     columns: [
         {field: 'cb', checkbox: true},
-        {field: 'userId', title: '用户id', heigh: 20, align: 'left'},
-        {field: 'userName', title: '用户姓名'},
-        {field: 'userPwd', title: '用户密码'},
+        {field: 'staffId', title: '员工号', heigh: 20, align: 'left'},
+        {field: 'staffName', title: '职员姓名'},
+        {field: 'userPwd', title: '密码'},
         {field: 'userIdentity', title: '身份证号'},
         {field: 'userStatus', title: '使用状态'},
-        {field: 'userCreated', title: '开户时间',formatter:function (v,r,i) {
+        {field: 'userCreated', title: '入职时间',formatter:function (v,r,i) {
             return moment(v).format('L');
         }},
     ],
 });
 //增、删、改的触发操作
 function deleteFn() {
-    var aa = $('#table').bootstrapTable('getSelections');   //找出被选中的数据行
+    var aa = $('#staff').bootstrapTable('getSelections');   //找出被选中的数据行
     if(aa.length>0){
         var isDe = confirm("是否真的要删除此记录");
         if(isDe){
@@ -51,7 +54,7 @@ function deleteFn() {
                 function(data){
                     if(data>0){
                         alert("删除成功");
-                        $('#table').bootstrapTable('refresh');  //刷新当前页面
+                        $('#staff').bootstrapTable('refresh');  //刷新当前页面
                     }
                 },
                 'json'
@@ -59,14 +62,15 @@ function deleteFn() {
         }
     }else {alert("您未选中任何记录")}
 }
-function addFn() {
-        alert('OK')
+function addStaff() {
+       bank.addTab(7,'新增职员','staff-add');
 }
 
 function modifyFn() {
-    var aa = $('#table').bootstrapTable('getSelections');   //找出被选中的数据行
+    var aa = $('#staff').bootstrapTable('getSelections');   //找出被选中的数据行
     if(aa.length==1){
-        alert('OK')
+        var sid =aa[0].staffId;
+        bank.addTab(sid,'修改职员信息','toModifyStaff/'+sid);
 
     }
     if(aa.length<1){alert("您未选中任何记录")}
