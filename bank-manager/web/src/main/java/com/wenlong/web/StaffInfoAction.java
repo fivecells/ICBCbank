@@ -40,5 +40,4 @@ public class StaffInfoAction {
         model.addAttribute("staff",staff);
         return "staff-modify";
     }
-
 }

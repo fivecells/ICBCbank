@@ -60,4 +60,12 @@ public class UserInfoServiceImpl implements UserInfoService{
         result.setRows(list);
         return result;
     }
+
+    @Override
+    public Userinfo getUserInfoById(Integer userId) {
+        Userinfo result = new Userinfo();
+        Userinfo userinfo = userInfoDao.selectByPrimaryKey(userId);
+
+        return userinfo;
+    }
 }
