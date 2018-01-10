@@ -13,13 +13,13 @@
         <div class="form-group  has-feedback">
             <label class="control-label col-sm-4" >用户密码</label>
             <div class="col-sm-5">
-                <input type="text" name="userPwd" id="userPwd" class="form-control"  aria-describedby="inputSuccess3Status">
+                <input type="password" name="userPwd" id="userPwd" class="form-control"  aria-describedby="inputSuccess3Status">
             </div>
         </div>
         <div class="form-group  has-feedback">
             <label class="control-label col-sm-4" >确认密码</label>
             <div class="col-sm-5">
-                <input type="text" name="rePwd" id="rePwd"  class="form-control"  aria-describedby="inputSuccess3Status">
+                <input type="password" name="rePwd" id="rePwd"  class="form-control"  aria-describedby="inputSuccess3Status">
             </div>
         </div>
         <div class="form-group  has-feedback">
@@ -73,77 +73,75 @@ function addUser(){
 
 }
 
-$('#userAddForm').bootstrapValidator({
+$(function () {
 
-    excluded: [':disabled', ':hidden', ':not(:visible)'],
-
-    feedbackIcons: {
-        valid: 'glyphicon glyphicon-ok',
-        invalid: 'glyphicon glyphicon-remove',
-        validating: 'glyphicon glyphicon-refresh'
-    },
-
-    live: 'enabled',
-
-    /**
-     * 指定提交的按钮，例如：'.submitBtn' '#submitBtn'
-     * 当表单验证不通过时，该按钮为disabled
-     */
-    submitButtons: 'input[type="submit"]',
-    /**
-     * submitHandler: function(validator, form, submitButton) {
-    *   //validator: 表单验证实例对象
-    *   //form  jq对象  指定表单对象
-    *   //submitButton  jq对象  指定提交按钮的对象
-    * }
-     * 在ajax提交表单时很实用
-     *   submitHandler: function(validator, form, submitButton) {
-            // 实用ajax提交表单
-            $.post(form.attr('action'), form.serialize(), function(result) {
-                // .自定义回调逻辑
-            }, 'json');
-         }
-     *
-     */
-    submitHandler: null,
-    field:{
-        userIdentity:{
-            message: '身份证号验证失败',
-            validators:{
-                notEmpty: {
-                    message:'身份证号不能为空'
-                },
-                regexp: {
-                    regexp: /^\+?[1-9][0-9]*$/,
-                    message: '身份证号只能为数字'
-                }
-            }
+    $('#userAddForm').bootstrapValidator({
+        excluded: [':disabled', ':hidden', ':not(:visible)'],
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
         },
-        userName:{
-            message:'用户名验证失败',
-            validators:{
-                notEmpty: {
-                    message:'用户名不能为空'
+
+        /**
+         * 指定提交的按钮，例如：'.submitBtn' '#submitBtn'
+         * 当表单验证不通过时，该按钮为disabled
+         */
+        submitButtons: 'input[type="submit"]',
+        /**
+         * submitHandler: function(validator, form, submitButton) {
+        *   //validator: 表单验证实例对象
+        *   //form  jq对象  指定表单对象
+        *   //submitButton  jq对象  指定提交按钮的对象
+        * }
+         * 在ajax提交表单时很实用
+         *   submitHandler: function(validator, form, submitButton) {
+                // 实用ajax提交表单
+                $.post(form.attr('action'), form.serialize(), function(result) {
+                    // .自定义回调逻辑
+                }, 'json');
+             }
+         *
+         */
+        submitHandler: null,
+        fields:{
+            userIdentity:{
+                message: '身份证号验证失败',
+                validators:{
+                    notEmpty: {
+                        message:'身份证号不能为空'
+                    },
+                    regexp: {
+                        regexp: /^\+?[1-9][0-9]*$/,
+                        message: '身份证号只能为数字'
+                    }
                 }
-            }
-        },
-        userPwd:{
-            validators:{
-                notEmpty: {
-                    message:'密码不能为空'
+            },
+            userName:{
+                message:'用户名验证失败',
+                validators:{
+                    notEmpty: {
+                        message:'用户名不能为空'
+                    }
                 }
-            }
-        },
-        rePwd:{
-            validators:{
-                //等于密码
-                identical: {
-                    field: 'userPwd',
-                    message: '两次密码必须相同'
+            },
+            userPwd:{
+                validators:{
+                    notEmpty: {
+                        message:'密码不能为空'
+                    }
+                }
+            },
+            rePwd:{
+                validators:{
+                    //等于密码
+                    identical: {
+                        field: 'userPwd',
+                        message: '两次密码必须相同'
+                    }
                 }
             }
         }
-
-    }
+    });
 });
 </script>
