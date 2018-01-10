@@ -9,10 +9,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -58,7 +56,7 @@ public class UserInfoAction {
         return result;
     }
 
-    @ResponseBody
+    /*@ResponseBody
     @RequestMapping(value = "/userinfo-get", method = RequestMethod.GET)
     public Userinfo getUserInfoById(@RequestParam("userId") Integer userId){
         Userinfo userinfo = null;
@@ -66,5 +64,26 @@ public class UserInfoAction {
         userinfo = ser.getUserInfoById(userId);
 
         return userinfo;
+    }*/
+
+//    回显用户信息
+    @RequestMapping(value="/table-user-modify/{userId}", method = RequestMethod.GET)
+    public String getUserInfoById(@PathVariable("userId") Integer userId, Model model){
+        Userinfo userinfo = null;
+        userinfo = ser.getUserInfoById(userId);
+
+        model.addAttribute("userinfo", userinfo);
+
+        return "table-user-modify";
+    }
+    @ResponseBody
+    @RequestMapping("/updateUser.do")
+    public int updateUser(Userinfo userinfo){
+        int i = 0;
+
+            i    = ser.updateUser(userinfo);
+
+        return i;
+
     }
 }

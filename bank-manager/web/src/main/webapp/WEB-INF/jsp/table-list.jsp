@@ -92,8 +92,9 @@ function addFn() {
 function modifyFn() {
     var aa = $('#table').bootstrapTable('getSelections');   //找出被选中的数据行
     if (aa.length == 1) {
+        var userId =aa[0].userId;
 
-        bank.addTab( aa[0].userId,'修改用户','table-user-modify');
+        bank.addTab( aa[0].userId,'修改用户','table-user-modify/'+userId);
 
     }
     if (aa.length < 1) {

@@ -15,4 +15,6 @@ public interface UserInfoService {
     Result<Userinfo> listUserInfoBySearch(UserinfoSearch userinfoSearch);
 
     Userinfo getUserInfoById(Integer userId);
+
+    int updateUser(Userinfo userinfo);
 }
