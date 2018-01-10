@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: mky
@@ -10,11 +11,14 @@
     <!-- Default panel contents -->
     <div class="panel-heading"><h3>修改用户</h3></div>
 
-    <form class="form-horizontal" id="userUpdateForm">
+    <form class="form-horizontal" id="userUpdateForm" >
+
+        <input type="hidden" name="userId" id="userId" value="${userinfo.userId}"/>
+
         <div class="form-group has-feedback" style="margin-top: 10px">
             <label class="control-label col-sm-4">用户姓名</label>
             <div class="col-sm-5">
-                <input type="text" name="userName" id="userName" class="form-control"
+                <input type="text" name="userName" id="userName" class="form-control" value="${userinfo.userName}"
                        aria-describedby="inputSuccess3Status" readonly>
             </div>
 
@@ -31,7 +35,7 @@
             <label class="control-label col-sm-4">身份证号</label>
             <div class="col-sm-5">
                 <input type="text" name="userIdentity" id="userIdentity" class="form-control"
-                       aria-describedby="inputSuccess3Status"/>
+                       value="${userinfo.userIdentity}"    aria-describedby="inputSuccess3Status"/>
 
             </div>
         </div>
@@ -39,9 +43,29 @@
             <label class="control-label col-sm-4">使用状态</label>
             <div class="col-sm-5">
                 <select class="form-control" name="userStatus" id="userStatus" aria-describedby="inputSuccess3Status">
-                    <option value="0">流失用户</option>
+                    <c:if test="${userinfo.userStatus == 0}">
+
+                    <option value="0" selected="selected">流失用户</option>
                     <option value="1">个人用户</option>
                     <option value="2">企业用户</option>
+
+                    </c:if>
+
+                    <c:if test="${userinfo.userStatus == 1}">
+
+                        <option value="0" >流失用户</option>
+                        <option value="1" selected="selected">个人用户</option>
+                        <option value="2">企业用户</option>
+
+                    </c:if>
+
+                    <c:if test="${userinfo.userStatus == 2}">
+
+                        <option value="0" >流失用户</option>
+                        <option value="1">个人用户</option>
+                        <option value="2" selected="selected">企业用户</option>
+
+                    </c:if>
 
                 </select>
             </div>
@@ -63,16 +87,16 @@
             </div>
         </div>
 
-        <input class="btn btn-default" type="submit" onclick="updateUser()" value="保存"
+        <input class="btn btn-default" id="userModifySubmit" type="submit" value="保存"
                style="margin-bottom: 10px; width: 100px">
-        <input class="btn btn-default" type="reset" value="返回未修改状态" style="margin-bottom: 10px; width: 120px">
+        <input class="btn btn-default" id="userModifyReset" type="reset" value="返回未修改状态" style="margin-bottom: 10px; width: 120px">
 
     </form>
 </div>
 
 <script>
     //    回显数据
-    $(function () {
+    /*$(function () {
         $.get(
             "userinfo-get",
             {userId: $('#tabContainer').data("tabs").getCurrentTabId()},
@@ -82,12 +106,9 @@
                 $("#userStatus").find("option[value='" + data.userStatus + "']").attr("selected", true);
             }
         );
-    });
-
-    function updateUser() {
+    });*/
 
 
-    }
 $(function () {
     $('#userUpdateForm').bootstrapValidator({
 
@@ -138,6 +159,31 @@ $(function () {
             }
 
         }
+    });
+    $('#userModifySubmit').click(function () {
+        $('#userUpdateForm').bootstrapValidator('validate');
+
+        var flag = $('#userUpdateForm').data('bootstrapValidator').isValid();
+        if(flag){
+            $.ajax({
+                url:"${pageContext.request.contextPath}/updateUser.do",
+                data:{"userIdentity":$('#userIdentity').val(), "userName":$('#userName').val(),
+                    "userStatus":$('#userStatus').val(), "userId":$('#userId').val()},
+                type: "post",
+                success:function (data) {
+                    alert("修改成功");
+                },
+                error:function (data) {
+                    alert("修改失败");
+                }
+            });
+            bank.closeTab('4');
+            bank.addTab('4', '用户列表', 'table-list');
+            setTimeout("bank.closeTab('${userinfo.userId}')", 500);
+        }
+    });
+    $('#userModifyReset').click(function () {
+        $('#userUpdateForm').data('bootstrapValidator').resetForm(true);
     });
 });
 
