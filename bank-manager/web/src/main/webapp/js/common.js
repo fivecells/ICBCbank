@@ -50,7 +50,7 @@ var bank ={
             collapseIcon: 'glyphicon glyphicon-chevron-down',
             nodeIcon: 'glyphicon glyphicon-bookmark',
             data: defaultData,
-            onNodeSelected: function (event, node) {
+            onNodeSelected: function (event,node) {
                 //从节点中获取node属性
                 var id = node.tags;
                 var text = node.text;
@@ -60,12 +60,12 @@ var bank ={
         });
     },
 
-    addTab:function (id,text,url) {
+    addTab:function (_id,_text,_url) {
 
-        if($('#'+id)[0]==null){
-            $('#tabContainer').data("tabs").addTab({id: id, text: text, closeable: true, url: url});
+        if($('#'+_id)[0]==null){
+            $('#tabContainer').data("tabs").addTab({id: _id, text: _text, closeable: true, url: _url});
         }else{
-            $('#tabContainer').data("tabs").showTab(id);
+            $('#tabContainer').data("tabs").showTab(_id);
         }
 
     },
