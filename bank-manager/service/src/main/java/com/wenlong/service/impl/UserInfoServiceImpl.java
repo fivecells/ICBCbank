@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -76,6 +77,13 @@ public class UserInfoServiceImpl implements UserInfoService{
 //        System.out.println(userinfo.getUserId());
         example.createCriteria().andUserIdEqualTo(userinfo.getUserId());
         int i = userInfoDao.updateByExampleSelective(userinfo, example);
+        return i;
+    }
+
+    @Override
+    public int insertNewUser(Userinfo userinfo) {
+        userinfo.setUserCreated(new Date());
+        int i = userInfoDao.insert(userinfo);
         return i;
     }
 }
