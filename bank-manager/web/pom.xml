@@ -117,7 +117,7 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <configuration>
                     <port>8080</port>
-                    <path>/moneybank</path>
+                    <path>/moneybank/manager</path>
                 </configuration>
             </plugin>
         </plugins>
