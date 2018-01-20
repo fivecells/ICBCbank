@@ -1,0 +1,14 @@
+/**Ò»²ã**/
+.ebdp-pc-mouseovertip-wrapper {
+	z-index: 300;
+	position: absolute;
+	background-color: #ffffff;
+	font-size: 10px;
+	line-height: 18px;
+	color: #888889;
+	border: solid 1px #b4b5b5;
+	padding-left:4px;
+	padding-right:4px;
+	font-family: simsun;
+	text-align: left;
+}

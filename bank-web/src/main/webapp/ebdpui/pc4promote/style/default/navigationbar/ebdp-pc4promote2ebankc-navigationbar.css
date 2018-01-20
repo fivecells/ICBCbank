@@ -1,0 +1,165 @@
+.ebdp-pc4promote-navigationbar-outer{
+	position: fixed;
+	width: auto;
+	height: 100%;
+/* 	border: 2px solid red; */
+	right:0px;
+	top:0px;	
+	overflow: hidden;
+	z-index: 1000;
+}
+.ebdp-pc4promote-navigationbar-left{
+	width: 34px;
+	height: 100%;
+	position:relative;
+	display:inline-block;
+	float: left;
+/* 	border: 1px solid black; */
+}
+.ebdp-pc4promote-navigationbar-left-middle{
+	width: 34px;
+	height: 252px;
+	position: absolute;
+	top: 244px;
+}
+
+.ebdp-pc4promote-navigationbar-left-middle-link{
+	width: 34px;	
+	height:34px;
+	margin-top: 2px;
+	background-color: #4d4d4d;
+	cursor:pointer;
+}
+/* 快速交易、交易快照、金融日历、我的消息、在线客服、基金对比、回到顶部 */
+.ebdp-pc4promote-navigationbar-left-middle-img1{
+	background-image: url(ksjy.png);
+	background-position: center;
+	background-repeat: no-repeat;
+/* 	 center center no-repeat */
+}
+.ebdp-pc4promote-navigationbar-left-middle-msg{
+	position:absolute;
+	display:inline-block; 
+	overflow:hidden; 
+	color:white; 
+	width:14px; 
+	height:14px;
+	line-height:14px;
+	text-align:center;
+	font-size:12px;
+	/* background-image: url(2017-09-04.png); */
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ebdp-pc4promote-navigationbar-left-middle-msg-open{
+	left:0px; 
+	margin-top:-3px;
+	background-image: url(xxtz-zhankai.png);
+}
+.ebdp-pc4promote-navigationbar-left-middle-msg-close{
+	right:0px; 
+	margin-top:3px;
+	background-image: url(xxtz-shouqi.png);
+}
+.ebdp-pc4promote-navigationbar-left-middle-img2{
+	background-image: url(jykz.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ebdp-pc4promote-navigationbar-left-middle-img3{
+	background-image: url(jrrl.png);	
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ebdp-pc4promote-navigationbar-left-middle-img4{
+	background-image: url(wdxx.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ebdp-pc4promote-navigationbar-left-middle-img5{
+	background-image: url(zxkf.png);	
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ebdp-pc4promote-navigationbar-left-middle-img6{
+	background-image: url(jjdb.png);	
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ebdp-pc4promote-navigationbar-left-middle-img7{
+	background-image: url(cclb.png);	
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ebdp-pc4promote-navigationbar-left-middle-link-hover{
+	background: #ff0000;
+}
+.ebdp-pc4promote-navigationbar-left-bottom{
+	width: 34px;
+	height: 80px;
+	position: absolute;
+	bottom: 34px;
+}
+.ebdp-pc4promote-navigationbar-left-middle-span{
+	display: block;
+	width: 100%;
+	height: 50%;
+	line-height:17px;
+	margin:0px;
+/* 	padding-top:2px; */
+/* 	padding-bottom:auto; */
+	text-align:center;
+	vertical-align:middle;
+	border:0px; 
+	font-size:12px;
+	color: white;
+	background: #ff0000;
+}
+.ebdp-pc4promote-navigationbar-left-bottom-span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height:34px;
+	font-size:12px;
+	color: white;
+	text-align:center;
+	background: #ff0000;
+}
+.ebdp-pc4promote-navigationbar-left-bottom-noImg{
+	background-image:none;
+}
+.ebdp-pc4promote-navigationbar-left-bottom-link{
+	width: 34px;	
+	height:34px;
+	margin-bottom: 2px;
+	background-color: #7d7d7d;
+	cursor:pointer;
+}
+.ebdp-pc4promote-navigationbar-left-bottom-img1{
+	background-image: url(zhankai.png);	
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ebdp-pc4promote-navigationbar-left-bottom-img1-shouqi{
+	background-image: url(shouqi.png);	
+}
+.ebdp-pc4promote-navigationbar-left-bottom-img2{
+	background-image: url(fhdb.png);	
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ebdp-pc4promote-navigationbar-content{
+	width: 245px;
+	height: 100%;
+	position:relative;
+	top:0px;
+	display:inline-block;
+	zoom:1;
+	*display: inline;
+	overflow-x:hidden;
+	margin-top:0px;
+	border-left: 4px solid #4d4d4d;
+	background-color: #7d7d7d;
+	float: left;
+/* 	border: 1px solid yellow; */
+}

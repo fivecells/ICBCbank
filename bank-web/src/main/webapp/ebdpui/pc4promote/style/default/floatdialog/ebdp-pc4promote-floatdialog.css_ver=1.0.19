@@ -1,0 +1,155 @@
+.ebdp-floatdialog-overlayIframe{
+	z-index:10000; 
+	position:absolute;
+	top: 0;
+	left: 0;
+	background-color:#000;
+	border:none;
+	filter:alpha(opacity=10);
+	-moz-opacity: 0.1; 
+	opacity: 0.1;   
+}
+
+.ebdp-floatdialog-overlayDiv {
+	position: absolute;
+	z-index:100001;
+	top: 0px;
+	left: 0px;
+	background-color:#000;
+	filter:alpha(opacity=10);
+	-moz-opacity: 0.1;
+	opacity: 0.1; 
+}
+
+.ebdp-floatdialog-window {
+	font-size:12px;
+	position: fixed;
+	background: #ffffff;
+	z-index: 100002;
+	color:#000000;
+	display:none;
+}
+
+.ebdp-floatdialog-window img {
+	display:block;
+	margin: 15px 0 0 15px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #666;
+	border-left: 1px solid #666;
+}
+
+.ebdp-floatdialog-load{
+	position: absolute;
+	display:none;
+	height:100px;
+	width:100px;
+	z-index:10001;
+}
+
+.ebdp-floatdialog-top { 
+	height: 30px;
+	line-height: 30px;
+}
+
+.ebdp-floatdialog-backImage {
+	width: 20px;
+	height: 20px ;
+	float: left;
+	background-color: #fff;
+	margin: 5px; 
+	background: url(back.png) center no-repeat; 
+}
+
+.ebdp-floatdialog-position {
+	position: relative;
+}
+
+.ebdp-floatdialog-closeImage {
+	width: 20px;
+	height: 20px ;
+	float: right;
+	background-color: #fff;
+	margin: 5px; 
+	background: url(close.png) center no-repeat;  
+}
+
+.ebdp-floatdialog-closeImage-type1 {
+	font-size: 16px;
+	position: absolute;
+	top: 6px;
+	cursor: pointer;
+	right: 12px;
+	color: #666;
+	font-weight: bold; 
+}
+
+.ebdp-floatdialog-waitImage {
+	background-image:url(loadingAnimation.gif);
+}
+
+.ebdp-button-buttonDiv {
+	font-size: 14px;
+	font-family: Microsoft YaHei;  
+	display: inline-block;
+	*display: inline;
+}
+
+.ebdp-floatdialog-contentFloat {
+	float: left;
+}
+
+.ebdp-floatdialog-content {
+	padding-top: 5px;
+	width:302px;
+	float: left;
+}
+
+.ebdp-floatdialog-middle {
+	word-break:break-all;
+	word-wrap : break-word;
+	width: 338px;
+}
+
+.ebdp-floatdialog-buttonDiv {
+	width: 302px;
+	height: 64px;    
+	font-size: 16px;  
+	font-family: Microsoft YaHei;
+	text-align: center; 
+}
+
+.ebdp-floatdialog-button {
+	width: 75px;  
+	height: 28px;                       
+	text-align: center;    
+	vertical-align:middle; 
+	margin-right:10px; 
+	display: inline-block;
+	*display: inline; 
+	font-family:Microsoft YaHei;
+	font-size:14px;
+	font-weight:normal;
+	font-style:normal; 
+	text-decoration:none;
+	cursor: pointer; 
+	line-height: 28px; 
+	margin-top:25px;  
+}
+
+.ebdp-floatdialog-button-gray {
+	background-color: #faaaaa;
+	color:#fff; 
+}
+
+.ebdp-floatdialog-button-red {
+	background-color: #ff7878; 
+	color:#fff; 
+}
+
+.ebdp-floatdialog-button-disable{
+	cursor:default;
+	background-color:#d3d3d3;
+	border-color:#d3d3d3;
+	background-image:none;
+}

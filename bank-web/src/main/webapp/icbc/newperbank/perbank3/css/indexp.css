@@ -1,0 +1,106 @@
+/* 首页下层信息 */
+
+#ICBC_helper,ICBC_helper_title{width:1000px;}
+
+
+#ICBC_helper_title{
+	height: 35px;
+	background-color: #f6f6f6;
+	border-bottom: 1px solid #ebebeb;
+	padding-left: 10px
+}
+.ICBC_helper_title_0{
+	height: 20px;
+	width: 4px;
+	background-color: #FE333A;
+	float: left;
+	margin-top:7px
+}
+
+.ICBC_helper_title_text{
+	font-size: 18px;
+	padding-left: 10px;
+	line-height: 35px;
+	float: left;
+}
+#ICBC_helper{
+	margin-top: 30px;
+}
+#downArea{
+	overflow-y: hidden;
+	position: relative;
+	top: 12px;
+	left: 24px;
+}
+
+.quick-menu-box{
+	box-sizing:border-box;
+	width:169px;
+	position: relative;
+	float: left;
+	left: 50px;
+}
+.quick-menu-title{
+	height:30px;
+	line-height:30px;
+	font-size:18px;
+	font-weight:bold;
+	padding-left: 40px;
+	color:#626262;
+}
+.assist{
+	background:url(/icbc/newperbank/perbank3/style/style_default/images/assist.png) 10px no-repeat
+}
+.security{
+	background:url(/icbc/newperbank/perbank3/style/style_default/images/security.png) 10px no-repeat
+}
+.regist{
+	background:url(/icbc/newperbank/perbank3/style/style_default/images/regist.png) 10px no-repeat
+}
+.moremore{
+	background:url(/icbc/newperbank/perbank3/style/style_default/images/more.png) 10px no-repeat
+}
+.quick-menu-content{
+    padding-left: 10px;
+    padding-top: 10px;
+}	
+.vertical-line{
+	height: 90px;
+	position: relative;
+	float: left;
+	width: 1px;
+	background-color: gray;
+}
+.quick-menu-list{
+	margin: 0 0px 0 22px;
+	padding: 0;
+	padding-left: 6px;
+}
+.quick-menu-list li{ 
+	list-style-image:url(/icbc/newperbank/perbank3/style/style_default/images/li.png);
+	list-style-position:outside;
+	line-height: 23px;
+	font-size:14px;
+}
+.dowload-tool-tip{
+	position: relative;
+	float: left;
+	width:270px;
+	height:124px;
+	margin: auto 26px;
+	background:url(/icbc/newperbank/perbank3/style/style_default/images/icbc-assist-tip.png) no-repeat;
+	overflow:hidden;
+}
+.inner-tip-wrapper{
+	position: relative;
+	color: #9fa0a0;
+	font-size: 14px;
+	width: 200px;
+	height: 40px;
+	top: 50%;
+	left: 50%;
+	margin: -5px 0 0 -100px;
+}
+.inner-tip-wrapper img{
+	vertical-align:bottom;
+}

@@ -1,0 +1,308 @@
+/*================= layout =================*/
+.max_content{ min-width: 1200px}
+.max_content #footer,.max_content .content,.max_content  .help,.max_content #ICBC_footer,.max_content .ICBC_content,.max_content  .ICBC_help{width:1200px;}
+
+.min_content{ min-width: 1000px}
+.min_content #footer,.min_content .content,.min_cotent  .help,.min_content #ICBC_footer,.min_content .ICBC_content,.min_cotent  .ICBC_help{width:1000px;}
+
+
+#ICBC_page, #ICBC_header, #ICBC_nav, #ICBC_content, #ICBC_footer, #ICBC_topbar ,#ICBC_login{ margin-left: auto; margin-right: auto;}
+#ICBC_nav { }
+#ICBC_content { }
+#ICBC_help { }
+#ICBC_login{ }
+#ICBC_footer,.ICBC_content,.ICBC_help {width: 1000px; margin: 0 auto; clear:both; margin-bottom:0px;}
+
+/* 浏览器版本 提示  */
+#ICBC_ie-version{ position:relative;  font-size:18px;}
+#ICBC_ie-version { margin: 0 auto;background:#F5ECDD; text-align:center;}
+#ICBC_ie-version .show{ border-bottom:1px solid #F8B853;border-top:1px solid #F8B853;}
+#ICBC_ie-version .ICBC_content{ position: relative; margin-bottom:0;}
+#ICBC_ie6-close{ position:relative;top:5px;right:10px; display:block;cursor: pointer;height: 15px;width: 15px;background: url("../images/ico6.png") no-repeat 0 0;}
+#ICBC_ie-version span{color:#c00;}
+
+/*-- 组合和搭售 --*/
+img.pt1,img.pt2{background:url(../images/pt1.png) no-repeat; width:16px !important; height:29px !important;vertical-align:top; margin-right:3px;}
+img.pt2{background:url(../images/pt2.png) no-repeat;}
+
+/*登录页面*/
+#ICBC_login {/*background-color: red;*/height: 1px;width:100%;margin: 0 auto;position: absolute;left:0px;top:0px}
+#ICBC_login .ICBC_login_center{ /*background-color: blue; */height: 1px;width: 1000px;margin: 0px auto 10px}
+#ICBC_login .ICBC_login_center .ICBC_login_right{position:relative; top:0px;left: 705px;width: 310px;height:368px; z-index: 0; border: 1px solid #ccc;-moz-box-shadow: 0 0 10px #DDD;-webkit-box-shadow: 0 0 10px #DDD;box-shadow: 0 0 10px #DDD;}
+
+/*浮动登录页面*/
+#ICBC_login_float {width: 310px;height: 370px;display: none}
+#ICBC_login_float #ICBC_login_float_left{float:left; margin: 0px auto 0px;width: 310px;height:370px; z-index: 1000; border: 0px solid #ccc;}
+#ICBC_login_float #ICBC_login_float_x{position: absolute;right:5px;top:5px; width: 15px;height: 15px;background: rgba(0,0,0,.6);text-align: center;line-height: 15px;color: #000000;cursor: pointer;font-size: 15px;background:url(/icbc/newperbank/perbank3/css/frame/images/close.png) no-repeat 0 0;}
+
+/*浮动广告*/
+#ICBC_common_float {width: 100%;height: 100%;display: none}
+#ICBC_common_float #ICBC_common_float_left{float:left; margin: 0px auto 0px;width: 100%;height:100%; z-index: 1000; border: 0px solid #ccc;-moz-box-shadow: 0 0 10px #DDD;-webkit-box-shadow: 0 0 10px #DDD;box-shadow: 0 0 10px #DDD;}
+#ICBC_common_float #ICBC_common_float_x{position: absolute;right:0px;top:0px; width: 15px;height: 15px;background: rgba(0,0,0,.6);text-align: center;line-height: 15px;color: #000000;cursor: pointer;font-size: 15px;background-color: transparent\9;filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, startColorstr='#60000000', endColorstr='#60000000');}
+
+/*常用功能设置页面*/
+#ICBC_layer_float {width: 800x;height: 400px;display: none}
+#ICBC_layer_float #ICBC_layer_float_left{float:left; margin: 0px auto 10px;width: 770px;height:400px; z-index: 1000; border: 1px solid #ccc;-moz-box-shadow: 0 0 10px #DDD;-webkit-box-shadow: 0 0 10px #DDD;box-shadow: 0 0 10px #DDD;}
+#ICBC_layer_float #ICBC_layer_float_x{float: left;left:-15;top:-10; width: 15px;height: 15px;background: rgba(0,0,0,0);text-align: center;line-height: 15px;color: #000000;cursor: pointer;font-size: 15px;background-color: transparent\9;filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, startColorstr='#60000000', endColorstr='#60000000');}
+
+/*浮动交易页面*/
+#ICBC_window_float {width: 820px;display: none}
+#ICBC_window_float #ICBC_window_float_left{float:left;margin: 0px auto 0px;width: 800px; z-index: 1000; border: 0px solid #ccc;-moz-box-shadow: 0 0 10px #DDD;-webkit-box-shadow: 0 0 10px #DDD;box-shadow: 0 0 10px #DDD;}
+#ICBC_window_float #ICBC_window_float_x{float: left;left:-15;top:-10; width: 15px;height: 15px;background: rgba(0,0,0,.6);text-align: center;line-height: 15px;color: #000000;cursor: pointer;font-size: 15px;background-color: transparent\9;filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, startColorstr='#60000000', endColorstr='#60000000');}
+
+
+#DRAW_ICBC_window_float {width: 100%;height: 100%;display: none}
+#DRAW_ICBC_window_float #DRAW_ICBC_window_float_left{float:left;margin: 0px auto 0px;width: 99%; height : 99%;  z-index: 1000; border: 0px solid #ccc;-moz-box-shadow: 0 0 10px #DDD;-webkit-box-shadow: 0 0 10px #DDD;box-shadow: 0 0 10px #DDD;}
+#DRAW_ICBC_window_float #DRAW_ICBC_window_float_x{float: left;left:-15;top:-10; width: 15px;height: 15px;background: rgba(0,0,0,.6);text-align: center;line-height: 15px;color: #000000;cursor: pointer;font-size: 15px;background-color: transparent\9;filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, startColorstr='#60000000', endColorstr='#60000000');}
+
+
+/*浮动登录页面*/
+#ICBC_login_float_photo {width: 380px;height: 400px;display: none}
+#ICBC_login_float_photo #ICBC_login_float_left_photo{float:left; margin: 0px auto 0px;width: 380px;height:400px; z-index: 1000; border: 1px solid #ccc;-moz-box-shadow: 0 0 10px #DDD;-webkit-box-shadow: 0 0 10px #DDD;box-shadow: 0 0 10px #DDD;}
+#ICBC_login_float_photo #ICBC_login_float_x_photo{float: left;left:-15;top:0; width: 15px;height: 15px;background: rgba(0,0,0,.6);text-align: center;line-height: 15px;color: #000000;cursor: pointer;font-size: 15px;background-color: transparent\9;filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, startColorstr='#60000000', endColorstr='#60000000');}
+
+
+/*-- 商城头部 --*/
+#ICBC_topbar {height:30px;line-height:30px;background-color: #F7F7F7; border-bottom: 1px solid #E6E6E6;text-align:center}
+#ICBC_topbar .ICBC_content { text-align: right; margin-bottom: 0; font-size:12px; }
+#ICBC_topbar .ICBC_content a { color: #000; }
+#ICBC_topbar .ICBC_content a:hover { color: #C7000B; }
+#ICBC_topbar .ICBC_content s {display: inline-block; font-size: 12px; color: #666; text-decoration: none;}
+#ICBC_topbar .ICBC_content .ICBC_hlp {  height:30px; padding-right: 15px; }
+#ICBC_topbar .ICBC_content .ICBC_hlp a { color: #000; }
+#ICBC_topbar .ICBC_content .ICBC_hlp a.online_kf{ float:right;margin-top:5px; width:66px;height:19px; overflow:hidden; background:url(../images/ico_online.png) no-repeat 0 0;}
+#ICBC_topbar .ICBC_content .ICBC_hlp a.online_kf:hover{ background-position:0 -20px;}
+#ICBC_topbar .ICBC_content .ICBC_hlp a.online:hover{ background-position: 0 -20px;}
+#ICBC_topbar .ICBC_content .ICBC_cart_min,#ICBC_topbar .ICBC_content {position:relative;display:inline-block;height:30px;top:-2px;*top:0;_top:0;}
+#ICBC_topbar .ICBC_content .ICBC_cart_min{ z-index: 97;}
+#ICBC_topbar .ICBC_content .ICBC_cart_min label,#ICBC_topbar .ICBC_content  label{ position:relative; z-index:100;display: inline-block; text-align: center; height:30px; line-height:29px;vertical-align:middle;overflow: hidden; white-space: nowrap;}
+#ICBC_topbar .ICBC_content .ICBC_cart_min label .ICBC_t,#ICBC_topbar .ICBC_content .ICBC_t{ position:relative;top:1px;*top:0; background: url(../images/new_ico_index.png) no-repeat -186px -77px; padding-left: 18px;}
+#ICBC_topbar .ICBC_content .ICBC_cart_min label .ICBC_t,#ICBC_topbar .ICBC_content .ICBC_login{ position:relative;top:1px;*top:0; background: url(../style/style_default/images/index_logon.png) no-repeat; padding-left: 18px;}
+#ICBC_topbar .ICBC_content .ICBC_cart_min label .ICBC_t,#ICBC_topbar .ICBC_content .ICBC_regist{ position:relative;top:1px;*top:0; background: url(../style/style_default/images/index_regist.png) no-repeat; padding-left: 18px;}
+#ICBC_topbar .ICBC_content .ICBC_cart_min label .ICBC_t,#ICBC_topbar .ICBC_content .ICBC_collect{ position:relative;top:1px;*top:0; background: url(../style/style_default/images/index_c.png) no-repeat; padding-left: 18px;}
+#ICBC_topbar .ICBC_content .ICBC_cart_min label .ICBC_t,#ICBC_topbar .ICBC_content .ICBC_message{ position:relative;top:1px;*top:0; background: url(../style/style_default/images/index_m.png) no-repeat; padding-left: 18px;}
+#ICBC_topbar .ICBC_content .ICBC_cart_caipiao label .ICBC_t{background: url(../images/new_ico_index.png) no-repeat -186px -77px;;}
+#ICBC_topbar .ICBC_content .ICBC_cart_min  .ICBC_cart_f a{ padding-left: 10px;}
+#ICBC_topbar .ICBC_content .ICBC_ctm_show label {height:30px;background-color: #fff; border-color: #ddd; width:76px; border-left: 1px solid #ddd; border-right: 1px solid #ddd; }
+#ICBC_topbar .ICBC_content .ICBC_ctm_show label .ICBC_t{ background: url(../images/index_icon.png) no-repeat 0 -1510px; color: #c00; }
+#ICBC_topbar .ICBC_content .ICBC_ctm_show .ICBC_cart_f {display: block;}
+
+#ICBC_topbar .ICBC_content .ICBC_tnm, #ICBC_topbar.ICBC_content .ICBC_tnm2 {display: inline-block;margin-top:-2px;*margin-top:-1px;_margin-top:0;overflow: hidden;text-overflow: ellipsis;vertical-align: middle;white-space: nowrap;max-width: 64px;_width:64px;}
+#ICBC_topbar .ICBC_content .ICBC_my_jifen,#ICBC_topbar.ICBC_content .ICBC_my_money{ position:relative;top:-2px;display: inline-block;max-width:49px;_width:49px;overflow: hidden;text-overflow: ellipsis;vertical-align: middle;white-space: nowrap;}
+#ICBC_topbar .ICBC_content .ICBC_my_jifen{ max-width:70px;_width:60px;font-size:14px; font-weight:bold;}
+#ICBC_topbar .ICBC_content .ICBC_my_money{max-width:55px;_width:55px;}
+#ICBC_topbar .ICBC_content .ICBC_tnm2{max-width:105px;_width:105px;}
+#ICBC_topbar .ICBC_content .ICBC_tnm2.ICBC_addJf {max-width:81px;_width:81px;}
+#ICBC_topbar .ICBC_content .ICBC_mbr label a { position:relative;top:1px; background: url(../images/new_ico_index.png) no-repeat -185px -48px; padding-left: 18px; }
+#ICBC_topbar .ICBC_content .ICBC_mbr.ICBC_ctm_show a{ background-position:-184px -108px;}
+#ICBC_topbar .ICBC_content .ICBC_ad_min{float:left;}
+#ICBC_header {clear: both; position:relative;z-index:96; height: 67px}
+#ICBC_header .ICBC_fangwl{ text-align:right;color:#666; margin-bottom:-5px;margin-left:20px;}
+#ICBC_header .ICBC_fangwl s{display: inline-block;margin:0 5px; font-size: 12px;color: #666;text-decoration: none;}
+#ICBC_header a:hover { color: #656565; text-decoration: underline; }
+#ICBC_header h1 {float: left; font-size: 18px; font-weight: normal; color: #C7000B; line-height: 177%; margin-top:8px;}
+#ICBC_header .ICBC_clms {position: relative; float: left; }
+#ICBC_header .ICBC_clms dt {background: #C50009 url(../images/bg4.png) no-repeat; color: #fff; height: 28px; overflow: hidden; margin-left: 10px; display: inline; padding-left: 15px; cursor: pointer; float: left; }
+#ICBC_header .ICBC_clms dt span { background: url(../images/icos5.png) no-repeat right -138px; display: inline-block; font-size: 18px; padding-right: 28px; }
+#ICBC_header .ICBC_clms dt span.on { background: url(../images/icos5.png) no-repeat right -112px; }
+#ICBC_header .ICBC_clms dd { position: absolute; top: 28px; left: 15px; display: none; width: 74px; }
+#ICBC_header .ICBC_clms dd em { height: 28px; display: block; line-height: 28px; }
+#ICBC_header .ICBC_clms dd a { display: block; color: #fff; background-color: #C7000B; height: 100%; font-size: 14px; padding: 0 5px; }
+#ICBC_header .ICBC_clms dd a:hover { text-decoration: none; background: url(../images/bg1_on.png); color: #fff; }
+#ICBC_header .ICBC_logo,#ICBC_header .ICBC_ad_min{ float: left; }
+#ICBC_header .ICBC_logo{margin-bottom:0px; margin-top:0px;}
+#ICBC_header .ICBC_logo img{width:450px; height:67px;}
+#ICBC_header .ICBC_ad_min{width:150px; height:42px; display:inline;margin-left: 30px;margin-top: 20px;}
+#ICBC_header .ICBC_ad_min img{width:150px; height:42px;}
+#ICBC_header .ICBC_searchbox {font-size:12px width:320px;text-align: right; float: right; position: relative; z-index:96; margin-top:25px;*width:306px;}
+.ICBC_header_tit{ position:relative; display: inline-block; margin-left:8px; font-weight: bold; width: 30px; height: 30px; text-align:center;color:#df2320;  font-size: 13px; line-height: 14px;}
+.ICBC_header_tit img{ position:absolute;left:0;top:0; width: 31px; height: 31px;}
+#ICBC_header .ICBC_searchbox .ICBC_keywords { white-space: nowrap; text-align: left; color: #999; height: 24px; line-height: 24px; }
+#ICBC_header .ICBC_searchbox .ICBC_keywordsMain{width:367px; overflow:hidden;}
+#ICBC_header .ICBC_searchbox .ICBC_keywords a { color: #999; }
+#ICBC_header .ICBC_search_view { position: absolute; top:1px; display:none; left:8px; color: #ccc; cursor: text; width: 430px; line-height: 28px; height: 28px; text-align: left; padding: 0; font-family: 'simsun'; }
+.ICBC_ac_results {width:432px!important; height: 300x; overflow: hidden; position: absolute; display: none; left: -1px; top: 29px; background-color: #fff; z-index:96; border: 1px solid #C8000B;}
+.ICBC_ac_results li {text-align: left;height: 30px !important; line-height: 30px; padding: 0 5px; cursor:pointer;}
+.ICBC_left_s { float: left; }
+.ICBC_right_s { float: right; }
+.ICBC_ac_last { text-align: left; }
+.ICBC_ac_over { background-color: #ffffff; }
+.left_s {max-width:312px;float: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; }
+.min_content .left_s{max-width:288px;}
+.max_content .left_s{max-width:384px;}
+.right_s { float: right; max-width:104px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; }
+.ac_last { text-align: left; }
+.ac_over { background-color: #f5f5f5; }
+#ICBC_header .ICBC_form {height:28px;width:332px;  margin: 0; margin-right: 2px;border: 0 none;}
+#ICBC_header .ICBC_form .ICBC_keyANDac {height:28px;width:246px; margin: 0;padding-right:2px; border: 1px solid #C8000B; position: relative;float:right;}
+#ICBC_header .ICBC_form .ICBC_noIndex { margin-right: 0;}
+#ICBC_header .ICBC_form input { vertical-align:inherit;}
+#ICBC_header .ICBC_form .ICBC_search {border: 0 none; /*background: url(../style/style_default/images/index_big.png)no-repeat left center;*/ background-color:#bd000a; height:30px; position:relative;top:0px;float:right; width: 80px; font-size:16px; cursor: pointer; color: #fff; font-family:'黑体'; margin-right:0; margin-top:0; font-size:16px;}
+#ICBC_header .ICBC_form .ICBC_txt {height: 26px; width: 238px;background: url(../style/style_default/images/index_big.png) no-repeat right center;background-color: #fff; padding: 0;line-height: 28px; border:0 none;left:0; position:relative;*float:left;}
+#ICBC_header .ICBC_form .ICBC_txt::-ms-clear{display:none;}
+.ICBC_nav { clear: both; height: 33px; background-color:#bd000a;font-size: 18px }
+.ICBC_nav_c li {  padding:0 3px; line-height: 33px; text-align: center; float: left;  overflow: hidden; }
+.ICBC_nav_c li a { display: inline-block; text-decoration: none; color: #fff; font-size: 17px; }
+.ICBC_nav_c li.cur{background-color:#f7f7f7;}
+.ICBC_nav_c li.cur2{background-color:#f7f7f7;}
+.ICBC_nav_c li.cur a{color: #c7000b; text-decoration:none;}
+.ICBC_nav_c li.cur2 a{color: #c7000b; text-decoration:none;}
+.ICBC_nav_c li.act{background-color:#870006;}
+.ICBC_share {float: right;width:90px;height:33px; line-height: 33px; cursor: pointer; position: relative;z-index:91;font-size: 17px}
+.ICBC_pro_shares .share{ height: 29px;}
+.ICBC_share span { display: inline-block; padding-right: 18px;}
+.ICBC_share a{ color:#fdd000 ;}
+/* 
+.ICBC_share_show { border-right: 1px solid #ccc; border-left: 1px solid #ccc; background: #fff url(../images/new_ico_index.png) no-repeat -174px -206px; }
+.ICBC_share_show span { background: #fff url(../images/new_ico_index.png) no-repeat -162px -445px; color: #C7000B; }
+.ICBC_share_show .ICBC_share_c {display: block;}
+.ICBC_share_c {padding:10px 0 10px 10px; display: none; position: absolute; right: -1px; _right: -2px; top: 32px; line-height: 20px; width:69px; border: 1px solid #ccc; border-top: 0 none; z-index: 2; background-color: #fff;cursor: default; }
+.ICBC_share_c span, #ICBC_header .ICBC_share_c a img { display: inline-block; width: 16px; height: 16px; padding: 0; margin:0 5px 3px 0;}
+ */
+/*分享图标*/
+/* .ICBC_share_c .sina { background: url(../images/fx1.png) no-repeat; }
+.ICBC_share_c .tenxun { background: url(../images/fx2.png) no-repeat; }
+.ICBC_share_c .qzone { background: url(../images/fx3.png) no-repeat; }
+.ICBC_share_c .douban { background: url(../images/fx4.png) no-repeat; }
+.ICBC_share_c .renren { background: url(../images/fx5.png) no-repeat; } */
+#ICBC_header #ICBC_key, #ICBC_header .col_grey { color: #c2bbb1; }
+#ICBC_header #ICBC_key.ICBC_here { color: #333; }
+#categorys { position: relative; height: 33px;width: 190px;  line-height: 33px; float: left; color: #fff; z-index:2; }
+.min_content #categorys , .max_content #categorys{width: 280px;}
+#categorys a:hover { /*color: #fff; */}
+#categorys.active { background-color:#870006; }
+#ICcategorys h2 { font-size: 14px; font-family: 'microsoft yahei'; font-weight: normal; color: #FFD0C0; display: block; background:url(../images/new_ico_index.png) no-repeat -154px 5px; cursor: pointer; outline: none; }
+#categorys h2 a { display:block;  color: #fff;padding-left: 64px; }
+.min_content #categorys h2 a ,.max_content #categorys h2 a {padding-left: 97px;}
+#categorys h2 a:hover { text-decoration: none; }
+#categorys .ICBC_content,#categorys .content { /*background: url(../images/bg1_black.png) repeat;*/ background-color:#232323; overflow: hidden; opacity: 0.95; filter: alpha(opacity=95); margin: 0; position: absolute; top: 33px; left: 0; z-index: 999; display: none; padding-bottom:10px;}
+
+#ICBC_categorys { position: relative; height: 33px; width: 171px; line-height: 33px; float: left; color: #fff; z-index: 99; }
+
+#ICBC_categorys.active { background-color:#870006; }
+#ICBC_categorys h2 { font-family: 'microsoft yahei'; font-weight: normal; color: #FFD0C0; display: block; background:url(../images/index_icon.png) no-repeat -268px -782px;  cursor: pointer; outline: none; }
+#ICBC_categorys h2 a {display:block; padding-left: 21px;  color: #fff; font-size: 17px; }
+#categorys h2 a {display:block; padding-left: 68px;  color: #fff; font-size: 14px; }
+
+#ICBC_categorys h2 a:hover { text-decoration: none; }
+#ICBC_categorys .ICBC_content { /*background: url(../images/bg1_black.png) repeat;*/ background-color:#232323; overflow: hidden; opacity: 0.95; filter: alpha(opacity=95); margin: 0; position: absolute; top: 33px; left: 0; z-index: 999; display: none; padding-bottom:10px;}
+#ICBC_categorys ul { padding-left: 30px; overflow: hidden; float:left; width:200px;}
+#ICBC_categorys li {overflow: hidden;}
+#ICBC_categorys li h4 { font-size: 14px; border-bottom: 1px dotted #fff; }
+#ICBC_categorys li h4 a { color: #fff; }
+#ICBC_categorys li p  {line-height: 18px;}
+#ICBC_categorys li p a { color: #fff; margin: 4px 0 0 -8px; padding: 0 16px 0 8px; display: inline-block; height: 18px; line-height: 18px;background: url(../images/index_icon.png) no-repeat 0px -1898px; }
+/*--/商城头部--*/
+
+
+/*-- 底部代码--*//* 
+.ICBC_help {overflow: hidden; clear: both; padding-top: 30px;font-family: 'microsoft yahei', Arial, Helvetica, sans-serif;}
+.ICBC_help_list { border-top: solid 1px #e4e4e4; }
+.ICBC_help_list li {float: left; width:25%; text-align:center;}
+.ICBC_help_list li a { color: #5f5f5f; }
+.ICBC_help_list dl { margin-top: 8px; }
+.ICBC_help_list dt { font-size: 14px; font-weight: bold;background: url(../images/icos_help.png) no-repeat; text-indent: 3em; line-height: 35px; height: 35px; color: #5e5e5e; }
+.ICBC_help_list dd { height: 126px; }
+.ICBC_help_list dd {line-height: 20px; }
+ */
+ 
+/* #ICBC_footer{overflow: hidden;color:#5e5e5e;border-top: solid 1px #e4e4e4; padding-top:10px;}
+#ICBC_footer a{color:#5e5e5e;}
+#ICBC_footer a:hover{text-decoration:none;}
+#ICBC_footer .fl{height:40px; line-height:40px;}
+.ICBC_copyright{text-align: center; float:right;line-height:40px;}
+.ICBC_copyright a{ display:inline-block; }
+.ICBC_copyright a img{ vertical-align: middle;} */
+/*-- 悬浮购物车 --*/
+/* .ICBC_cart_f{background-color: #fff; overflow: hidden; border: 1px solid #DDD; position: absolute; overflow: hidden;left:0;top:29px; z-index: 97; text-align: left; width: 327px; display: none; font-size:12px;}
+.ICBC_myshop a{ display:block; line-height:30px; }
+#ICBC_topbar.ICBC_content .ICBC_mbr .ICBC_myshop a{background:none; }
+#ICBC_topbar.ICBC_content .ICBC_mbr .ICBC_myshop a:hover{ color:#000; text-decoration:none; background:#f5f5f5;}
+.ICBC_cart_f .ICBC_cart_c { padding: 10px 0 10px 10px; }
+.ICBC_cart_f .ICBC_cart_c {}
+.cart_f h2 { color: #5D5D5D; font-size: 12px; }
+.cart_f strong { color: #E54F50; }
+.cart_f ul { margin-bottom: 10px; padding-right: 10px; }
+.cart_f ul.scroll { overflow-y: scroll; height: 296px; padding-right: 0; }
+.cart_f li { overflow: hidden; clear: both; border-top: 1px dotted #000;}
+.cart_f .pro {margin:10px 0px; overflow: hidden;}
+.cart_f .pro .pic {width:64px; height:64px; text-align: right; margin-right: 10px;}
+.cart_f .pro a img {border: 1px solid #B2D4EB; width:60px; height: 60px; overflow:hidden;}
+.cart_f .pro span, .cart_f .pro .name { display: inline-block;vertical-align: middle; }
+.cart_f .pro .name { width:146px;line-height: 18px; height:60px; overflow: hidden; padding-right: 3px; font-style: normal; }
+.cart_f .pro .name a { color: #000; }
+.cart_f .pro .name a:hover { color: #FF6B00; text-decoration: underline; }
+.cart_f .pro .del{width:78px; height:60px; white-space: nowrap; overflow: hidden; line-height:18px; padding-left:6px }
+.cart_f .pro .name .n1,.cart_f .pro .name .n2{display:block;text-overflow:ellipsis; white-space:nowrap; word-break:break-all; word-wrap:break-word;}
+.cart_f .pro .name .n1{height:40px; line-height:20px; overflow:hidden;}
+.cart_f .pro .name .n2{word-break:break-all; word-wrap:break-word;height:20px; line-height:20px;color:#999;}
+.cart_f .pro .del .nm{float:none; display:inline-block; width:100%; text-align:left;}
+.cart_f .pro .del span { color: #0092D2; cursor: pointer; float: none; }
+.cart_f .group a img { width: 40px; height: 40px; }
+.cart_f .group em span { height: auto; width: auto; }
+.cart_f .tar { padding-right: 10px; }
+.cart_f .btn2 { font-size: 16px;  color: #fff !important; }
+.cart_f  .btn2.n_btn { width:87px; float:right;} */
+
+
+.bottom-footer {
+	height: 110px;	/*tmp*/
+	border-top: 4px solid #ca0000;
+	background: #eee;
+}
+.bottom-footer-main-left {
+	float: left;
+	margin-left: 38px;
+	margin-top: 40px;
+}
+.bottom-footer-main-left li {
+	position: relative;
+	float: left;
+	padding: 0 12px;
+	line-height: 32px;
+	text-align: center;
+}
+.bottom-footer-main-left li a {
+	font-size: 12px;
+	color: #000;
+}
+.bottom-footer-main-left li b {
+	position: absolute;
+	right: 0;
+	top: 11px;
+	z-index: 1;
+	width: 0;
+	height: 12px;
+	border-left: 1px solid #000;
+}
+
+.bottom-footer-main-right {
+	float: right;
+	margin-right: 38px;
+	margin-top: 40px;
+}
+.bottom-footer-main-right li {
+	float: left;
+	margin-right: 10px;
+	font-size: 12px;
+	line-height: 32px;
+}
+.bottom-cf { *zoom: 1; }
+.bottom-width { margin: 0 auto; width: 1000px; }
+
+.menu_hotp{
+	background:url(/icbc/newperbank/perbank3/images/menu_hotp.png) no-repeat 100% 3;
+}
+
+.menu_hotp_1{
+	background:url(/icbc/newperbank/perbank3/images/menu_hotp.png) no-repeat 100% -2;
+}
+.menu_hotp_2{
+	background:url(/icbc/newperbank/perbank3/images/menu_hotp.png) no-repeat 100% -2;
+}
+.menu_hotp_3{
+	background:url(/icbc/newperbank/perbank3/images/menu_hotp.png) no-repeat 100% -2;
+}
+.menu_bold{
+	font-weight:bold;
+}

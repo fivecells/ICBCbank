@@ -1,0 +1,75 @@
+.product_addressMian {
+	WIDTH: 88px; FLOAT: right; PADDING-TOP: 4px
+}
+.t_add_address {
+	POSITION: relative; FLOAT: left
+}
+.t_add_address LI {
+	POSITION: relative; DISPLAY: inline-block; VERTICAL-ALIGN: middle
+}
+.t_add_address .tabname {
+	POSITION: absolute; WIDTH: 390px; HEIGHT: 28px; TOP: 12px; LEFT: 15px
+}
+.t_add_address LI.li_cur {
+	Z-INDEX: 2; BORDER-BOTTOM: #bebebe 1px solid; POSITION: relative; BORDER-LEFT: #bebebe 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 23px; MARGIN: 0px; PADDING-LEFT: 20px; PADDING-RIGHT: 22px; BACKGROUND: #fff; FLOAT: left; HEIGHT: 23px; BORDER-TOP: #bebebe 1px solid; CURSOR: pointer; BORDER-RIGHT: #bebebe 1px solid; PADDING-TOP: 0px
+}
+.correct_address {
+	Z-INDEX: 2; BORDER-BOTTOM: #bebebe 1px solid; POSITION: relative; BORDER-LEFT: #bebebe 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 23px; MARGIN: 0px; PADDING-LEFT: 20px; PADDING-RIGHT: 22px; BACKGROUND: #fff; FLOAT: left; HEIGHT: 23px; BORDER-TOP: #bebebe 1px solid; CURSOR: pointer; BORDER-RIGHT: #bebebe 1px solid; PADDING-TOP: 0px
+}
+.correct_address {
+	Z-INDEX: 2; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; DISPLAY: inline-block; BACKGROUND: url(/icbc/newperbank/perbank3/style/style_default/images/index_location.png) no-repeat 5px 2px; baFLOAT: none; COLOR: #fff; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.correct_address .max_text {
+	TEXT-OVERFLOW: ellipsis; DISPLAY: inline-block; MAX-WIDTH: 56px; WHITE-SPACE: nowrap; FONT-SIZE: 14px; VERTICAL-ALIGN: middle; OVERFLOW: hidden
+}
+.cur.correct_address {
+	BORDER-BOTTOM-COLOR: #fff
+}
+.correct_address I {
+	POSITION: absolute; WIDTH: 9px; BACKGROUND: url(/icbc/newperbank/perbank3/style/style_default/images/index_location.png) no-repeat -1196px -25px; HEIGHT: 5px; TOP: 10px; RIGHT: 4px
+}
+.t_add_address LI.li_cur I {
+	POSITION: absolute; WIDTH: 9px; BACKGROUND: url(/icbc/newperbank/perbank3/style/style_default/images/index_location.png) no-repeat -1196px -25px; HEIGHT: 5px; TOP: 10px; RIGHT: 4px
+}
+.t_add_address LI.li_cur {
+	BORDER-BOTTOM: medium none; MARGIN: 0px 3px 0px 0px
+}
+.t_add_address LI.cur.li_cur {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #f48e4a 2px solid; MARGIN: 0px 3px 0px 0px; BORDER-TOP: #f48e4a 2px solid; BORDER-RIGHT: #f48e4a 2px solid
+}
+.t_add_address LI.li_cur I {
+	WIDTH: 7px; BACKGROUND-POSITION: -1245px 0px; HEIGHT: 5px
+}
+.address_main {
+	BORDER-BOTTOM: #bebebe 1px solid; POSITION: absolute; BORDER-LEFT: #bebebe 1px solid; PADDING-BOTTOM: 27px; PADDING-LEFT: 15px; WIDTH: 390px; PADDING-RIGHT: 15px; DISPLAY: none; BACKGROUND: #fff; BORDER-TOP: #bebebe 1px solid; TOP: 24px; BORDER-RIGHT: #bebebe 1px solid; PADDING-TOP: 36px; LEFT: 0px
+}
+.address_main .t_close {
+	POSITION: absolute; WIDTH: 15px; BACKGROUND: url(../images/icon.png) no-repeat right 0px; HEIGHT: 15px; TOP: 3px; CURSOR: pointer; RIGHT: 3px
+}
+.t_add_address .tabcon {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 8px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #f48e4a 2px solid; PADDING-TOP: 0px
+}
+.t_add_address .tabcon .t_address_list {
+	WIDTH: 373px; PADDING-TOP: 9px
+}
+.t_add_address .tabcon .t_address_list LI {
+	MARGIN: 0px; WIDTH: 76px; FLOAT: left; HEIGHT: 27px
+}
+.t_add_address .tabcon .t_address_list LI.long_text {
+	WIDTH: 170px
+}
+.t_add_address .tabcon .t_address_list LI.long_text A {
+	TEXT-OVERFLOW: ellipsis; MAX-WIDTH: 144px; WHITE-SPACE: nowrap; OVERFLOW: hidden
+}
+.t_add_address .tabcon .t_address_list LI A {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LINE-HEIGHT: 20px; PADDING-LEFT: 10px; TEXT-OVERFLOW: ellipsis; PADDING-RIGHT: 10px; DISPLAY: inline-block; MAX-WIDTH: 75px; WHITE-SPACE: nowrap; HEIGHT: 20px; COLOR: #5b5b5b; OVERFLOW: hidden; CURSOR: pointer; PADDING-TOP: 0px
+}
+.t_add_address .tabcon .t_address_list LI A:hover {
+	BACKGROUND: #f4734a; COLOR: #fff
+}
+.pro_detail .t_add_address .disable {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BACKGROUND-COLOR: #c3c5cd; COLOR: #5b5b5b; BORDER-TOP: medium none; CURSOR: default; BORDER-RIGHT: medium none; TEXT-DECORATION: none
+}
+.pro_detail .t_add_address .tabcon .t_address_list LI A.disable:hover {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BACKGROUND-COLOR: #c3c5cd; COLOR: #5b5b5b; BORDER-TOP: medium none; CURSOR: default; BORDER-RIGHT: medium none; TEXT-DECORATION: none
+}

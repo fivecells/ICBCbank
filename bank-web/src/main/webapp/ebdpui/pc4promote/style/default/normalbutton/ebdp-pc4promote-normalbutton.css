@@ -1,0 +1,128 @@
+.ebdp-pc4promote-normalbutton-wrapper{
+ 	display: inline-block;
+    *display: inline;
+    white-space:nowrap;
+    *zoom: 1;
+    border-radius: 2px;
+    padding-left:6px;
+    margin-left:3px;
+    margin-right:3px;
+    padding-right:6px;
+    text-align: center;
+    color: #fff;
+    cursor:pointer;
+}
+
+.ebdp-pc4promote-normalbutton-normal{
+	height: 30px;
+    line-height: 30px;
+    min-width:85px;
+    font-size: 14px;
+    
+}
+
+.ebdp-pc4promote-normalbutton-big{
+	height: 50px;
+    line-height: 50px;
+    min-width:110px;
+    font-size: 30px;
+} 
+.ebdp-pc4promote-normalbutton-small{
+	height: 25px;
+    line-height: 25px;
+    min-width:60px;
+    font-size: 12px;
+}
+
+.ebdp-pc4promote-normalbutton-lessnormal{
+	height: 28px;
+    line-height: 28px;
+    min-width:75px;
+    font-size: 14px;
+} 
+
+.ebdp-pc4promote-normalbutton-smaller{
+	height: 20px;
+    line-height: 20px;
+    min-width:28px;
+    font-size: 12px;
+}
+
+
+.ebdp-pc4promote-normalbutton-wrapper-backImage {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    cursor:pointer;
+    background-repeat:no-repeat;
+    background-position:center center;
+    border:0;
+    border-style:none;
+    
+}
+
+/* ------------------------------------------ */
+.ebdp-pc4promote-normalbutton-wrapper-orange{
+	background-color: #ff7878;
+}
+.ebdp-pc4promote-normalbutton-wrapper-orange-hover{
+	background-color: #fe333a;
+}
+/* ------------------------------------------ */
+
+/* ------------------------------------------ */
+.ebdp-pc4promote-normalbutton-wrapper-red{
+	background-color:red;
+}
+/* ------------------------------------------ */
+
+/* ------------------------------------------ */
+.ebdp-pc4promote-normalbutton-wrapper-pink{
+	background-color:pink;
+}
+/* ------------------------------------------ */
+
+/* ------------------------------------------ */
+.ebdp-pc4promote-normalbutton-wrapper-gray{
+	background-color:#faaaaa;
+}
+/* ------------------------------------------ */
+
+/* ------------------------------------------ */
+.ebdp-pc4promote-normalbutton-wrapper-yellow{
+	background-color:#f8b62d;
+}
+.ebdp-pc4promote-normalbutton-wrapper-yellow-hover{
+	background-color:#fcd268;
+}
+/* ------------------------------------------ */
+
+/* ------------------------------------------ */
+.ebdp-pc4promote-normalbutton-wrapper-lightpink{
+	background-color:#ff7878;
+}
+.ebdp-pc4promote-normalbutton-wrapper-lightpink-hover{
+	background-color:#faaaaa;
+}
+/* ------------------------------------------ */
+
+.ebdp-pc4promote-normalbutton-wrapper-disabled {
+	display: inline-block;
+    *display: inline;
+    white-space:nowrap;
+    *zoom: 1;
+    border-radius: 2px;
+    padding-left:6px;
+    margin-left:3px;
+    margin-right:3px;
+    padding-right:6px;
+    text-align: center;
+    background-color: #C5C5C5;
+    color: #fff;
+    cursor: text;
+}
+
+.ebdp-pc4promote-normalbutton-mouseover {
+	background-color: #EEE;
+}
+
