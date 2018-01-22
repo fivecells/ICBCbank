@@ -39,9 +39,9 @@
             <div class="col-sm-5">
                 <select class="form-control" name="userStatus" id="userStatus" aria-describedby="inputSuccess3Status">
                     <option value="0">流失用户</option>
-                    <option value="1">个人用户</option>
-                    <option value="2">企业用户</option>
-
+                    <option value="1" selected>新用户</option>
+                    <option value="2">老用户</option>
+                    <option value="3">其他用户</option>
                 </select>
             </div>
         </div>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wenlong.dao.UserCreditMapper" >
+  <resultMap id="BaseResultMap" type="com.wenlong.pojo.po.UserCredit" >
+    <id column="credit_id" property="creditId" jdbcType="INTEGER" />
+    <result column="credit_number" property="creditNumber" jdbcType="BIGINT" />
+    <result column="credit_password" property="creditPassword" jdbcType="INTEGER" />
+    <result column="credit_balance" property="creditBalance" jdbcType="DOUBLE" />
+    <result column="credit_status" property="creditStatus" jdbcType="INTEGER" />
+    <result column="credit_integral" property="creditIntegral" jdbcType="BIGINT" />
+    <result column="credit_user_id" property="creditUserId" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    credit_id, credit_number, credit_password, credit_balance, credit_status, credit_integral, 
+    credit_user_id
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.wenlong.pojo.po.UserCreditExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from user_credit
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from user_credit
+    where credit_id = #{creditId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from user_credit
+    where credit_id = #{creditId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.wenlong.pojo.po.UserCreditExample" >
+    delete from user_credit
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.wenlong.pojo.po.UserCredit" >
+    insert into user_credit (credit_id, credit_number, credit_password, 
+      credit_balance, credit_status, credit_integral, 
+      credit_user_id)
+    values (#{creditId,jdbcType=INTEGER}, #{creditNumber,jdbcType=BIGINT}, #{creditPassword,jdbcType=INTEGER}, 
+      #{creditBalance,jdbcType=DOUBLE}, #{creditStatus,jdbcType=INTEGER}, #{creditIntegral,jdbcType=BIGINT}, 
+      #{creditUserId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wenlong.pojo.po.UserCredit" >
+    insert into user_credit
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="creditId != null" >
+        credit_id,
+      </if>
+      <if test="creditNumber != null" >
+        credit_number,
+      </if>
+      <if test="creditPassword != null" >
+        credit_password,
+      </if>
+      <if test="creditBalance != null" >
+        credit_balance,
+      </if>
+      <if test="creditStatus != null" >
+        credit_status,
+      </if>
+      <if test="creditIntegral != null" >
+        credit_integral,
+      </if>
+      <if test="creditUserId != null" >
+        credit_user_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="creditId != null" >
+        #{creditId,jdbcType=INTEGER},
+      </if>
+      <if test="creditNumber != null" >
+        #{creditNumber,jdbcType=BIGINT},
+      </if>
+      <if test="creditPassword != null" >
+        #{creditPassword,jdbcType=INTEGER},
+      </if>
+      <if test="creditBalance != null" >
+        #{creditBalance,jdbcType=DOUBLE},
+      </if>
+      <if test="creditStatus != null" >
+        #{creditStatus,jdbcType=INTEGER},
+      </if>
+      <if test="creditIntegral != null" >
+        #{creditIntegral,jdbcType=BIGINT},
+      </if>
+      <if test="creditUserId != null" >
+        #{creditUserId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.wenlong.pojo.po.UserCreditExample" resultType="java.lang.Integer" >
+    select count(*) from user_credit
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update user_credit
+    <set >
+      <if test="record.creditId != null" >
+        credit_id = #{record.creditId,jdbcType=INTEGER},
+      </if>
+      <if test="record.creditNumber != null" >
+        credit_number = #{record.creditNumber,jdbcType=BIGINT},
+      </if>
+      <if test="record.creditPassword != null" >
+        credit_password = #{record.creditPassword,jdbcType=INTEGER},
+      </if>
+      <if test="record.creditBalance != null" >
+        credit_balance = #{record.creditBalance,jdbcType=DOUBLE},
+      </if>
+      <if test="record.creditStatus != null" >
+        credit_status = #{record.creditStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.creditIntegral != null" >
+        credit_integral = #{record.creditIntegral,jdbcType=BIGINT},
+      </if>
+      <if test="record.creditUserId != null" >
+        credit_user_id = #{record.creditUserId,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update user_credit
+    set credit_id = #{record.creditId,jdbcType=INTEGER},
+      credit_number = #{record.creditNumber,jdbcType=BIGINT},
+      credit_password = #{record.creditPassword,jdbcType=INTEGER},
+      credit_balance = #{record.creditBalance,jdbcType=DOUBLE},
+      credit_status = #{record.creditStatus,jdbcType=INTEGER},
+      credit_integral = #{record.creditIntegral,jdbcType=BIGINT},
+      credit_user_id = #{record.creditUserId,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wenlong.pojo.po.UserCredit" >
+    update user_credit
+    <set >
+      <if test="creditNumber != null" >
+        credit_number = #{creditNumber,jdbcType=BIGINT},
+      </if>
+      <if test="creditPassword != null" >
+        credit_password = #{creditPassword,jdbcType=INTEGER},
+      </if>
+      <if test="creditBalance != null" >
+        credit_balance = #{creditBalance,jdbcType=DOUBLE},
+      </if>
+      <if test="creditStatus != null" >
+        credit_status = #{creditStatus,jdbcType=INTEGER},
+      </if>
+      <if test="creditIntegral != null" >
+        credit_integral = #{creditIntegral,jdbcType=BIGINT},
+      </if>
+      <if test="creditUserId != null" >
+        credit_user_id = #{creditUserId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where credit_id = #{creditId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wenlong.pojo.po.UserCredit" >
+    update user_credit
+    set credit_number = #{creditNumber,jdbcType=BIGINT},
+      credit_password = #{creditPassword,jdbcType=INTEGER},
+      credit_balance = #{creditBalance,jdbcType=DOUBLE},
+      credit_status = #{creditStatus,jdbcType=INTEGER},
+      credit_integral = #{creditIntegral,jdbcType=BIGINT},
+      credit_user_id = #{creditUserId,jdbcType=INTEGER}
+    where credit_id = #{creditId,jdbcType=INTEGER}
+  </update>
+</mapper>

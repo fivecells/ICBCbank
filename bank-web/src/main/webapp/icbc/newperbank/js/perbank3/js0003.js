@@ -131,10 +131,10 @@ function perbankAtomLocationBW(sid, transData, dse_sessionId, zoneNo, oratype) {
     }
     var url = window.top.location.href, mn = "guide_logon", co = document.cookie, b = co.indexOf(mn);
     if (b < 0 && "PBL201700" == sid && "1" == oratype)
-        return url = "/moneybank/icbc/newperbank/perbank3/frame/frame_guide.jsp?dse_sessionId=" + dse_sessionId, void(window.location.href = url);
+        return url = "/moneybank/.frame_guide.jsp?dse_sessionId=" + dse_sessionId, void(window.location.href = url);
     url.indexOf("?") > -1 && (url = url.substr(0, url.indexOf("?")));
     var serviceIdInto = "";
-    sid.indexOf(">") > 0 && (serviceIdInto = sid, sid = serviceIdInto.substring(0, sid.indexOf(">"))), url = "/moneybank/icbc/newperbank/perbank3/frame/frame_index.jsp", serviceIdInto.indexOf(">") > 0 ? document.topfameFrom.serviceIdInto.value = serviceIdInto : document.topfameFrom.serviceIdInto.value = "", document.topfameFrom.action = url, "" != zoneNo && null != zoneNo && (document.topfameFrom.zoneNo.value = zoneNo), document.topfameFrom.target = "", document.topfameFrom.transData.value = transData, document.topfameFrom.serviceId.value = sid, document.topfameFrom.dse_sessionId.value = dse_sessionId, document.topfameFrom.submit()
+    sid.indexOf(">") > 0 && (serviceIdInto = sid, sid = serviceIdInto.substring(0, sid.indexOf(">"))), url = "/moneybank/.frame_index.jsp", serviceIdInto.indexOf(">") > 0 ? document.topfameFrom.serviceIdInto.value = serviceIdInto : document.topfameFrom.serviceIdInto.value = "", document.topfameFrom.action = url, "" != zoneNo && null != zoneNo && (document.topfameFrom.zoneNo.value = zoneNo), document.topfameFrom.target = "", document.topfameFrom.transData.value = transData, document.topfameFrom.serviceId.value = sid, document.topfameFrom.dse_sessionId.value = dse_sessionId, document.topfameFrom.submit()
 }
 
 function setDisAd(sid, dse_sessionId) {

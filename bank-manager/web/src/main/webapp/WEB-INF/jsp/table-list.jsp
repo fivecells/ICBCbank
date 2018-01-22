@@ -28,6 +28,7 @@ $('#table').bootstrapTable({
     height: 540,      //行高，如果没有设置height属性，表格自动根据记录条数调整表格高度,该设置可使分页按钮固定在最上面
 //  detailView: true,     //是否显示父子表，每行最前面会加一个折叠按钮
     showRefresh: true,     //是否显示刷新按钮
+    striped: true,      //隔行换色
     columns: [
         {field: 'cb', checkbox: true},
         {field: 'userId', title: '用户id', height: 20, align: 'left'},
@@ -40,10 +41,10 @@ $('#table').bootstrapTable({
                     return '流失用户';
                     break;
                 case  '1':
-                    return '个人用户';
+                    return '新用户';
                     break;
                 case  '2':
-                    return '企业用户';
+                    return '老用户';
                     break;
                 default:
                     return '其他用户';

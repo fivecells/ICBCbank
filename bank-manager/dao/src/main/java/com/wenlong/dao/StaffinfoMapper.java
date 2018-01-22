@@ -3,6 +3,7 @@ package com.wenlong.dao;
 import com.wenlong.pojo.po.Staffinfo;
 import com.wenlong.pojo.po.StaffinfoExample;
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface StaffinfoMapper {

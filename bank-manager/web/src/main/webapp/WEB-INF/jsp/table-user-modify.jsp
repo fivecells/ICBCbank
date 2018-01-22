@@ -46,24 +46,24 @@
                     <c:if test="${userinfo.userStatus == 0}">
 
                     <option value="0" selected="selected">流失用户</option>
-                    <option value="1">个人用户</option>
-                    <option value="2">企业用户</option>
+                    <option value="1">新用户</option>
+                    <option value="2">老用户</option>
 
                     </c:if>
 
                     <c:if test="${userinfo.userStatus == 1}">
 
                         <option value="0" >流失用户</option>
-                        <option value="1" selected="selected">个人用户</option>
-                        <option value="2">企业用户</option>
+                        <option value="1" selected="selected">新用户</option>
+                        <option value="2">老用户</option>
 
                     </c:if>
 
                     <c:if test="${userinfo.userStatus == 2}">
 
                         <option value="0" >流失用户</option>
-                        <option value="1">个人用户</option>
-                        <option value="2" selected="selected">企业用户</option>
+                        <option value="1">新用户</option>
+                        <option value="2" selected="selected">老用户</option>
 
                     </c:if>
 

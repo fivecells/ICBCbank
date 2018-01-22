@@ -1,0 +1,56 @@
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	&lt;!&ndash; 连接mysql驱动包所在位置 &ndash;&gt;
+	<classPathEntry location="D:\m\repository\mysql-connector-java-5.0.8-bin.jar" />
+	<context id="db2tables" targetRuntime="MyBatis3">
+		<commentGenerator>
+			&lt;!&ndash;是否去除自动生成的注释 true是,false否&ndash;&gt;
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		&lt;!&ndash; 数据库连接信息，驱动类、连接地址、用户名、密码 &ndash;&gt;
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://47.100.100.8:3306/moneybank" userId="root"
+			password="Wujing15.">
+		</jdbcConnection>
+		&lt;!&ndash;<jdbcConnection driverClass="oracle.jdbc.OracleDriver"&ndash;&gt;
+						&lt;!&ndash;connectionURL="jdbc:oracle:thin:@localhost:1521:orcl" userId="scott"&ndash;&gt;
+						&lt;!&ndash;password="tigger">&ndash;&gt;
+		&lt;!&ndash;</jdbcConnection>&ndash;&gt;
+
+		&lt;!&ndash;默认false,把JDBC DECIMAL和NUMBERIC类型解析为Integer&ndash;&gt;
+		&lt;!&ndash;为true时,把JDBC DECIMAL和NUMBERIC类型解析为java.math.BigDecimal&ndash;&gt;
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		&lt;!&ndash; 生成POJO类 &ndash;&gt;
+		<javaModelGenerator targetPackage="com.wenlong.pojo.po"
+			targetProject="src/main/java/">
+			&lt;!&ndash;是否让schema作为包的后缀&ndash;&gt;
+			<property name="enableSubPackages" value="false" />
+			&lt;!&ndash;去除前后空格&ndash;&gt;
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		&lt;!&ndash; 生成mapper映射文件 &ndash;&gt;
+		<sqlMapGenerator targetPackage="com.wenlong.dao"
+			targetProject="src/main/java/">
+			&lt;!&ndash;同上&ndash;&gt;
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+		&lt;!&ndash; 生成mapper接口 &ndash;&gt;
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.wenlong.dao" targetProject="src/main/java/">
+			&lt;!&ndash;同上&ndash;&gt;
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+		&lt;!&ndash; 指定数据库表 &ndash;&gt;
+		<table schema="" tableName="fund_per"></table>
+		&lt;!&ndash;<table tableName="UserInfo" domainObjectName="UserInfo"&ndash;&gt;
+			&lt;!&ndash;enableCountByExample="false" enableUpdateByExample="false"&ndash;&gt;
+			&lt;!&ndash;enableDeleteByExample="false" enableSelectByExample="false"&ndash;&gt;
+			&lt;!&ndash;selectByExampleQueryId="false" />&ndash;&gt;
+
+	</context>
+</generatorConfiguration>
+-->

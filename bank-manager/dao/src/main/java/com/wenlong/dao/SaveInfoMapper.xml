@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wenlong.dao.SaveInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.wenlong.pojo.po.SaveInfo" >
+    <id column="save_id" property="saveId" jdbcType="INTEGER" />
+    <result column="save_waiter_id" property="saveWaiterId" jdbcType="INTEGER" />
+    <result column="save_card_id" property="saveCardId" jdbcType="BIGINT" />
+    <result column="save_money" property="saveMoney" jdbcType="DOUBLE" />
+    <result column="save_time" property="saveTime" jdbcType="TIMESTAMP" />
+    <result column="save_summary" property="saveSummary" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    save_id, save_waiter_id, save_card_id, save_money, save_time, save_summary
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.wenlong.pojo.po.SaveInfoExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from save_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from save_info
+    where save_id = #{saveId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from save_info
+    where save_id = #{saveId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.wenlong.pojo.po.SaveInfoExample" >
+    delete from save_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.wenlong.pojo.po.SaveInfo" >
+    insert into save_info (save_id, save_waiter_id, save_card_id, 
+      save_money, save_time, save_summary
+      )
+    values (#{saveId,jdbcType=INTEGER}, #{saveWaiterId,jdbcType=INTEGER}, #{saveCardId,jdbcType=BIGINT}, 
+      #{saveMoney,jdbcType=DOUBLE}, #{saveTime,jdbcType=TIMESTAMP}, #{saveSummary,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.wenlong.pojo.po.SaveInfo" >
+    insert into save_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="saveId != null" >
+        save_id,
+      </if>
+      <if test="saveWaiterId != null" >
+        save_waiter_id,
+      </if>
+      <if test="saveCardId != null" >
+        save_card_id,
+      </if>
+      <if test="saveMoney != null" >
+        save_money,
+      </if>
+      <if test="saveTime != null" >
+        save_time,
+      </if>
+      <if test="saveSummary != null" >
+        save_summary,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="saveId != null" >
+        #{saveId,jdbcType=INTEGER},
+      </if>
+      <if test="saveWaiterId != null" >
+        #{saveWaiterId,jdbcType=INTEGER},
+      </if>
+      <if test="saveCardId != null" >
+        #{saveCardId,jdbcType=BIGINT},
+      </if>
+      <if test="saveMoney != null" >
+        #{saveMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="saveTime != null" >
+        #{saveTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="saveSummary != null" >
+        #{saveSummary,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.wenlong.pojo.po.SaveInfoExample" resultType="java.lang.Integer" >
+    select count(*) from save_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update save_info
+    <set >
+      <if test="record.saveId != null" >
+        save_id = #{record.saveId,jdbcType=INTEGER},
+      </if>
+      <if test="record.saveWaiterId != null" >
+        save_waiter_id = #{record.saveWaiterId,jdbcType=INTEGER},
+      </if>
+      <if test="record.saveCardId != null" >
+        save_card_id = #{record.saveCardId,jdbcType=BIGINT},
+      </if>
+      <if test="record.saveMoney != null" >
+        save_money = #{record.saveMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="record.saveTime != null" >
+        save_time = #{record.saveTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.saveSummary != null" >
+        save_summary = #{record.saveSummary,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update save_info
+    set save_id = #{record.saveId,jdbcType=INTEGER},
+      save_waiter_id = #{record.saveWaiterId,jdbcType=INTEGER},
+      save_card_id = #{record.saveCardId,jdbcType=BIGINT},
+      save_money = #{record.saveMoney,jdbcType=DOUBLE},
+      save_time = #{record.saveTime,jdbcType=TIMESTAMP},
+      save_summary = #{record.saveSummary,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wenlong.pojo.po.SaveInfo" >
+    update save_info
+    <set >
+      <if test="saveWaiterId != null" >
+        save_waiter_id = #{saveWaiterId,jdbcType=INTEGER},
+      </if>
+      <if test="saveCardId != null" >
+        save_card_id = #{saveCardId,jdbcType=BIGINT},
+      </if>
+      <if test="saveMoney != null" >
+        save_money = #{saveMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="saveTime != null" >
+        save_time = #{saveTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="saveSummary != null" >
+        save_summary = #{saveSummary,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where save_id = #{saveId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wenlong.pojo.po.SaveInfo" >
+    update save_info
+    set save_waiter_id = #{saveWaiterId,jdbcType=INTEGER},
+      save_card_id = #{saveCardId,jdbcType=BIGINT},
+      save_money = #{saveMoney,jdbcType=DOUBLE},
+      save_time = #{saveTime,jdbcType=TIMESTAMP},
+      save_summary = #{saveSummary,jdbcType=VARCHAR}
+    where save_id = #{saveId,jdbcType=INTEGER}
+  </update>
+</mapper>

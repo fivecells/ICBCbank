@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wenlong.dao.WaiterInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.wenlong.pojo.po.WaiterInfo" >
+    <id column="waiter_id" property="waiterId" jdbcType="INTEGER" />
+    <result column="waiter_username" property="waiterUsername" jdbcType="VARCHAR" />
+    <result column="waiter_password" property="waiterPassword" jdbcType="VARCHAR" />
+    <result column="waiter_realname" property="waiterRealname" jdbcType="VARCHAR" />
+    <result column="waiter_identity" property="waiterIdentity" jdbcType="VARCHAR" />
+    <result column="waiter_phone" property="waiterPhone" jdbcType="VARCHAR" />
+    <result column="waiter_status" property="waiterStatus" jdbcType="INTEGER" />
+    <result column="waiter_hiredate" property="waiterHiredate" jdbcType="DATE" />
+    <result column="waiter_email" property="waiterEmail" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    waiter_id, waiter_username, waiter_password, waiter_realname, waiter_identity, waiter_phone, 
+    waiter_status, waiter_hiredate, waiter_email
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.wenlong.pojo.po.WaiterInfoExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from waiter_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from waiter_info
+    where waiter_id = #{waiterId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from waiter_info
+    where waiter_id = #{waiterId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.wenlong.pojo.po.WaiterInfoExample" >
+    delete from waiter_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.wenlong.pojo.po.WaiterInfo" >
+    insert into waiter_info (waiter_id, waiter_username, waiter_password, 
+      waiter_realname, waiter_identity, waiter_phone, 
+      waiter_status, waiter_hiredate, waiter_email
+      )
+    values (#{waiterId,jdbcType=INTEGER}, #{waiterUsername,jdbcType=VARCHAR}, #{waiterPassword,jdbcType=VARCHAR}, 
+      #{waiterRealname,jdbcType=VARCHAR}, #{waiterIdentity,jdbcType=VARCHAR}, #{waiterPhone,jdbcType=VARCHAR}, 
+      #{waiterStatus,jdbcType=INTEGER}, #{waiterHiredate,jdbcType=DATE}, #{waiterEmail,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.wenlong.pojo.po.WaiterInfo" >
+    insert into waiter_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="waiterId != null" >
+        waiter_id,
+      </if>
+      <if test="waiterUsername != null" >
+        waiter_username,
+      </if>
+      <if test="waiterPassword != null" >
+        waiter_password,
+      </if>
+      <if test="waiterRealname != null" >
+        waiter_realname,
+      </if>
+      <if test="waiterIdentity != null" >
+        waiter_identity,
+      </if>
+      <if test="waiterPhone != null" >
+        waiter_phone,
+      </if>
+      <if test="waiterStatus != null" >
+        waiter_status,
+      </if>
+      <if test="waiterHiredate != null" >
+        waiter_hiredate,
+      </if>
+      <if test="waiterEmail != null" >
+        waiter_email,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="waiterId != null" >
+        #{waiterId,jdbcType=INTEGER},
+      </if>
+      <if test="waiterUsername != null" >
+        #{waiterUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="waiterPassword != null" >
+        #{waiterPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="waiterRealname != null" >
+        #{waiterRealname,jdbcType=VARCHAR},
+      </if>
+      <if test="waiterIdentity != null" >
+        #{waiterIdentity,jdbcType=VARCHAR},
+      </if>
+      <if test="waiterPhone != null" >
+        #{waiterPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="waiterStatus != null" >
+        #{waiterStatus,jdbcType=INTEGER},
+      </if>
+      <if test="waiterHiredate != null" >
+        #{waiterHiredate,jdbcType=DATE},
+      </if>
+      <if test="waiterEmail != null" >
+        #{waiterEmail,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.wenlong.pojo.po.WaiterInfoExample" resultType="java.lang.Integer" >
+    select count(*) from waiter_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update waiter_info
+    <set >
+      <if test="record.waiterId != null" >
+        waiter_id = #{record.waiterId,jdbcType=INTEGER},
+      </if>
+      <if test="record.waiterUsername != null" >
+        waiter_username = #{record.waiterUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.waiterPassword != null" >
+        waiter_password = #{record.waiterPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="record.waiterRealname != null" >
+        waiter_realname = #{record.waiterRealname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.waiterIdentity != null" >
+        waiter_identity = #{record.waiterIdentity,jdbcType=VARCHAR},
+      </if>
+      <if test="record.waiterPhone != null" >
+        waiter_phone = #{record.waiterPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.waiterStatus != null" >
+        waiter_status = #{record.waiterStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.waiterHiredate != null" >
+        waiter_hiredate = #{record.waiterHiredate,jdbcType=DATE},
+      </if>
+      <if test="record.waiterEmail != null" >
+        waiter_email = #{record.waiterEmail,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update waiter_info
+    set waiter_id = #{record.waiterId,jdbcType=INTEGER},
+      waiter_username = #{record.waiterUsername,jdbcType=VARCHAR},
+      waiter_password = #{record.waiterPassword,jdbcType=VARCHAR},
+      waiter_realname = #{record.waiterRealname,jdbcType=VARCHAR},
+      waiter_identity = #{record.waiterIdentity,jdbcType=VARCHAR},
+      waiter_phone = #{record.waiterPhone,jdbcType=VARCHAR},
+      waiter_status = #{record.waiterStatus,jdbcType=INTEGER},
+      waiter_hiredate = #{record.waiterHiredate,jdbcType=DATE},
+      waiter_email = #{record.waiterEmail,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wenlong.pojo.po.WaiterInfo" >
+    update waiter_info
+    <set >
+      <if test="waiterUsername != null" >
+        waiter_username = #{waiterUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="waiterPassword != null" >
+        waiter_password = #{waiterPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="waiterRealname != null" >
+        waiter_realname = #{waiterRealname,jdbcType=VARCHAR},
+      </if>
+      <if test="waiterIdentity != null" >
+        waiter_identity = #{waiterIdentity,jdbcType=VARCHAR},
+      </if>
+      <if test="waiterPhone != null" >
+        waiter_phone = #{waiterPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="waiterStatus != null" >
+        waiter_status = #{waiterStatus,jdbcType=INTEGER},
+      </if>
+      <if test="waiterHiredate != null" >
+        waiter_hiredate = #{waiterHiredate,jdbcType=DATE},
+      </if>
+      <if test="waiterEmail != null" >
+        waiter_email = #{waiterEmail,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where waiter_id = #{waiterId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wenlong.pojo.po.WaiterInfo" >
+    update waiter_info
+    set waiter_username = #{waiterUsername,jdbcType=VARCHAR},
+      waiter_password = #{waiterPassword,jdbcType=VARCHAR},
+      waiter_realname = #{waiterRealname,jdbcType=VARCHAR},
+      waiter_identity = #{waiterIdentity,jdbcType=VARCHAR},
+      waiter_phone = #{waiterPhone,jdbcType=VARCHAR},
+      waiter_status = #{waiterStatus,jdbcType=INTEGER},
+      waiter_hiredate = #{waiterHiredate,jdbcType=DATE},
+      waiter_email = #{waiterEmail,jdbcType=VARCHAR}
+    where waiter_id = #{waiterId,jdbcType=INTEGER}
+  </update>
+</mapper>

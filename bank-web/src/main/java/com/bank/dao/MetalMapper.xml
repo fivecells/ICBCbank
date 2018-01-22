@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bank.dao.MetalMapper" >
+  <resultMap id="BaseResultMap" type="com.bank.po.Metal" >
+    <id column="metal_id" property="metalId" jdbcType="INTEGER" />
+    <result column="metal_name" property="metalName" jdbcType="VARCHAR" />
+    <result column="metal_status" property="metalStatus" jdbcType="INTEGER" />
+    <result column="buy_price" property="buyPrice" jdbcType="DOUBLE" />
+    <result column="sell_price" property="sellPrice" jdbcType="DOUBLE" />
+    <result column="price_avg" property="priceAvg" jdbcType="DOUBLE" />
+    <result column="fluctuation" property="fluctuation" jdbcType="DOUBLE" />
+    <result column="flu_per_day" property="fluPerDay" jdbcType="DOUBLE" />
+    <result column="flu_per_year" property="fluPerYear" jdbcType="DOUBLE" />
+    <result column="metal_user_id" property="metalUserId" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    metal_id, metal_name, metal_status, buy_price, sell_price, price_avg, fluctuation, 
+    flu_per_day, flu_per_year, metal_user_id
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.bank.po.MetalExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from metal
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from metal
+    where metal_id = #{metalId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from metal
+    where metal_id = #{metalId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.bank.po.MetalExample" >
+    delete from metal
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.bank.po.Metal" >
+    insert into metal (metal_id, metal_name, metal_status, 
+      buy_price, sell_price, price_avg, 
+      fluctuation, flu_per_day, flu_per_year, 
+      metal_user_id)
+    values (#{metalId,jdbcType=INTEGER}, #{metalName,jdbcType=VARCHAR}, #{metalStatus,jdbcType=INTEGER}, 
+      #{buyPrice,jdbcType=DOUBLE}, #{sellPrice,jdbcType=DOUBLE}, #{priceAvg,jdbcType=DOUBLE}, 
+      #{fluctuation,jdbcType=DOUBLE}, #{fluPerDay,jdbcType=DOUBLE}, #{fluPerYear,jdbcType=DOUBLE}, 
+      #{metalUserId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.bank.po.Metal" >
+    insert into metal
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="metalId != null" >
+        metal_id,
+      </if>
+      <if test="metalName != null" >
+        metal_name,
+      </if>
+      <if test="metalStatus != null" >
+        metal_status,
+      </if>
+      <if test="buyPrice != null" >
+        buy_price,
+      </if>
+      <if test="sellPrice != null" >
+        sell_price,
+      </if>
+      <if test="priceAvg != null" >
+        price_avg,
+      </if>
+      <if test="fluctuation != null" >
+        fluctuation,
+      </if>
+      <if test="fluPerDay != null" >
+        flu_per_day,
+      </if>
+      <if test="fluPerYear != null" >
+        flu_per_year,
+      </if>
+      <if test="metalUserId != null" >
+        metal_user_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="metalId != null" >
+        #{metalId,jdbcType=INTEGER},
+      </if>
+      <if test="metalName != null" >
+        #{metalName,jdbcType=VARCHAR},
+      </if>
+      <if test="metalStatus != null" >
+        #{metalStatus,jdbcType=INTEGER},
+      </if>
+      <if test="buyPrice != null" >
+        #{buyPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="sellPrice != null" >
+        #{sellPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="priceAvg != null" >
+        #{priceAvg,jdbcType=DOUBLE},
+      </if>
+      <if test="fluctuation != null" >
+        #{fluctuation,jdbcType=DOUBLE},
+      </if>
+      <if test="fluPerDay != null" >
+        #{fluPerDay,jdbcType=DOUBLE},
+      </if>
+      <if test="fluPerYear != null" >
+        #{fluPerYear,jdbcType=DOUBLE},
+      </if>
+      <if test="metalUserId != null" >
+        #{metalUserId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.bank.po.MetalExample" resultType="java.lang.Integer" >
+    select count(*) from metal
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update metal
+    <set >
+      <if test="record.metalId != null" >
+        metal_id = #{record.metalId,jdbcType=INTEGER},
+      </if>
+      <if test="record.metalName != null" >
+        metal_name = #{record.metalName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.metalStatus != null" >
+        metal_status = #{record.metalStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.buyPrice != null" >
+        buy_price = #{record.buyPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="record.sellPrice != null" >
+        sell_price = #{record.sellPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="record.priceAvg != null" >
+        price_avg = #{record.priceAvg,jdbcType=DOUBLE},
+      </if>
+      <if test="record.fluctuation != null" >
+        fluctuation = #{record.fluctuation,jdbcType=DOUBLE},
+      </if>
+      <if test="record.fluPerDay != null" >
+        flu_per_day = #{record.fluPerDay,jdbcType=DOUBLE},
+      </if>
+      <if test="record.fluPerYear != null" >
+        flu_per_year = #{record.fluPerYear,jdbcType=DOUBLE},
+      </if>
+      <if test="record.metalUserId != null" >
+        metal_user_id = #{record.metalUserId,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update metal
+    set metal_id = #{record.metalId,jdbcType=INTEGER},
+      metal_name = #{record.metalName,jdbcType=VARCHAR},
+      metal_status = #{record.metalStatus,jdbcType=INTEGER},
+      buy_price = #{record.buyPrice,jdbcType=DOUBLE},
+      sell_price = #{record.sellPrice,jdbcType=DOUBLE},
+      price_avg = #{record.priceAvg,jdbcType=DOUBLE},
+      fluctuation = #{record.fluctuation,jdbcType=DOUBLE},
+      flu_per_day = #{record.fluPerDay,jdbcType=DOUBLE},
+      flu_per_year = #{record.fluPerYear,jdbcType=DOUBLE},
+      metal_user_id = #{record.metalUserId,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bank.po.Metal" >
+    update metal
+    <set >
+      <if test="metalName != null" >
+        metal_name = #{metalName,jdbcType=VARCHAR},
+      </if>
+      <if test="metalStatus != null" >
+        metal_status = #{metalStatus,jdbcType=INTEGER},
+      </if>
+      <if test="buyPrice != null" >
+        buy_price = #{buyPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="sellPrice != null" >
+        sell_price = #{sellPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="priceAvg != null" >
+        price_avg = #{priceAvg,jdbcType=DOUBLE},
+      </if>
+      <if test="fluctuation != null" >
+        fluctuation = #{fluctuation,jdbcType=DOUBLE},
+      </if>
+      <if test="fluPerDay != null" >
+        flu_per_day = #{fluPerDay,jdbcType=DOUBLE},
+      </if>
+      <if test="fluPerYear != null" >
+        flu_per_year = #{fluPerYear,jdbcType=DOUBLE},
+      </if>
+      <if test="metalUserId != null" >
+        metal_user_id = #{metalUserId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where metal_id = #{metalId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bank.po.Metal" >
+    update metal
+    set metal_name = #{metalName,jdbcType=VARCHAR},
+      metal_status = #{metalStatus,jdbcType=INTEGER},
+      buy_price = #{buyPrice,jdbcType=DOUBLE},
+      sell_price = #{sellPrice,jdbcType=DOUBLE},
+      price_avg = #{priceAvg,jdbcType=DOUBLE},
+      fluctuation = #{fluctuation,jdbcType=DOUBLE},
+      flu_per_day = #{fluPerDay,jdbcType=DOUBLE},
+      flu_per_year = #{fluPerYear,jdbcType=DOUBLE},
+      metal_user_id = #{metalUserId,jdbcType=INTEGER}
+    where metal_id = #{metalId,jdbcType=INTEGER}
+  </update>
+</mapper>

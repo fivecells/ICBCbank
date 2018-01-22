@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wenlong.dao.WaiterIFMapper" >
+  <sql id="waiterInfo">
+    waiter_id,waiter_username,waiter_password,waiter_realname,waiter_identity,waiter_phone,waiter_status,waiter_hiredate,waiter_email
+  </sql>
+  <sql id="waiterInfoSearchWhere">
+    <where>
+      <if test="waiterInfoSearch != null and waiterInfoSearch.waiterRealname != null and waiterInfoSearch.waiterRealname != '' ">
+        and waiter_realname like concat('%',#{waiterInfoSearch.waiterRealname},'%')
+      </if>
+      <if test="waiterInfoSearch != null and waiterInfoSearch.waiterIdentity != null and waiterInfoSearch.waiterIdentity != '' ">
+        and waiter_identity like concat('%',#{waiterInfoSearch.waiterIdentity},'%')
+      </if>
+    </where>
+  </sql>
+  <select id="selectlistWaiterInfoByPage" resultType="com.wenlong.pojo.po.WaiterInfo">
+    select <include refid="waiterInfo"></include> from waiter_info order by waiter_id asc limit #{offset},#{limit}
+  </select>
+  <select id="selectlistWaiterInfoBySearch" resultType="com.wenlong.pojo.po.WaiterInfo">
+    select <include refid="waiterInfo"></include> from waiter_info <include refid="waiterInfoSearchWhere"></include> order by waiter_id asc
+  </select>
+</mapper>

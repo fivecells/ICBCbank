@@ -3,6 +3,7 @@ package com.wenlong.service.impl;
 import com.wenlong.dao.StaffinfoMapper;
 import com.wenlong.pojo.po.Staffinfo;
 import com.wenlong.pojo.po.StaffinfoExample;
+import com.wenlong.pojo.po.WaiterInfo;
 import com.wenlong.pojo.vo.Loginvo;
 import com.wenlong.service.UserLoginService;
 import org.slf4j.Logger;
@@ -17,7 +18,7 @@ public class UserLoginServiceImpl implements UserLoginService {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    private StaffinfoMapper staffinfoMapper;
+    private StaffinfoMapper staffinfoDao;
 
     @Override
     public  List<Staffinfo> CheckUsername(Loginvo loginvo) {
@@ -27,7 +28,7 @@ public class UserLoginServiceImpl implements UserLoginService {
             StaffinfoExample example = new StaffinfoExample();
             StaffinfoExample.Criteria criteria=example.createCriteria();
             criteria.andStaffNameEqualTo(loginvo.getUsername());
-            staffinfos = staffinfoMapper.selectByExample(example);
+            staffinfos = staffinfoDao.selectByExample(example);
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
             e.printStackTrace();

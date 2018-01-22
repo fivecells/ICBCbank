@@ -785,7 +785,6 @@ var structCode ="";
 			//alert("未登录"+dse_sessionId);
 			perbankAtomLocationTW(serviceId,'','',true);
 		}else{
-		    debugger;
           showDiv();
 	 	// var sendParam = {};
 		// sendParam["doFlag"]="0";
@@ -964,7 +963,6 @@ function commFucSuccsed(KColl){
 }
 
 function drawTable(serviceIdStr){
-    debugger;
     serviceIdStr='20170108|20130033';
 	$('#commonUseTbl').find('ul').html('');
 	var html_head = '';
@@ -5792,8 +5790,15 @@ DkggWQD7PZqclCfbVho7WFutMqxxDNt5wgEpw8Cz7ssPCDk=%2B"   target="_blank"
 	<input type="hidden"name="requestChannel" value="302">
 </form>
 <div id="atomService_content" class="width" style="margin-top:0px;margin-bottom:60px;display:none">
- 	<iframe id="perbank-content-frame"  name="perbank-content-frame" frameborder="no"  scrolling="no" VSPACE="0" style="top:0;width:100%;border:0 none;overflow:hidden;"  class="content-frame" ></iframe>
+ 	<iframe id="perbank-content-frame"  name="perbank-content-frame" frameborder="no"  scrolling="no" VSPACE="0" style="top:0;width:100%;border:0 none;overflow:hidden;" onload="myload()" class="content-frame" ></iframe>
 </div>
+<script>
+
+    function myload() {
+        var ifm= document.getElementById("perbank-content-frame");
+        ifm.height=document.documentElement.scrollHeight;}
+</script>
+
 <div id="guessyoulike_div_outer" style="display:none;">
 
 

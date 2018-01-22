@@ -1,6 +1,5 @@
 package com.wenlong.dao;
 
-import com.wenlong.dto.Page;
 import com.wenlong.pojo.po.Userinfo;
 import com.wenlong.pojo.po.UserinfoExample;
 import java.util.List;
