@@ -5802,10 +5802,10 @@ DkggWQD7PZqclCfbVho7WFutMqxxDNt5wgEpw8Cz7ssPCDk=%2B"   target="_blank"
 </div>
 <script>
 
-    // function myload() {
-    //     var ifm= document.getElementById("perbank-content-frame");
-    //     ifm.height=document.documentElement.scrollHeight;
-    // }
+    function myload() {
+        var ifm= document.getElementById("perbank-content-frame");
+        ifm.height=document.documentElement.scrollHeight;
+    }
 
 
 </script>
