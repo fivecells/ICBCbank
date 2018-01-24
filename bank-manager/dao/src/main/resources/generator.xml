@@ -45,7 +45,7 @@
 			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
 		&lt;!&ndash; 指定数据库表 &ndash;&gt;
-		<table schema="" tableName="fund_per"></table>
+		<table schema="" tableName="metal_poxy"></table>
 		&lt;!&ndash;<table tableName="UserInfo" domainObjectName="UserInfo"&ndash;&gt;
 			&lt;!&ndash;enableCountByExample="false" enableUpdateByExample="false"&ndash;&gt;
 			&lt;!&ndash;enableDeleteByExample="false" enableSelectByExample="false"&ndash;&gt;
