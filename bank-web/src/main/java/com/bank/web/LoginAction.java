@@ -17,8 +17,6 @@ public class LoginAction {
     @ResponseBody
     @RequestMapping("/loginin")
     public String doLogin(Userinfo userinfo, HttpSession session) {
-        System.out.println(userinfo.getUserName());
-        System.out.println("111");
         Userinfo user_result = loginService.doLogin(userinfo);
         if(user_result!=null){
             String dse_sessionId = session.getId();
