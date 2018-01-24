@@ -48,6 +48,7 @@ function AtomSerivceSubmit(serviceId, transData, checkflag, loginws) {
 }
 
 function perbankAtomLocationTW(sid, transData1, sessionIdpara, loginws, oratype) {
+    debugger;
     try {
         frames["perbank-content-frame"].AtomSerivceShowLoading()
     } catch (e) {

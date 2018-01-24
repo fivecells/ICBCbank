@@ -1,0 +1,37 @@
+.hd-block{ width:100%; }
+.hd-block .hd-top-box .hd-top{padding:20px 18px; background-color:#fff;}
+.hd-block .hd-top-box .hd-top .tit{overflow: hidden;font-size: 16px;color: #1a1a1a;}
+.hd-block .hd-top-box .hd-top .tit>span{float:left; width:8px; height:20px; background-color:#fcb12b; margin-right:6px; border-radius:2px;}
+.hd-block .hd-box{ width:1000px; margin:0 auto; background-color:#fff; height:222px; overflow:hidden; position:relative;}
+.hd-block .hd-box .prev-btn{ width:23px; height:48px; position:absolute; left:0; top:50%; margin-top:-24px;background: url(https://mybank.icbc.com.cn/images/commonly-prev-bg.png) center center no-repeat; z-index:10; cursor:pointer;}
+.hd-block .hd-box .next-btn{ width:23px; height:48px; position:absolute; right:0; top:50%; margin-top:-24px;background: url(https://mybank.icbc.com.cn/images/commonly-next-bg.png) center center no-repeat; z-index:10; cursor:pointer;}
+.hd-block .hd-box .hd-ul-box{overflow:hidden; width:10000px;}
+.hd-block .hd-box .hd-ul{ float:left;}
+.hd-block .hd-box .hd-ul li{ width:182px; height:204px; border:1px solid #dcdcdc; margin-right:20px; position:relative; overflow:hidden; float:left;}
+.hd-block .hd-box .hd-ul li.big-li{ width:590px;}
+.hd-block .hd-box .hd-ul li.last{ margin-right:0;}
+.hd-block .hd-box .hd-ul li a{ display:block; height:100%;}
+.hd-block .hd-box .hd-ul li a img{ position:absolute; top:0; left:0;}
+.commonly-used-block{ width:100%;}
+.commonly-used-block .commonly-used-box .commonly-used-top{ padding:20px 18px; background-color:#fff;}
+.commonly-used-block .commonly-used-box .commonly-used-top .tit{ overflow:hidden; font-size:16px; color:#1a1a1a;}
+.commonly-used-block .commonly-used-box .commonly-used-top .tit>span{ float:left; width:8px; height:20px; background-color:#fc622b; margin-right:6px; border-radius:2px;}
+.commonly-used-block .commonly-used-box .commonly-used-body{  background-color:#fff; }
+.commonly-used-block .commonly-used-box .commonly-used-body .commonly-used-ul{ overflow:hidden; padding:0 2px;}
+.commonly-used-block .commonly-used-box .commonly-used-body .commonly-used-ul li{ width:164px; height:164px; float:left; border:1px solid #e5e5e5; border-radius:3px;}
+.commonly-used-block .commonly-used-box .commonly-used-body .commonly-used-ul li:hover{ border:1px solid #6fbde3;}
+.commonly-used-block .commonly-used-box .commonly-used-body .commonly-used-ul li a{ display:block; height:100%; text-align:center;}
+.commonly-used-block .commonly-used-box .commonly-used-body .commonly-used-ul li a>img{ margin-top:44px;}
+.commonly-used-block .commonly-used-box .commonly-used-body .commonly-used-ul li:hover a>img{ margin-top:38px;}
+.commonly-used-block .commonly-used-box .commonly-used-body .commonly-used-ul li a p{ font-size:16px; color:#333; margin-top:30px; line-height:16px;}
+.commonly-used-block .commonly-used-box .commonly-used-body .commonly-used-ul li:hover a p{ color:#6fbde3;}
+.preferential-block{ width:100%;}
+.preferential-block .preferential-box .preferential-top{padding:20px 18px;  background-color:#fff;}
+.preferential-block .preferential-box .preferential-top .tit{ overflow:hidden; font-size:16px; color:#1a1a1a;}
+.preferential-block .preferential-box .preferential-top .tit>span{float:left; width:8px; height:20px; background-color:#ea4343; margin-right:6px; border-radius:2px;}
+.preferential-block .preferential-box .preferential-body{ background-color:#fff;}
+.preferential-block .preferential-box .preferential-body .preferential-main .preferential-ul{ overflow:hidden; margin-bottom:13px;}
+.preferential-block .preferential-box .preferential-body .preferential-main .preferential-ul li{ width:184px; height:204px; float:left; border:1px solid #d8d8d8; margin-left:13px; overflow:hidden; position:relative;}
+.preferential-block .preferential-box .preferential-body .preferential-main .preferential-ul li.big-li{ margin:0; width:401px}
+.preferential-block .preferential-box .preferential-body .preferential-main .preferential-ul li a{display: block; height: 100%;}
+.preferential-block .preferential-box .preferential-body .preferential-main .preferential-ul li a img{position: absolute; top: 0;left: 0;}

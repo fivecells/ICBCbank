@@ -111,7 +111,9 @@
                 //data==0验证失败 ==1验证成功
                 if (data > 0) {
                     alert('cg')
+
                     location.href="${pageContext.request.contextPath}/";
+
                     // return true;
                 } else {
                     alert('1');

@@ -599,15 +599,15 @@ function getAtomService(){
     		<li onclick="logPV('PBL201700');perbankAtomLocationTW('PBL201804','',dse_sessionId);"><a href="javascript:void(0);"><span class="jrrl-bg"></span>金融日历</a></li>
         	<li onclick="logPV('PBL201804');perbankAtomLocationTW('PBL201804','',dse_sessionId);"><a href="javascript:void(0);"><span class="kabao-bg"></span>账户列表</a></li>
         	<li onclick="logPV('PBL201670');perbankAtomLocationTW('PBL201670','5',dse_sessionId);"><a href="javascript:void(0);"><span class="hall-bg"></span>活动大厅</a></li>
-            <li onclick="logPV('PBL201720');perbankAtomLocationTW('PBL201720','',dse_sessionId);"><a href="javascript:void(0);"><span class="anquan-bg"></span>安全</a></li>
-            <li onclick="logPV('PBL201724');perbankAtomLocationTW('PBL201724','',dse_sessionId);"><a href="javascript:void(0);"><span class="shezhi-bg"></span>设置</a></li>
+            <li onclick="logPV('PBL201720');perbankAtomLocationTW('PBL201802','',dse_sessionId);"><a href="javascript:void(0);"><span class="anquan-bg"></span>安全</a></li>
+            <li onclick="logPV('PBL201724');perbankAtomLocationTW('PBL201803','',dse_sessionId);"><a href="javascript:void(0);"><span class="shezhi-bg"></span>设置</a></li>
         </ul>
     </div>
     </div>
   </div>
 </div>
 
-<div class="zuiai-block">
+<div class="zuiai-block"  style="background-color:#F7F7F7">
   	<div class="zuiai-div">
 				<div class="zuiai-icon" style="cursor:pointer;" onclick="showMyQuickFucDiv();">
 					   <div class="zuiai-icon-bg" ></div>
@@ -2000,6 +2000,14 @@ function xh1(arr,a){
 
 
 <script type="text/javascript">
+	//如果登录成功后显示个人主页
+    window.onload=function(){
+        if(dse_sessionId){
+            logPV('PBL201804');
+            perbankAtomLocationTW('PBL201804','',dse_sessionId);
+		}
+
+	}
 
 $(document).ready(function(){
 
@@ -5745,7 +5753,7 @@ DkggWQD7PZqclCfbVho7WFutMqxxDNt5wgEpw8Cz7ssPCDk=%2B"   target="_blank"
 <jsp:include page="6.jsp"></jsp:include>
 
 <!--主交易区start-->
-<form name="topfameFrom"   id="topfameFrom"  method="post"  target="perbank-content-frame"
+<form name="topfameFrom"   id="topfameFrom"  method="get"  target="perbank-content-frame"
 	action="servlet/icbcPERBANKLocationService" onSubmit="return false;">
 	<input type="hidden"name="transData" value="">
 	<input type="hidden"name="serviceId" value="PBL200202">
@@ -5790,13 +5798,16 @@ DkggWQD7PZqclCfbVho7WFutMqxxDNt5wgEpw8Cz7ssPCDk=%2B"   target="_blank"
 	<input type="hidden"name="requestChannel" value="302">
 </form>
 <div id="atomService_content" class="width" style="margin-top:0px;margin-bottom:60px;display:none">
- 	<iframe id="perbank-content-frame"  name="perbank-content-frame" frameborder="no"  scrolling="no" VSPACE="0" style="top:0;width:100%;border:0 none;overflow:hidden;" onload="myload()" class="content-frame" ></iframe>
+ 	<iframe id="perbank-content-frame"  name="perbank-content-frame" frameborder="no"  scrolling="no" VSPACE="0" style="top:0;width:100%;border:0 none;overflow:hidden;"  class="content-frame" ></iframe>
 </div>
 <script>
 
-    function myload() {
-        var ifm= document.getElementById("perbank-content-frame");
-        ifm.height=document.documentElement.scrollHeight;}
+    // function myload() {
+    //     var ifm= document.getElementById("perbank-content-frame");
+    //     ifm.height=document.documentElement.scrollHeight;
+    // }
+
+
 </script>
 
 <div id="guessyoulike_div_outer" style="display:none;">

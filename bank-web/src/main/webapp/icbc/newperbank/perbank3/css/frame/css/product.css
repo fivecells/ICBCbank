@@ -1,0 +1,12 @@
+.products-block{ padding:12px 0; width:100%; background-color:#e0e1e3;}
+.products-block .products-box .products-item{ margin-bottom:12px;}
+.products-block .products-box .products-item .tit-5{ height:40px; line-height:40px; padding-left:24px; font-size:14px; color:#3e3a39; background-color:#f7f8f8; border-bottom:1px solid #d6d7d8; border-top:1px solid #d6d7d8;}
+.products-block .products-box .products-item .tit-5 a{ color:#3e3a39;}
+.products-block .products-box .products-item .products-service-box{ overflow:hidden; padding:18px 24px 12px 24px; background-color:#ecedee;}
+.products-block .products-box .products-item .products-service-box .products-service{ float:left; width:50%;}
+.products-block .products-box .products-item .products-service-box .products-service .products-service-list{ overflow:hidden; position:relative; margin-bottom:12px;margin:0 16px;}
+.products-block .products-box .products-item .products-service-box .products-service .products-service-list>h6{ float:left; min-width:80px; font-size:14px; color:#3e83c0;}
+.products-block .products-box .products-item .products-service-box .products-service .products-service-list .products-service-ul{ overflow:hidden;white-space: nowrap}
+.products-block .products-box .products-item .products-service-box .products-service .products-service-list .products-service-ul li{ float:left; margin:0 6px;}
+.products-block .products-box .products-item .products-service-box .products-service .products-service-list .products-service-ul li a{ color:#3e3a39; font-size:12px;} 
+.products-block .products-box .products-item .products-service-box .products-service .products-service-list .products-service-ul li:hover a{ color:#c7000b;}

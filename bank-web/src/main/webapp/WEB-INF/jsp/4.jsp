@@ -180,7 +180,7 @@ jQuery(document).ready(function() {
 					src="${pageContext.request.contextPath}/login/login.jsp?StructCode=1&orgurl=0&STNO=31"
 					style="width: 310px;height:370px; border:0;overflow:hidden;"></iframe> 
 	</div>
-	<div id="ICBC_login_float_x"><div id="ICBC_login_float_xxx">&nbsp;</div></div>
+	<div id="ICBC_login_float_x"><div id="ICBC_common_float_xxx" onclick="hideLogonDiv()"><img src="${pageContext.request.contextPath}/icbc/newperbank/perbank3/css/frame/images/close.png"/></div></div>
 </div>
 
 <div id="ICBC_common_float">
@@ -192,13 +192,12 @@ jQuery(document).ready(function() {
 					src=""
 					style="width: 100%;height:100%; border:0;overflow:hidden;"></iframe> 
 	</div>
-	<div id="ICBC_common_float_x"><div id="ICBC_common_float_xxx" onclick="hideLogonDiv();">X</div></div>
+	<%--<div id="ICBC_common_float_x"><div id="ICBC_common_float_xxx" onclick="hideLogonDiv();"><img src="${pageContext.request.contextPath}/icbc/newperbank/perbank3/css/frame/images/close.png"/></div></div>--%>
 </div>
 </div>
 
 <form name="topfameFrom4Login"   id="topfameFrom4Login"  method="post"  target="_top"
 	action="${pageContext.request.contextPath}/icbc/newperbank/perbank3/frame/frame_index.jsp" onSubmit="return false;">
-</form>	
-
+</form>
 </body>
 </html>
