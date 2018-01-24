@@ -15,16 +15,6 @@
 <link href="${pageContext.request.contextPath}/icbc/newperbank/perbank3/css/new_headerFooter.css?ver=2017122122" rel="stylesheet" type="text/css"/>
 <link href="${pageContext.request.contextPath}/icbc/newperbank/perbank3/css/frame/css/index.css?ver=2017122122" rel="stylesheet" type="text/css"/>
 
-
-
-
-
-
-
-
-
-
-
 <script language="JavaScript1.1" src="${pageContext.request.contextPath}/icbc/newperbank/js/includes/ControlsId.js"></script>
 <script src="${pageContext.request.contextPath}/icbc/newperbank/js/perbank3/jquery-1.8.3.min.js?ver=2017122122"></script>
 <script src="${pageContext.request.contextPath}/icbc/newperbank/js/perbank3/userBrowseSidStack.js?ver=2017122122"></script>
@@ -5798,14 +5788,14 @@ DkggWQD7PZqclCfbVho7WFutMqxxDNt5wgEpw8Cz7ssPCDk=%2B"   target="_blank"
 	<input type="hidden"name="requestChannel" value="302">
 </form>
 <div id="atomService_content" class="width" style="margin-top:0px;margin-bottom:60px;display:none">
- 	<iframe id="perbank-content-frame"  name="perbank-content-frame" frameborder="no"  scrolling="no" VSPACE="0" style="top:0;width:100%;border:0 none;overflow:hidden;"  class="content-frame" ></iframe>
+ 	<iframe id="perbank-content-frame"  name="perbank-content-frame" frameborder="no"  scrolling="no" VSPACE="0" style="top:0;width:100%;border:0 none;overflow:hidden;"  class="content-frame" onload="myload()"></iframe>
 </div>
 <script>
 
-    // function myload() {
-    //     var ifm= document.getElementById("perbank-content-frame");
-    //     ifm.height=document.documentElement.scrollHeight;
-    // }
+     function myload() {
+         var ifm= document.getElementById("perbank-content-frame");
+         ifm.height=document.documentElement.scrollHeight;
+     }
 
 
 </script>

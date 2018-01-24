@@ -1,10 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Title</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/layui/css/layui.css">
 </head>
 <body>
+
 <div class="layui-container" style="background-color: white">
     <%--头部步骤栏--%>
     <div class="layui-row">
@@ -33,11 +35,11 @@
                     </ul>
                     <div class="layui-tab-content">
                         <div class="layui-tab-item layui-show">
-                            <form id="transfer" class="layui-form" action="">
+                            <form id="transfer" class="layui-form" action="${pageContext.request.contextPath}/transfer">
                                 <div class="layui-form-item">
                                     <label class="layui-form-label">收款姓名：</label>
                                     <div class="layui-input-block">
-                                        <input type="text" name="userName" required lay-verify="required"
+                                        <input type="text" name="acceptName" required lay-verify="required"
                                                placeholder="请输入标题"
                                                autocomplete="off" class="layui-input">
                                     </div>
@@ -45,15 +47,15 @@
                                 <div class="layui-form-item">
                                     <label class="layui-form-label">收款卡号：</label>
                                     <div class="layui-input-block">
-                                        <input type="text" name="title" required lay-verify="required"
-                                               placeholder="请输入标题"
+                                        <input type="text" name="acceptAccount" required lay-verify="required"
+                                               placeholder="请输入卡号"
                                                autocomplete="off" class="layui-input">
                                     </div>
                                 </div>
                                 <div class="layui-form-item">
                                     <label class="layui-form-label">收款银行：</label>
                                     <div class="layui-input-block">
-                                        <select name="city" lay-verify="required">
+                                        <select name="acceptBank" lay-verify="required">
                                             <option value="">请选择</option>
                                             <option value="0">工商银行</option>
                                             <option value="1">建设银行</option>
@@ -67,18 +69,18 @@
                                     <label class="layui-form-label">币种：</label>
                                     <div class="layui-input-block">
                                         <select name="city" lay-verify="required">
-                                            <option value="">人民币</option>
-                                            <option value="0">美元</option>
-                                            <option value="1">欧元</option>
-                                            <option value="2">英镑</option>
+                                            <option value="0">人民币</option>
+                                            <option value="1">美元</option>
+                                            <option value="2">欧元</option>
+                                            <option value="3">英镑</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="layui-form-item">
                                     <label class="layui-form-label">汇款金额：</label>
                                     <div class="layui-input-block">
-                                        <input type="text" name="title" required lay-verify="required"
-                                               placeholder="请输入标题"
+                                        <input type="text" name="money" required lay-verify="required"
+                                               placeholder="请输入金额"
                                                autocomplete="off" class="layui-input">
                                     </div>
                                 </div>
@@ -95,8 +97,10 @@
                                 <div class="layui-form-item">
                                     <label class="layui-form-label">付款卡号：</label>
                                     <div class="layui-input-block">
-                                        <select name="city" lay-verify="required">
-                                            <option value="1">卡号</option>
+                                        <select name="payAccount" lay-verify="required">
+                                            <c:forEach items="${payList}" var="cardnum">
+                                            <option value="1">${cardnum}</option>
+                                            </c:forEach>
                                         </select>
                                     </div>
                                 </div>
@@ -116,7 +120,7 @@
         </div>
     </div>
 </div>
-
+<script src="${pageContext.request.contextPath}/js/jquery-1.11.0.min.js"></script>
 <script src="${pageContext.request.contextPath}/layui/layui.js"></script>
 <script>
     //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
@@ -130,7 +134,20 @@
         //监听提交
         form.on('submit(formDemo)', function (data) {
             layer.msg(JSON.stringify(data.field));
-            return false;
+            return true;
+        });
+    });
+</script>
+<script>
+    $(function(){
+        alert("aaa");
+        $.ajax({
+            url: "${pageContext.request.contextPath}/getPayAccount",
+            data: {"userId":${user.userId}},
+            type: 'get',
+            success:function(data){
+
+            }
         });
     });
 </script>
