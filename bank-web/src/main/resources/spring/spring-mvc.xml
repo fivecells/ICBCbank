@@ -45,4 +45,5 @@
     <mvc:resources mapping="/icbc/**" location="/icbc/"/>
     <!--<mvc:resources mapping="/login/**" location="/login/"/>-->
     <mvc:resources mapping="/regist/**" location="/regist/"/>
+    <mvc:resources mapping="/layui/**" location="/layui/"/>
 </beans>
