@@ -1,6 +1,7 @@
 package com.wenlong.web;
 
 import com.wenlong.pojo.po.Staffinfo;
+import com.wenlong.pojo.po.Userinfo;
 import com.wenlong.pojo.vo.Loginvo;
 import com.wenlong.service.UserLoginService;
 import org.slf4j.Logger;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

@@ -1,0 +1,43 @@
+td {  font-size: 12px; text-decoration: none}
+form {  font-size: 12px; text-decoration: none}
+input {  font-size: 12px; text-decoration: none}
+select {  font-size: 12px; color: #003499; text-decoration: none}
+.copyright {  font-size: 12px; color: #b4b4b4; text-decoration: none}
+a.copyright:link {  color: #b4b4b4; text-decoration: underline}
+a.copyright:hover {  color: #6C6C6C; text-decoration: none}
+.text1 {  font-size: 12px; color: #000000; text-decoration: none}
+a.text1:link {  color: #000000; text-decoration: none}
+a.text1:hover {  color: #000000; text-decoration: none}
+.map {  font-size: 12px; color: #6c6c6c; text-decoration: none; line-height: 20px}
+a.map:link {  color: #6c6c6c; text-decoration: none; line-height: 20px}
+a.map:hover {  color: #003399; text-decoration: none; line-height: 20px}
+.bar2 {  font-size: 12px; color: #000000; text-decoration: none}
+a.bar2:link {  color: #000000; text-decoration: none}
+a.bar2:hover {  color: #FF0000; text-decoration: none}
+.text2 {  font-size: 12px; color: #003399; text-decoration: none}
+a.text2:link {  color: #003399; text-decoration: none}
+a.text2:hover {  color: #FF0000; text-decoration: none}
+.newstitle {  font-size: 14pt; color: #003399; text-decoration: none; font-weight: bold}
+.newscontent {  color: #003399; text-decoration: none; font-family: "ËÎÌו"}
+
+p {  line-height: 150%; text-decoration: none}
+h1 {  font-size: 150%; font-weight: bold; text-decoration: none}
+h2 {  font-size: 14.8px; font-weight:bold; text-decoration: none}
+h3 {  font-size: 10pt; font-weight:bold; text-decoration: none}
+.h2 {  font-size: 14.8px; font-weight:bold; text-decoration: none}
+.h3 {  font-size: 10pt; font-weight:bold; text-decoration: none}
+.input1 {background-color:#CCCCCC; font-size: 12px; text-decoration: none}
+
+A.title_e:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.title_e:visited {
+	COLOR: #efefef; TEXT-DECORATION: none
+}
+A.title_e:hover {
+	COLOR: #efefef; TEXT-DECORATION: none
+}
+A.title_e:active {
+	COLOR: #efefef; TEXT-DECORATION: none
+}
+

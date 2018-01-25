@@ -75,11 +75,11 @@
             </tr>
         </table>
     </div>
-    <div style="background-color: white;height: 400px;margin-top: 30px">
-        <table border="0px" width="100%" height="100%">
+    <div style="background-color: white;height: 410px;margin-top: 30px">
+        <table width="100%" height="100%">
             <tr height="10%"><td>常见问题</td></tr>
             <tr><td style="border-top: 1px dashed rgb(222,222,222);font-size: 8px;">
-                <ul>
+                <ul style="margin-top: 10px">
                     <li><a href="javascript:void(0);">账户贵金属最小交易数量是多少？</a></li><p></p>
                     <li><a href="javascript:void(0);">账户贵金属最小交易数量是多少？</a></li><p></p>
                     <li><a href="javascript:void(0);">什么是账户贵金属?</a></li><p></p>

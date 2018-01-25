@@ -43,11 +43,11 @@ public class IndexAction {
 
     @RequestMapping("/PBL200203")
     public String huiShengHuo() {
-        //业务逻辑
+        //惠生活
         return "PBL200203";
     }
 
-    @RequestMapping("/PBL201804")
+    @RequestMapping("/PBL201805")
     public String myAccount(HttpServletRequest request, HttpSession session, Model model, HttpServletResponse response) {
         //业务逻辑
 
@@ -96,6 +96,11 @@ public class IndexAction {
 
         return "myaccount";
     }
+    @RequestMapping("/PBL200204")
+    public String allProducts(){
+        //全部
+        System.out.println("0204");
+        return "PBL200204";    }
 
 
 }
