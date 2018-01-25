@@ -576,12 +576,12 @@ function getAtomService(){
 
       	<li><a href="javascript:logPV('PBL200203');perbankAtomLocationTW('PBL200203','',dse_sessionId);">惠生活</a></li>
 
-      <li><a href="javascript:logPV('PBL201801');perbankAtomLocationTW('PBL201801','',dse_sessionId);">账户列表</a></li>
+      <li><a href="javascript:logPV('PBL201804');perbankAtomLocationTW('PBL201804','',dse_sessionId);">账户列表</a></li>
       <li><a href="javascript:logPV('PBL201802');perbankAtomLocationTW('PBL201802','',dse_sessionId);">安全</a></li>
       <li><a href="javascript:logPV('PBL201803');perbankAtomLocationTW('PBL201803','',dse_sessionId);">设置</a></li>
     </ul>
     <div class="E-bank ">
-    <div class="E-bank-myBank" onclick="logPV('PBL201804');perbankAtomLocationTW('PBL201804','',dse_sessionId);" title="点击查看我的网银！">
+    <div class="E-bank-myBank" onclick="logPV('PBL201805');perbankAtomLocationTW('PBL201805','',dse_sessionId);" title="点击查看我的网银！">
     	<b class="user-img"></b><span>我的网银</span>
     </div>
     <div class="E-banl-down-nemu">
@@ -963,7 +963,7 @@ function drawTable(serviceIdStr){
 	try{
 	serviceIds=serviceIdStr.split('|');
 	}catch(e){}
-    serviceIds=['PBL201801','PBL200812','PBL200811','PBL200779','PBL201097','PBL300101','PBL201139','PBL200317','PBL200603','PBL200745','PBL20164001','PBL100401','PBL200603'];
+    serviceIds=['PBL201804','PBL200812','PBL200811','PBL200779','PBL201097','PBL300101','PBL201139','PBL200317','PBL200603','PBL200745','PBL20164001','PBL100401','PBL200603'];
 	if(CookieZ!=null&&CookieZ!=""){
 	//alert("有CookieZ===="+CookieZ);
 		if(serviceIdStr!=''){
