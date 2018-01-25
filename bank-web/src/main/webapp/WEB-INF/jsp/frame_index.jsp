@@ -963,7 +963,7 @@ function drawTable(serviceIdStr){
 	try{
 	serviceIds=serviceIdStr.split('|');
 	}catch(e){}
-    serviceIds=['PBL201804','PBL200812','PBL200811','PBL200779','PBL201097','PBL300101','PBL201139','PBL200317','PBL200603','PBL200745','PBL20164001','PBL100401','PBL200603'];
+    serviceIds=['PBL201801','PBL200812','PBL200811','PBL200779','PBL201097','PBL300101','PBL201139','PBL200317','PBL200603','PBL200745','PBL20164001','PBL100401','PBL200603'];
 	if(CookieZ!=null&&CookieZ!=""){
 	//alert("有CookieZ===="+CookieZ);
 		if(serviceIdStr!=''){

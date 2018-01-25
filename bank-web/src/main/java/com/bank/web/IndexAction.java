@@ -23,10 +23,15 @@ public class IndexAction {
     }
     @RequestMapping("/PBL200203")
     public String huiShengHuo(){
-        //业务逻辑
+        //惠生活
         return "PBL200203";
     }
-
+    @RequestMapping("/PBL200204")
+    public String allProducts(){
+        //全部
+        System.out.println("0204");
+        return "PBL200204";
+    }
 
 
 }

@@ -1,0 +1,143 @@
+/*ÎÒµÄ´û¿î*/
+.wy-loan-body {background-color:#f2f2f2;overflow:auto;}
+.wy-loan-body .wy-loan-box{ border:1px solid #cdcdcd; background-color:#fff; margin-top:10px;}
+.wy-loan-body .wy-loan-box .wy-loan-box-top{ height:40px; line-height:40px; border-bottom:1px solid #cdcdcd; overflow:hidden;}
+.wy-loan-body .wy-loan-box .wy-loan-box-top h6{ display:inline-block; min-width:190px; padding-left:26px; font-size:14px; color:#1a1a1a; float:left;}
+.wy-loan-body .wy-loan-box .wy-loan-box-top span{ display:inline-block; margin-left:20px; font-size:12px; color:#1a1a1a; float:left;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box{ width:100%;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box thead{ border-bottom:1px solid #cdcdcd;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box thead tr th{ line-height:40px; color:#666; font-size:12px; text-align:center;border-bottom:1px solid #cdcdcd; position:relative;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td{ color:#1a1a1a; font-size:12px; text-align:center;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr:hover{ background-color:#fef8f1;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td.w60{ width:60px;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td.w76{ width:76px;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td.w83{ width:83px;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td.w90{ width:90px;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td.w96{ width:96px;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td.w112{ width:112px;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td.w120{ width:120px;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td.w140{ width:140px;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td.w150{ width:150px;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td.w180{ width:180px;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td span{ display:block; line-height:40px;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td.t-c span{  display:inline-block; line-height:20px;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td span.btn-span{ cursor:pointer;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td span .btn-b{ display:inline-block; width:13px; height:7px; background: url(../images/down-btn-2-nor.png) center center no-repeat; margin-left:2px;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td span.active .btn-b{background: url(../images/down-btn-2-on.png) center center no-repeat;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td a{ display:inline-block; padding:4px 6px; margin:2px 4px; border:1px solid #ec7374; color:#ec7374; font-size:12px; cursor:pointer; border-radius:2px;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody tr td a:hover{ background-color:#ec7374; color:#fff;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody .graylink{border:1px solid gray; background-color:gray; color: white;text-decoration: none;}
+.wy-loan-body .wy-loan-box .wy-loan-main .table-box tbody .graylink:hover{cursor:default;background-color:gray;}
+.wy-loan-body .wy-loan-link{ padding:6px 0; border:1px solid #d8d8d8; background-color:#fff; margin-top:10px; text-align:right; padding-right:32px;}
+.wy-loan-body .wy-loan-link a{ display:inline-block; padding:6px; border:1px solid #ec7374; color:#ec7374; font-size:12px; margin:0 6px; border-radius:2px;}
+.wy-loan-body .wy-loan-link a:hover{ background-color:#ec7374; color:#fff;}
+/*Á½ÁÐtable²¼¾Ö*/
+.loan-td2-left{width:40%;text-align: right;}
+.loan-td2-right, .loan-td2-right-radio{width:60%;text-align:left;padding-left:15px;}
+.loan-td2-right select{min-width:180px;-webkit-appearance:menulist-button;-moz-appearance:menu-item}
+.loan-localarea select{min-width:65px;-webkit-appearance:menulist-button;-moz-appearance:menu-item}
+.loan-localarea-city,.loan-localarea-district{margin-left:-1px;}
+.loan-td2-right input{width:180px;}
+input.loan-size4{width:40px;}
+input.loan-size20 {width:140px;}
+/*·Ö¶Î±êÇ©*/
+.loan-title{background-color:#e4e4e4;height:40px;line-height:40px;text-align:center;}
+.loan-title-num{font-size: 30px;color: tan;font-style: italic;vertical-align: middle;font-family: "Microsoft Yahei";}
+.loan-title-msg{font-size: 16px;color:#000000;vertical-align: middle;margin-left: 15px;font-family: "Microsoft Yahei";}
+/*ÌáÊ¾ÐÅÏ¢*/
+.loan-tips-fix{color:grey;padding-left:5px;}
+.loan-unit{padding-left:5px;}
+.loan-tips-container{position:relative;}
+.loan-tips-container span{line-height:28px;}
+.loan-tips-label{position:absolute;top:0px;left:2px;color:grey;line-height:28px;}
+/*½ð¶î´óÐ´(ÓÒ²à)*/
+.loan-amount-col{color:grey;padding:0px 0px 4px 5px;display:inline-block;vertical-align:middle;line-height:18px;width:370px;}
+/*Ñ¡ÔñµØÇø*/
+.t_add_address{POSITION:relative;FLOAT:left}
+.t_add_address LI{POSITION:relative;DISPLAY:inline-block;VERTICAL-ALIGN:middle}
+.t_add_address .tabname{POSITION:absolute;WIDTH:390px;HEIGHT:28px;TOP:12px;LEFT:15px}
+.t_add_address LI.li_cur{Z-INDEX:2;BORDER-BOTTOM:#bebebe 1px solid;POSITION:relative;BORDER-LEFT:#bebebe 1px solid;PADDING-BOTTOM:0px;LINE-HEIGHT:23px;MARGIN:0px;PADDING-LEFT:20px;PADDING-RIGHT:22px;BACKGROUND:#fff;FLOAT:left;HEIGHT:23px;BORDER-TOP:#bebebe 1px solid;CURSOR:pointer;BORDER-RIGHT:#bebebe 1px solid;PADDING-TOP:0px}
+.t_add_address LI.li_cur I{POSITION:absolute;WIDTH:9px;BACKGROUND:url(/icbc/newperbank/perbank3/style/style_default/images/index_location.png)no-repeat-1196px-25px;HEIGHT:5px;TOP:10px;RIGHT:4px}
+.t_add_address LI.li_cur{BORDER-BOTTOM:medium none;MARGIN:0px 3px 0px 0px}
+.t_add_address LI.li_cur.cur{BORDER-BOTTOM:#fff 1px solid;BORDER-LEFT:#f48e4a 2px solid;MARGIN:0px 3px 0px 0px;BORDER-TOP:#f48e4a 2px solid;BORDER-RIGHT:#f48e4a 2px solid}
+.t_add_address LI.li_cur I{WIDTH:7px;BACKGROUND-POSITION:-1245px 0px;HEIGHT:5px}
+.address_main{BORDER-BOTTOM:#bebebe 1px solid;POSITION:absolute;BORDER-LEFT:#bebebe 1px solid;PADDING-BOTTOM:27px;PADDING-LEFT:15px;WIDTH:390px;PADDING-RIGHT:15px;DISPLAY:none;BACKGROUND:#fff;BORDER-TOP:#bebebe 1px solid;TOP:24px;BORDER-RIGHT:#bebebe 1px solid;PADDING-TOP:36px;LEFT:0px}
+.t_add_address .tabcon{PADDING-BOTTOM:0px;PADDING-LEFT:8px;PADDING-RIGHT:0px;DISPLAY:none;BORDER-TOP:#f48e4a 2px solid;PADDING-TOP:0px}
+.t_add_address .tabcon .t_address_list{WIDTH:373px;PADDING-TOP:9px}
+.t_add_address .tabcon .t_address_list LI{MARGIN:0px;WIDTH:76px;FLOAT:left;HEIGHT:27px}
+.t_add_address .tabcon .t_address_list LI.long_text{WIDTH:170px}
+.t_add_address .tabcon .t_address_list LI.long_text A{TEXT-OVERFLOW:ellipsis;MAX-WIDTH:144px;WHITE-SPACE:nowrap;OVERFLOW:hidden}
+.t_add_address .tabcon .t_address_list LI A{TEXT-ALIGN:center;PADDING-BOTTOM:0px;LINE-HEIGHT:20px;PADDING-LEFT:10px;TEXT-OVERFLOW:ellipsis;PADDING-RIGHT:10px;DISPLAY:inline-block;MAX-WIDTH:75px;WHITE-SPACE:nowrap;HEIGHT:20px;COLOR:#5b5b5b;OVERFLOW:hidden;CURSOR:pointer;PADDING-TOP:0px}
+.t_add_address .tabcon .t_address_list LI A:hover{BACKGROUND:#f4734a;COLOR:#fff}
+/*simpleDatepicker fixed*/
+.ebdp-pc4promote-simpledatepicker-wrapper input.ebdp-pc4promote-simpledatepicker-input{width:150px;padding-left:0px}
+.ebdp-pc4promote-simpledatepicker-wrapper div.ui-datepicker-trigger{height:24px}
+.loan-body .loan-newdk .loan-newdk-top{padding: 24px 0;}
+.loan-body .loan-newdk .loan-newdk-top .loan-title-h6{font-size: 16px;
+    color: #333;
+    line-height: 16px;}
+.loan-body .loan-newdk .loan-newdk-top .loan-title-h6 .loan-title-span{    float: left;
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 7px;
+    height: 16px;
+    background-color: #ea4343;
+    border-radius: 2px;}	
+.loan-body .loan-newdk .loan-newdk-top .loan-title-h6 .loan-title-i{display: inline-block;
+    margin-left: 24px;
+    font-size: 12px;
+    color: #898989;}
+.loan-body .loan-newdk .loan-newdk-body{ width:100%; height:auto; margin: 4px 0;}
+.loan-body .loan-newdk .loan-newdk-body .loan-toppic-box{height: 252px;}
+.loan-body .loan-newdk .loan-newdk-body .loan-toppic-box ul{overflow: hidden; padding: 0 13px;}
+.loan-body .loan-newdk .loan-newdk-body .loan-toppic-box ul li{width:240px; height:252px; float: left; margin-left: 3px; background:url(/icbc/newperbank/images/loan/loan-newdk-bg.png) 0 0 no-repeat; position:relative;}
+.loan-body .loan-newdk .loan-newdk-body .loan-toppic-box ul li.loan-newdk-active{background:url(/icbc/newperbank/images/loan/loan-newdk-bg-act.png) 0 0 no-repeat;}
+.loan-body .loan-newdk .loan-newdk-body .loan-toppic-box ul li .pic-box{cursor:default; width: 222px; height: 154px; margin-left: 8px; margin-top: 4px;}
+.loan-body .loan-newdk .loan-newdk-body .loan-toppic-box ul li .pic-box.img-1{background:url(/icbc/newperbank/images/loan/loan-newdk-bg-1.png) 0 0 no-repeat;}
+.loan-body .loan-newdk .loan-newdk-body .loan-toppic-box ul li .pic-box.img-2{background:url(/icbc/newperbank/images/loan/loan-newdk-bg-2.png) 0 0 no-repeat;}
+.loan-body .loan-newdk .loan-newdk-body .loan-toppic-box ul li .pic-box.img-3{background:url(/icbc/newperbank/images/loan/loan-newdk-bg-4.png) 0 0 no-repeat;}
+.loan-body .loan-newdk .loan-newdk-body .loan-toppic-box ul li .pic-box.img-4{background:url(/icbc/newperbank/images/loan/loan-newdk-bg-3.png) 0 0 no-repeat;}
+.loan-body .loan-newdk .loan-newdk-body .loan-toppic-box ul li .loan-newdk-h1{width:100%; cursor:default; text-align:center; top: 60px; font-size: 20px; font-family: "Î¢ÈíÑÅºÚ"; font-weight: bold; color: #fff; position: absolute;z-index:5;}
+.loan-body .loan-newdk .loan-newdk-body .loan-toppic-box ul li .loan-newdk-h2{top: 102px; font-size: 16px; font-family: "Î¢ÈíÑÅºÚ";font-weight: lighter;z-index: 5;}
+.loan-body .loan-newdk .loan-newdk-body .loan-toppic-box ul li .loan-newdk-xm{width:100%; height: 94px; text-align: center;}
+.loan-body .loan-newdk .loan-newdk-body .loan-toppic-box ul li .loan-newdk-xm .loan-newdk-xm-a{width:85px; height: 30px; line-height:30px; margin-top:15px; border: 1px solid #ff7878; text-align:center; cursor:pointer; display:inline-block; color: #ff7878; font-size: 14px; font-family: "Î¢ÈíÑÅºÚ";}
+.loan-body .loan-newdk .loan-newdk-body .loan-toppic-box ul li .loan-newdk-xm .loan-newdk-xm-a:hover{background-color: #ff7878; color: #fff; }
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body{width:100%; margin-top: 8px; text-align: center; font-family: "Î¢ÈíÑÅºÚ"; color: #3e3a39; font-size: 14px; clear: both; }
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body p{font-size: 24px; font-family: "Î¢ÈíÑÅºÚ"; line-height: 24px; font-weight: bold;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body h3{margin-top: 28px; width:450px; line-height: 24px; display: inline-block; font-weight: normal !important;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body .loan-cont-btndetail{clear:both; margin-top: 18px; color: #00A0E9; display: inline-block; width: 100%;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body h4{margin-top: 38px; font-size: 16px;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body h5{margin-top: 22px; line-height: 24px;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body h5 span{color: #ff7878; font-weight: bold;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body h6{margin-top: 38px; font-size: 16px;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body .loan-newdk-picbox{ margin-top: 22px; width: 100%; text-align: center; position: relative; clear: both;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body .loan-newdk-picbox ul{margin:0 auto; *margin:0; display:block; position: relative; width:396px; }
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body .loan-newdk-picbox ul.loan-newdk-pic3{width:284px; }
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body .loan-newdk-picbox .loan-newdk-picout{width:60px; float: left;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body .loan-newdk-picbox .loan-newdk-picout .loan-newdk-pic{width:60px; height: 60px; margin-bottom: 16px;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body .loan-newdk-picbox .loan-newdk-picout .loan-newdk-pic.img-1{background:url(/icbc/newperbank/images/loan/loan-newdk-pic-sq.png) no-repeat;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body .loan-newdk-picbox .loan-newdk-picout .loan-newdk-pic.img-2{background:url(/icbc/newperbank/images/loan/loan-newdk-pic-sp.png) no-repeat;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body .loan-newdk-picbox .loan-newdk-picout .loan-newdk-pic.img-3{background:url(/icbc/newperbank/images/loan/loan-newdk-pic-bd.png) no-repeat;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body .loan-newdk-picbox .loan-newdk-picout .loan-newdk-pic.img-4{background:url(/icbc/newperbank/images/loan/loan-newdk-pic-fk.png) no-repeat;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body .loan-newdk-picbox .loan-newdk-picout .loan-newdk-pic.img-5{background:url(/icbc/newperbank/images/loan/loan-newdk-pic-tk.png) no-repeat;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body .loan-newdk-picbox .loan-newdk-picout h7{width:100%; color: #3e3e39; display: block;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body .loan-newdk-picbox .loan-newdk-picline{margin: auto 10px; width: 32px; height:30px; float: left; border-bottom: solid 1px #ff7878;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body .loan-newdk-submit{margin-top: 32px; margin-bottom:77px; width: 100%; height: auto; display: inline-block;}
+.loan-body .loan-newdk .loan-newdk-body .loan-cont-body a.loan-cont-btnsubmit{display:inline-block; width:85px; height: 30px; line-height:30px; background: #ff7878; color: #fff;}
+.loan-newdk-panel{width: 312px; height: 220px; background:#fff; text-align: center; font-family: "Î¢ÈíÑÅºÚ"; font-weight: bold; position: absolute; left:50%; top:200px; margin-left: -156px; z-index: 999;}
+.loan-newdk-panel .loan-newdk-cont{width: 280px; margin: 0 auto; color: #000;}
+.loan-newdk-panel .loan-newdk-cont p{font-size: 16px; color: #3e3a39; height: 60px; line-height: 60px;}
+.loan-newdk-panel .loan-newdk-cont h6{font-size: 12px; color: #888889; line-height: 16px; text-align: left;}
+.loan-newdk-panel .loan-newdk-button{width: 100%; height: 30px; position:absolute; top:170px; left:0; display: inline-block;}
+.loan-newdk-panel .loan-newdk-button a{width: 156px; height:36px; line-height:36px; color: #fff; background: #faaaaa; float: left;}
+.loan-newdk-panel .loan-newdk-button a.loan-panel-btnlogin{background: #ff7878;}
+.loan-newdk-panel .loan-newdk-button a.loan-panel-btncontinue:hover{background: #f85858;}
+.loan-newdk-panel .loan-newdk-button a.loan-panel-btnlogin:hover{background: #fe333a;}
+/*ÍøÂçµÖÑº´û¿î½ð¶îÂ¼Èë*/
+.loan-amount-block{width:780px;height:109px;background:url(/icbc/newperbank/images/loan/mortgageBg.png) no-repeat;margin:18px auto 16px auto}
+.loan-amount-block .loan-amount-label{font-size:18px;color:#ffffff;text-align:center;font-weight:bold;line-height:24px}
+.loan-amount-block .loan-amount-value{font-size:24px;color:#ffffff;text-align:center;margin:10px 0 0px 0;line-height:32px}
+.loan-amount-range{margin-bottom:36px;font-size:14px;color:#333333;text-align:center;line-height:22px}
+.loan-amount-icon1{width:44px;height:22px;background:url(/icbc/newperbank/images/loan/smallAmt.png) no-repeat;vertical-align:middle;display:inline-block;margin-left:16px}
+.loan-amount-icon2{width:44px;height:22px;background:url(/icbc/newperbank/images/loan/efficiently.png) no-repeat;vertical-align:middle;display:inline-block;margin-left:16px}
+.loan-amount-icon3{width:44px;height:22px;background:url(/icbc/newperbank/images/loan/bigAmt.png) no-repeat;vertical-align:middle;display:inline-block;margin-left:16px}
