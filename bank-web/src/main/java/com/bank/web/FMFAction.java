@@ -104,7 +104,7 @@ public class FMFAction {
     public List<MetalPoxyPs> findMetalPoxyList(){
         List<MetalPoxyPs> list = fmfService.findMetalPoxyList();
         for (MetalPoxyPs metalPoxyPs:list) {
-            metalPoxyPs.setBuy("<a href='${pageContext.request.contextPath}/login/login.jsp'><img alt='购买' src='http://120.79.90.102:81/images/goumai.jpg'> </a>");
+            metalPoxyPs.setBuy("<a href='http://localhost:8080/moneybank/login/login.jsp'><img alt='购买' src='http://120.79.90.102:81/images/goumai.jpg'> </a>");
             Double flu = metalPoxyPs.getFluctuation();
             Integer status = metalPoxyPs.getMetalStatus();
             metalPoxyPs.setFluctuationShow(flu+"%");
@@ -118,5 +118,17 @@ public class FMFAction {
         }
         return list;
     }
+
+    //将理财衔接进指定区域的操作@@@@@@@@@@@@
+    @RequestMapping("/PBL201139")
+    public String financingIndex(){
+
+        return "PBL201139";
+    }
+
+    /*@RequestMapping(value = "/financing_login")
+    public String comeToLogin() {
+        return "";
+    }*/
 
 }
