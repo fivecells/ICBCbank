@@ -89,7 +89,9 @@
         </div>
         <div align="right" style="margin-top: 25px;"><a>忘记密码?</a></div>
 
-        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="checkAccount()" style="margin-top: 15px">登录</button>
+        <button id="loginButton" class="btn btn-lg btn-primary btn-block" type="button" onclick="checkAccount()" style="margin-top: 15px">登录</button>
+
+        <div id="returnResult" style="color:red; font-size: 15px; margin-top: 15px; margin-left: 90px"></div>
     </form>
 
 </div>
@@ -99,7 +101,9 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="${pageContext.request.contextPath}/js/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 <script>
+
     function checkAccount() {
+        $("#returnResult").text("");
         var name = $('#inputUserName').val();
         console.log(name);
         $.ajax({
@@ -113,12 +117,12 @@
                     location.href="${pageContext.request.contextPath}/";
                     // return true;
                 } else {
-                    alert('1');
+                        $("#returnResult").text("登录失败");
                     // return false;
                 }
             },
             error: function () {
-                alert("登录失败");
+                $("#returnResult").text("登录失败");
             }
         });
     }

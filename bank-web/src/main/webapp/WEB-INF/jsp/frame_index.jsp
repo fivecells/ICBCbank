@@ -508,7 +508,10 @@ function getAtomService(){
 	</c:if>
 		<c:if test="${!empty dse_sessionId}">
 			<li class="user-Login-li">
-			<a  class="icon-4">欢迎您${user.userName}</a>
+			<a  class="icon-4">欢迎您, ${user.userName}</a>
+			</li>
+			<li class="user-Login-li">
+				<a  class="icon-5" href="javascript:logOut()"> 退出登录</a>
 			</li>
 		</c:if>
 	<c:if test="${empty dse_sessionId}">
@@ -6302,7 +6305,22 @@ $(function(){
 	   		placeholder: "${pageContext.request.contextPath}/icbc/newperbank/perbank3/css/frame/images/loadering.gif"
 	});
 })
+
+
+
 </script>
+<script type="text/javascript"  charset="GB2312">
+	//登出操作
+	function logOut() {
+		var f = confirm("您确定要退出吗?");
+
+		if (f){
+			location.href = "${pageContext.request.contextPath}/logout";
+		}
+    }
+
+</script>
+
 </body>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 

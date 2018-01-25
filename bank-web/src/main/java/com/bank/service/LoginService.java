@@ -17,7 +17,11 @@ public class LoginService {
             UserinfoExample userinfoExample = new UserinfoExample();
             userinfoExample.createCriteria().andUserNameEqualTo(user.getUserName()).andUserPwdEqualTo(user.getUserPwd());
             List<Userinfo> userList = userinfoMapper.selectByExample(userinfoExample);
-            return userList.get(0);
+            if (userList!=null && !userList.isEmpty()){
+                return userList.get(0);
+            }else {
+                return null;
+            }
         }
         return null;
     }
