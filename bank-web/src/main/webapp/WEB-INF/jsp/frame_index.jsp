@@ -1996,8 +1996,8 @@ function xh1(arr,a){
 	//如果登录成功后显示个人主页
     window.onload=function(){
         if(dse_sessionId){
-            logPV('PBL201804');
-            perbankAtomLocationTW('PBL201804','',dse_sessionId);
+            logPV('PBL201805');
+            perbankAtomLocationTW('PBL201805','',dse_sessionId);
 		}
 
 	}
