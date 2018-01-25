@@ -27,95 +27,98 @@
                 <li>交易明细</li>
             </ul>
             <div class="layui-tab-content">
-                <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
-                    <ul class="layui-tab-title">
-                        <li class="layui-this">单笔汇款</li>
-                        <li>注册帐号转账</li>
-                        <li>批量汇款</li>
-                    </ul>
-                    <div class="layui-tab-content">
-                        <div class="layui-tab-item layui-show">
-                            <form id="transfer" class="layui-form" action="${pageContext.request.contextPath}/transfer">
-                                <div class="layui-form-item">
-                                    <label class="layui-form-label">收款姓名：</label>
-                                    <div class="layui-input-block">
-                                        <input type="text" name="acceptName" required lay-verify="required"
-                                               placeholder="请输入标题"
-                                               autocomplete="off" class="layui-input">
+                <div class="layui-tab-item layui-show">
+                    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this">单笔汇款</li>
+                            <li>注册帐号转账</li>
+                            <li>批量汇款</li>
+                        </ul>
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">
+                                <form id="transfer" class="layui-form" action="${pageContext.request.contextPath}/transfer">
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">收款姓名：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="acceptName" required lay-verify="required"
+                                                   placeholder="请输入标题"
+                                                   autocomplete="off" class="layui-input">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="layui-form-item">
-                                    <label class="layui-form-label">收款卡号：</label>
-                                    <div class="layui-input-block">
-                                        <input type="text" name="acceptAccount" required lay-verify="required"
-                                               placeholder="请输入卡号"
-                                               autocomplete="off" class="layui-input">
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">收款卡号：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="acceptAccount" required lay-verify="required"
+                                                   placeholder="请输入卡号"
+                                                   autocomplete="off" class="layui-input">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="layui-form-item">
-                                    <label class="layui-form-label">收款银行：</label>
-                                    <div class="layui-input-block">
-                                        <select name="acceptBank" lay-verify="required">
-                                            <option value="">请选择</option>
-                                            <option value="0">工商银行</option>
-                                            <option value="1">建设银行</option>
-                                            <option value="2">商业银行</option>
-                                            <option value="3">农业银行</option>
-                                            <option value="4">杭州银行</option>
-                                        </select>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">收款银行：</label>
+                                        <div class="layui-input-block">
+                                            <select name="acceptBank" lay-verify="required">
+                                                <option value="">请选择</option>
+                                                <option value="0">工商银行</option>
+                                                <option value="1">建设银行</option>
+                                                <option value="2">商业银行</option>
+                                                <option value="3">农业银行</option>
+                                                <option value="4">杭州银行</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="layui-form-item">
-                                    <label class="layui-form-label">币种：</label>
-                                    <div class="layui-input-block">
-                                        <select name="city" lay-verify="required">
-                                            <option value="0">人民币</option>
-                                            <option value="1">美元</option>
-                                            <option value="2">欧元</option>
-                                            <option value="3">英镑</option>
-                                        </select>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">币种：</label>
+                                        <div class="layui-input-block">
+                                            <select name="city" lay-verify="required">
+                                                <option value="0">人民币</option>
+                                                <option value="1">美元</option>
+                                                <option value="2">欧元</option>
+                                                <option value="3">英镑</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="layui-form-item">
-                                    <label class="layui-form-label">汇款金额：</label>
-                                    <div class="layui-input-block">
-                                        <input type="text" name="money" required lay-verify="required"
-                                               placeholder="请输入金额"
-                                               autocomplete="off" class="layui-input">
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">汇款金额：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="money" required lay-verify="required"
+                                                   placeholder="请输入金额"
+                                                   autocomplete="off" class="layui-input">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="layui-form-item">
-                                    <label class="layui-form-label">汇款时间：</label>
-                                    <div class="layui-input-block">
-                                        <select name="city" lay-verify="required">
-                                            <option value="1">实时汇款</option>
-                                            <option value="2">普通汇款</option>
-                                            <option value="3">次日汇款</option>
-                                        </select>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">汇款时间：</label>
+                                        <div class="layui-input-block">
+                                            <select name="city" lay-verify="required">
+                                                <option value="1">实时汇款</option>
+                                                <option value="2">普通汇款</option>
+                                                <option value="3">次日汇款</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="layui-form-item">
-                                    <label class="layui-form-label">付款卡号：</label>
-                                    <div class="layui-input-block">
-                                        <select name="payAccount" lay-verify="required">
-                                            <c:forEach items="${payList}" var="cardnum">
-                                            <option value="1">${cardnum}</option>
-                                            </c:forEach>
-                                        </select>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">付款卡号：</label>
+                                        <div class="layui-input-block">
+                                            <select name="payAccount" lay-verify="required">
+                                                <c:forEach items="${payList}" var="cardnum">
+                                                    <option value="${cardnum}">${cardnum}</option>
+                                                </c:forEach>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="layui-form-item">
-                                    <div class="layui-input-block">
-                                        <button class="layui-btn" lay-submit lay-filter="formDemo">确定汇款</button>
-                                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                            <button class="layui-btn" lay-submit lay-filter="formDemo">确定汇款</button>
+                                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                        </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
+                            <div class="layui-tab-item">内容2</div>
+                            <div class="layui-tab-item">内容3</div>
                         </div>
-                        <div class="layui-tab-item">内容2</div>
-                        <div class="layui-tab-item">内容3</div>
                     </div>
                 </div>
+                <div class="layui-tab-item">aaaa</div>
             </div>
         </div>
     </div>
@@ -139,8 +142,7 @@
     });
 </script>
 <script>
-    $(function(){
-        alert("aaa");
+   /* $(function(){
         $.ajax({
             url: "${pageContext.request.contextPath}/getPayAccount",
             data: {"userId":${user.userId}},
@@ -149,7 +151,7 @@
 
             }
         });
-    });
+    });*/
 </script>
 </body>
 </html>
