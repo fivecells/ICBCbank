@@ -9,8 +9,34 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/layui/css/layui.css">
 </head>
 <body>
-<div class="layui-container" style="background-color: #0C0C0C">sss</div>aa
+<div class="layui-container">
+    <div class="layui-row" style="text-align: center">
+        <h1><font color="red"><b>交易成功</b></font></h1>
+    </div>
+    <div class="layui-row">
+        <table lay-skin="line" lay-size="lg" class="layui-table">
+            <colgroup>
+                <col width="150">
+                <col width="200">
+                <col>
+            </colgroup>
+            <caption>订单信息</caption>
+            <tbody>
+            <tr>
+                <td>转入账号</td>
+                <td>转出金额</td>
+            </tr>
+            <tr>
+                <td>${tf.acceptAccount}</td>
+                <td>${tf.money}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="${pageContext.request.contextPath}/layui/layui.js"></script>
 </body>
 </html>
