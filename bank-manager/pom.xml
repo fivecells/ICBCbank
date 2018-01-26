@@ -16,7 +16,6 @@
         <module>service</module>
         <module>pojo</module>
         <module>web</module>
-        <module>listener</module>
     </modules>
     <artifactId>bank-manager</artifactId>
     <dependencies>
