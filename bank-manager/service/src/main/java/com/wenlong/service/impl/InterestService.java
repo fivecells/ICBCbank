@@ -15,18 +15,18 @@ import java.util.List;
 
 @Service
 public class InterestService {
-    private  Logger logger = LoggerFactory.getLogger(this.getClass());
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     private UserCardMapper userCardDao;
     @Autowired
     private TransRecordMapper transRecordDao;
 
-    public void addInterest(Double rate) {
+    public void addInterest() {
         //得到用户总额，计算利息，增加利息，生成订单
         List<UserCard> list = userCardDao.selectByExample(null);
         for (UserCard userCard : list) {
             //计算利息
-            Double interest = userCard.getUserCardAmount()*rate;
+            Double interest = userCard.getUserCardAmount()*0.04;
             Double balance = userCard.getUserCardAmount()+interest;
 
             UserCard userCard1 = new UserCard();
