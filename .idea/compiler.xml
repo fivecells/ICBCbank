@@ -10,7 +10,6 @@
         <module name="bank-web" />
         <module name="dao" />
         <module name="interface" />
-        <module name="listener" />
         <module name="pojo" />
         <module name="service" />
         <module name="web" />
