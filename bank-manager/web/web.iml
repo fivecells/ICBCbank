@@ -31,7 +31,6 @@
     <orderEntry type="module" module-name="dao" />
     <orderEntry type="module" module-name="pojo" />
     <orderEntry type="module" module-name="interface" />
-    <orderEntry type="module" module-name="listener" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.4.3" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.4.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.4.3" level="project" />
