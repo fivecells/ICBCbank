@@ -101,6 +101,11 @@ public class IndexAction {
         //全部
         System.out.println("0204");
         return "PBL200204";    }
+    @RequestMapping("/PBL20074503")
+    public String transdetails(){
+        //全部
+        System.out.println("0204");
+        return "transdetails";    }
 
 
 }

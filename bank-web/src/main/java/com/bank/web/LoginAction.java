@@ -29,7 +29,7 @@ public class LoginAction {
                 String dse_sessionId = session.getId();
                 session.setAttribute("user", user_result);
                 session.setAttribute("dse_sessionId", dse_sessionId);
-                session.setMaxInactiveInterval(2*60);
+//                session.setMaxInactiveInterval(2*60);
                 return "1";
             } else {
                 return "0";
