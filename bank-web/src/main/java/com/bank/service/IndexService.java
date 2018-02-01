@@ -10,10 +10,7 @@ import com.bank.vo.DateAndBalance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class IndexService {
@@ -44,13 +41,17 @@ public class IndexService {
     public DateAndBalance getDateAndBalance(Integer userId) {
         TransRecordExample example = new TransRecordExample();
         example.createCriteria().andUidEqualTo(userId);
+        example.setOrderByClause("trans_date asc");
         List<TransRecord> transRecords = recordMapper.selectByExample(example);
         DateAndBalance dab = new DateAndBalance();
         dab.setUid(userId);
-        Map<Date, Double> map = new HashMap<>();
+        Map<Long, Double> map = new TreeMap<>();
         if (transRecords != null && !transRecords.isEmpty()) {
             for (TransRecord transRecord : transRecords) {
-                map.put(transRecord.getTransDate(),transRecord.getBalance());
+
+                Long date = transRecord.getTransDate().getTime();
+
+                map.put(date,transRecord.getBalance());
             }
         }
         dab.setDateAndBalance(map);
