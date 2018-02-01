@@ -6,7 +6,7 @@ import java.util.Map;
 public class DateAndBalance {
     private Integer uid;
 
-    private Map<Date,Double> dateAndBalance;
+    private Map<Long, Double> dateAndBalance;
 
     public Integer getUid() {
         return uid;
@@ -16,11 +16,11 @@ public class DateAndBalance {
         this.uid = uid;
     }
 
-    public Map<Date, Double> getDateAndBalance() {
+    public Map<Long, Double> getDateAndBalance() {
         return dateAndBalance;
     }
 
-    public void setDateAndBalance(Map<Date, Double> dateAndBalance) {
+    public void setDateAndBalance(Map<Long, Double> dateAndBalance) {
         this.dateAndBalance = dateAndBalance;
     }
 }

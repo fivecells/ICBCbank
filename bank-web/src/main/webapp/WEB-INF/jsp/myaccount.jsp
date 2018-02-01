@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="c" uri ="http://java.sun.com/jstl/core"%>
+<%@ taglib prefix="c" uri ="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -340,7 +340,7 @@
         <script src="${pageContext.request.contextPath}/js/bootstrap-tab.js"></script>
         <script src="${pageContext.request.contextPath}/icbc/newperbank/desktop/js/jquery-1.4.3.min.js?ver=2018012022"></script>
         <script src="${pageContext.request.contextPath}/js/flotr2.js"></script>
-
+<%--三张图表--%>
         <script>
             $(function () {
                 //显示日期
@@ -434,12 +434,18 @@
                         }
                     });
                 })(document.getElementById("editor-render-1"));
-
-
-
             });
 
+
             //折线图
+
+            var dForBasicTime = [];
+debugger;
+            <c:forEach items="${dateAndBalance}" var="dab" >
+            dForBasicTime.push([${dab.key},${dab.value}]);
+            </c:forEach>
+
+
             (function basic_time(container) {
 
                 var
@@ -455,17 +461,13 @@
                                         Math.sin(i / 10 + Math.random()) * 10]);
                 }*/
 
-                d1.push([new Date("2017/01/01 01:00").getTime(),1500]);
-                d1.push([new Date("2017/02/01 01:00").getTime(),8000]);
-                d1.push([new Date("2017/03/01 01:00").getTime(),3000]);
-                d1.push([new Date("2017/05/01 01:00").getTime(),1505]);
-                d1.push([new Date("2017/08/01 01:00").getTime(),3500]);
-                d1.push([new Date("2018/01/01 01:00").getTime(),1200]);
+//                d1.push([new Date("2017/01/01 01:00").getTime(),1500]);
+//                d1.push([new Date("2017/02/01 01:00").getTime(),8000]);
+//                d1.push([new Date("2017/03/01 01:00").getTime(),3000]);
+//                d1.push([new Date("2017/05/01 01:00").getTime(),1505]);
+//                d1.push([new Date("2017/08/01 01:00").getTime(),3500]);
+//                d1.push([new Date("2018/01/01 01:00").getTime(),1200]);
 
-                <%--<c:forEach items="${dateAndBalance}" var="dab" >
-                d1.push([${dab.key},${dab.value}]);
-                </c:forEach>
---%>
                 options = {
                     xaxis: {
                         mode: 'time',
@@ -501,7 +503,7 @@
                     // Return a new graph.
                     return Flotr.draw(
                         container,
-                        [d1],
+                        [dForBasicTime],
                         o
                     );
                 }
