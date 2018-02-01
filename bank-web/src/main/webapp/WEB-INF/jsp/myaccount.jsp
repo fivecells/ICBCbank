@@ -33,7 +33,7 @@
         }
 
         #editor-render-2 {
-            width: 1000px;
+            width: 940px;
             height: 350px;
             margin: 50px auto;
         }
@@ -212,7 +212,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="container" style="margin-top: 15px" id="editor-render-2"></div>
+                    <div class="container">
+                        <div style="margin-top: 15px" id="editor-render-2"></div>
+                    </div>
                 </div>
             </div>
 
@@ -440,7 +442,7 @@
             //折线图
 
             var dForBasicTime = [];
-debugger;
+//debugger;
             <c:forEach items="${dateAndBalance}" var="dab" >
             dForBasicTime.push([${dab.key},${dab.value}]);
             </c:forEach>
