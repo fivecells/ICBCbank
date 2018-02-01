@@ -1,14 +1,13 @@
 package com.bank.web;
 
 import com.bank.po.FundPer;
-import com.bank.po.MetalPoxy;
 import com.bank.service.FMFService;
+import com.bank.vo.FinancingPs;
 import com.bank.vo.FundPs;
 import com.bank.vo.MetalPoxyPs;
 import com.bank.vo.MetalPs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -126,9 +125,12 @@ public class FMFAction {
         return "PBL201139";
     }
 
-    /*@RequestMapping(value = "/financing_login")
-    public String comeToLogin() {
-        return "";
-    }*/
+    //理财产品选项卡数据展示
+    @RequestMapping(value = "/financing_list",method = RequestMethod.GET)
+    public String tabToFinancingList(HttpServletRequest request) {
+        List<FinancingPs> list = fmfService.findFinancingPsList();
+        request.setAttribute("list",list);
+        return "financing_list";
+    }
 
 }

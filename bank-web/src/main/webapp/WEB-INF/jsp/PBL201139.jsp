@@ -35,7 +35,7 @@
     </table>
 </div>
 <%--选项卡区域--%>
-<div class="col-md-9 col-xs-9" align="center" style="background-color: white;height: 840px">
+<div class="col-md-9 col-xs-9" align="center" style="background-color: white;height: 1050px">
     <div id="tab-financing"></div>
 </div>
 <%--选项卡右侧热销排行区块--%>

@@ -62,8 +62,8 @@ public class TransferService {
                     transferdetailMapper.insert(tf);
                     TransRecord payrecord = new TransRecord();
                     payrecord.setTransDate(tf.getCreatetime());
-                    payrecord.setType("转账");
-                    payrecord.setMoney(tf.getMoney());
+                    payrecord.setType("出账");
+                    payrecord.setMoney(+tf.getMoney());
                     payrecord.setCurrency("人民币");
                     payrecord.setBalance(payCard.getUserCardAmount());
                     payrecord.setOtherInfo(acceptInfo.getUserName());
@@ -73,7 +73,7 @@ public class TransferService {
                     TransRecord acceptRecord = new TransRecord();
                     acceptRecord.setTransDate(tf.getCreatetime());
                     acceptRecord.setType("入账");
-                    acceptRecord.setMoney(tf.getMoney());
+                    acceptRecord.setMoney(-tf.getMoney());
                     acceptRecord.setCurrency("人民币");
                     acceptRecord.setBalance(acceptCard.getUserCardAmount());
                     Userinfo payInfo = userinfoMapper.selectByPrimaryKey(payCard.getUserId());

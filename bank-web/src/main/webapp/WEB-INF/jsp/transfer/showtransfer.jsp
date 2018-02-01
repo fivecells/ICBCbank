@@ -4,6 +4,13 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/layui/css/layui.css">
+    <style>
+        .layui-this  {
+            background-color: rgb(227, 42, 48);
+            font-weight: normal;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
@@ -21,22 +28,24 @@
     <%--选项卡--%>
     <div class="layui-tab layui-row">
         <div class="layui-col-md8 layui-col-md-offset2">
-            <ul class="layui-tab-title">
-                <li class="layui-this">境内汇款</li>
+            <ul class="layui-tab-title" style="border-bottom-color: rgb(227,42,48);border-bottom-width:medium">
+                <li class="layui-this" >境内汇款
+                </li>
                 <li>跨境汇款</li>
                 <li>交易明细</li>
             </ul>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
                     <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
-                        <ul class="layui-tab-title">
+                        <ul class="layui-tab-title" style="border-bottom-color: rgb(227,42,48);border-bottom-width:medium">
                             <li class="layui-this">单笔汇款</li>
                             <li>注册帐号转账</li>
                             <li>批量汇款</li>
                         </ul>
                         <div class="layui-tab-content">
                             <div class="layui-tab-item layui-show">
-                                <form id="transfer" class="layui-form" action="${pageContext.request.contextPath}/transfer">
+                                <form id="transfer" class="layui-form"
+                                      action="${pageContext.request.contextPath}/transfer">
                                     <div class="layui-form-item">
                                         <label class="layui-form-label">收款姓名：</label>
                                         <div class="layui-input-block">
@@ -142,9 +151,9 @@
     });
 </script>
 <script>
-   /* $(function(){
-        $.ajax({
-            url: "${pageContext.request.contextPath}/getPayAccount",
+    /* $(function(){
+         $.ajax({
+             url: "${pageContext.request.contextPath}/getPayAccount",
             data: {"userId":${user.userId}},
             type: 'get',
             success:function(data){
