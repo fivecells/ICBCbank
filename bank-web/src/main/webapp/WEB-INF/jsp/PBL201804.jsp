@@ -20,20 +20,20 @@
 <div class="container">
     <div class="row clearfix">
         <div class="col-md-12 column">
-            <div style="padding-bottom: 50px;padding-top: 20px;"> <span class="glyphicon glyphicon-home"></span><a href="#">我的网银</a><span class="glyphicon glyphicon-chevron-right"></span><a href="#">卡包</a>
+            <div style="padding-bottom: 50px;padding-top: 20px;"> <span class="glyphicon glyphicon-home" style="color: red;"></span><a href="#">我的网银</a><span class="glyphicon glyphicon-chevron-right" style="color: red;"></span><a href="#">卡包</a>
 
                 <span style="float: right;">最近使用：<a href="#">我的网银</a>|<a href="#">卡列表</a></span>
             </div>
             <div class="tabbable" id="tabs-559762">
                 <ul class="nav nav-tabs">
                     <li class="active">
-                        <a href="#panel-01" data-toggle="tab" class="btn btn-info btn-lg"> <span class="glyphicon glyphicon-cog"></span> 卡列表</a>
+                        <a href="#panel-01" data-toggle="tab" class="btn btn-info btn-lg"  style="background-color: red; color: white;" > <span class="glyphicon glyphicon-cog"></span> 卡列表</a>
                     </li>
                     <li>
-                        <a href="#panel-02" data-toggle="tab" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-cog"></span>资产</a>
+                        <a href="#panel-02" data-toggle="tab" class="btn btn-info btn-lg"  style="background-color: red; color: white;"  ><span class="glyphicon glyphicon-cog"></span>资产</a>
                     </li>
                     <li>
-                        <a href="#panel-03" data-toggle="tab" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-cog"></span>负债</a>
+                        <a href="#panel-03" data-toggle="tab" class="btn btn-info btn-lg"  style="background-color: red; color: white;" ><span class="glyphicon glyphicon-cog"></span>负债</a>
                     </li>
                 </ul>
                 <div class="tab-content">
@@ -65,11 +65,11 @@
                             <div class="col-md-2 column">
                                 <table width="150px" height="20px" >
                                     <tr><td>
-                                        <a href=""><button>明细</button></a>
+                                        <a href="${pageContext.request.contextPath}/PBL20074503?uid=${card.userCardId}"><button style="color: red;">明细</button></a>
 
-                                    </td><td><button>缴费</button></td></tr>
-                                    <tr><td><button>汇款</button></td><td><button>理财</button></td></tr>
-                                    <tr><td><button>开户网点</button></td><td><button>更多</button></td></tr>
+                                    </td><td><button style="color: red;">缴费</button></td></tr>
+                                    <tr><td><button style="color: red;">汇款</button></td><td><button style="color: red;">理财</button></td></tr>
+                                    <tr><td><button style="color: red;">开户网点</button></td><td><button style="color: red;">更多</button></td></tr>
                                 </table>
                             </div>
                         </div>
@@ -160,7 +160,7 @@
                                         <td>人民币</td>
                                         <td>${card.userCardAmount}</td>
                                         <td>${card.userCardAmount}</td>
-                                        <td><button>更多</button> <button>更多</button></td>
+                                        <td><button style="color: red;">更多</button> <button style="color: red;">更多</button></td>
                                     </tr>
                                 </table>
                             </div>

@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <title>Title</title>
@@ -40,21 +42,18 @@
     <div class="tab-content" style="margin:25px;">
         <div role="tabpanel"  class="tab-pane active" id="home">
             <div style="margin:25px;height:100px;border-bottom-color: rgb(227,42,48);border-bottom-width:medium">
-            <form class="form-horizontal">
+            <form class="form-horizontal" action="${pageContext.request.contextPath}/myAccountdetail"  method="get" id="myform">
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">起止日期</label>
                     <div class="col-sm-10">
-                        <input type="date"  id="inputEmail3" name="startdate" >——<input type="date" name="enddate" > <button class="btn btn-default" type="button" style="background-color: rgb(255,120,120)">当日</button> <button class="btn btn-default" type="button">近一周</button> <button class="btn btn-default" type="button">近一月</button> <button class="btn btn-default" type="button">近半年</button>
+                        <input type="date"  id="inputEmail3" name="startdate" value="${detail.startdate}">——<input type="date" name="enddate" value="${detail.enddate}" > <button class="btn btn-default" type="button" style="background-color: rgb(255,120,120)">当日</button> <button class="btn btn-default" type="button">近一周</button> <button class="btn btn-default" type="button">近一月</button> <button class="btn btn-default" type="button">近半年</button>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">请选择注册账户</label>
+                    <label class="col-sm-2 control-label">账户：</label>
                     <div class="col-sm-10">
-                        <select style="width:250px;height:30px">
-                            <option>1</option>
-                            <option>2</option>
-
-                        </select>
+                        ${param.uid}
+                        <input  type="hidden" name="uid" value=" ${param.uid}">
                     </div>
                 </div>
                 <div class="form-group">
@@ -79,9 +78,33 @@
                 <div>
                     <table class="table table-hover">
                         <tr>
-                            <td>交易日期</td><td>摘要</td><td>金额</td><td>币种</td><td>余额</td><td>对方信息</td>
+                            <td>序号</td> <td>交易日期</td><td>摘要</td><td>金额</td><td>币种</td><td>余额</td><td>对方信息</td>
                         </tr>
+                        <c:forEach  items="${details}" var="detail" varStatus="vs">
+                            <tr>
+                                <td>${vs.count}</td>
+                                <td><fmt:formatDate type="date" value="${detail.transDate}"/></td>
+                                <td>${detail.type}</td>
+                                <td>${detail.money}</td>
+                                <td>${detail.currency}</td>
+                                <td>${detail.balance}</td>
+                                <td>${detail.otherInfo}</td>
+                            </tr>
+
+                        </c:forEach>
                     </table>
+                    <c:if test="${details.size()>0}">
+                    <div style="float:right; margin-top: 40px ;margin-right: 60px">  转出：${out}￥
+                    <br>
+                    转入：${in}￥
+                 </div>
+                    </c:if>
+
+                    <c:if test="${empty details}">
+                        <center>
+                            没有明细
+                        </center>
+                    </c:if>
                     <p>特别提示：</p>
                     <p>1、明细不含未达账项，即未包含商户还未上传到我行的脱机交易信息。</p>
                     <p>2、因脱机消费存在延迟入账情况，电子现金应以芯片卡内实际为准。</p>
@@ -122,6 +145,7 @@
     })
 
 </script>
+
 
 </body>
 </html>

@@ -1,12 +1,16 @@
 package com.bank.web;
 
+import com.bank.po.TransRecord;
 import com.bank.po.UserCard;
 import com.bank.po.Userinfo;
 import com.bank.service.MyAccountService;
+import com.bank.transfer.vo.TransferDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -17,6 +21,7 @@ public class MyAccountAction {
 
     @Autowired
     private MyAccountService myAccountService;
+
     @RequestMapping("/PBL201804")
     public String MyAccount(Model model, HttpServletRequest request){
       /*
@@ -42,6 +47,36 @@ public class MyAccountAction {
 
 
         return "PBL201804";
+    }
+
+    /*
+    * 账单明细
+    * */
+    @RequestMapping(value = "/myAccountdetail")
+    public String MyAccountdetail(TransferDetail detail,Model model){
+
+        System.out.println(detail);
+        List <TransRecord> finddetails = myAccountService.finddetail(detail);
+        double out =0;
+        double in=0;
+        for (TransRecord transRecord:finddetails){
+           if (transRecord.getType().equals("转账")){
+
+               out=out+transRecord.getMoney();
+
+           }else if (transRecord.getType().equals("入账")||transRecord.getType().equals("利息")){
+               in=in+transRecord.getMoney();
+
+            }
+        }
+        model.addAttribute("details",finddetails);
+        model.addAttribute("detail",detail);
+        model.addAttribute("out",out);
+        model.addAttribute("in",in);
+
+        System.out.println(finddetails);
+        return "transdetails";
+
     }
 
 }
