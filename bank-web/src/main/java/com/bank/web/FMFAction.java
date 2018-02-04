@@ -1,6 +1,7 @@
 package com.bank.web;
 
 import com.bank.po.FundPer;
+import com.bank.po.Userinfo;
 import com.bank.service.FMFService;
 import com.bank.vo.FinancingPs;
 import com.bank.vo.FundPs;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -30,7 +32,7 @@ public class FMFAction {
         return "PBL200317";
     }
 
-    //    跳转到各个选项卡的具体内容页面
+    //    跳转到基金产品选项卡的具体内容页面
     @RequestMapping(value = "/fund_list", method = RequestMethod.GET)
     public String tableListTab(){
         return "fund_list";
@@ -47,6 +49,36 @@ public class FMFAction {
             fundPs.setWatch("<img slt='热门' src='http://120.79.90.102:81/images/menu_hotp.png'>");
         }
         return list;
+    }
+    //    跳转到我的基金选项卡的具体内容页面
+    @RequestMapping(value = "/fund_my",method = RequestMethod.GET)
+    public String fundMy(HttpSession session){
+        Userinfo user = (Userinfo) session.getAttribute("user");
+        //若还未登录，显示登录窗口
+        if (user==null){
+            return "forward:login/login.jsp";
+        }
+        return "";
+    }
+    //    跳转到交易明细选项卡的具体内容页面
+    @RequestMapping(value = "/fund_trade",method = RequestMethod.GET)
+    public String fundTrade(HttpSession session){
+        Userinfo user = (Userinfo) session.getAttribute("user");
+        //若还未登录，显示登录窗口
+        if (user==null){
+            return "forward:login/login.jsp";
+        }
+        return "";
+    }
+    //    跳转到我的定投选项卡的具体内容页面
+    @RequestMapping(value = "/fund_invest",method = RequestMethod.GET)
+    public String fundInvest(HttpSession session){
+        Userinfo user = (Userinfo) session.getAttribute("user");
+        //若还未登录，显示登录窗口
+        if (user==null){
+            return "forward:login/login.jsp";
+        }
+        return "";
     }
 
     //将贵金属衔接进指定区域的操作@@@@@@@@@@@@
@@ -131,6 +163,26 @@ public class FMFAction {
         List<FinancingPs> list = fmfService.findFinancingPsList();
         request.setAttribute("list",list);
         return "financing_list";
+    }
+    //    跳转到我的理财选项卡的具体内容页面
+    @RequestMapping(value = "/financing_my",method = RequestMethod.GET)
+    public String financingMy(HttpSession session){
+        Userinfo user = (Userinfo) session.getAttribute("user");
+        //若还未登录，显示登录窗口
+        if (user==null){
+            return "forward:login/login.jsp";
+        }
+        return "";
+    }
+    //    跳转到交易明细选项卡的具体内容页面
+    @RequestMapping(value = "/financing_trade",method = RequestMethod.GET)
+    public String financingTrade(HttpSession session){
+        Userinfo user = (Userinfo) session.getAttribute("user");
+        //若还未登录，显示登录窗口
+        if (user==null){
+            return "forward:login/login.jsp";
+        }
+        return "";
     }
 
 }

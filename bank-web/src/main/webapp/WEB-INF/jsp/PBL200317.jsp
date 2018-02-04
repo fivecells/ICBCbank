@@ -73,15 +73,15 @@
         },{
             id: 'fundTab2',
             text: '我的基金',
-            url: "",
+            url: "${pageContext.request.contextPath}/fund_my",
         },{
             id: 'fundTab3',
             text: '交易明细',
-            url: "",
+            url: "${pageContext.request.contextPath}/fund_trade",
         },{
             id: 'fundTab4',
             text: '我的定投',
-            url: "",
+            url: "${pageContext.request.contextPath}/fund_invest",
         }]
     })
 </script>

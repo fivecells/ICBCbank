@@ -1,5 +1,8 @@
 <%--基金产品选项卡--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<div style="float: left;margin-top: 10px">
+    <button type="button" class="btn btn-info" onclick="findOpenFund()">点击查看免费的10条最新基金详细信息</button>
+</div>
 <table id="fundList"></table>
 <script>
     $('#fundList').bootstrapTable({
@@ -52,4 +55,9 @@
             {field: 'watch', title: '关注'}
         ]
     });
+</script>
+<script>
+    function findOpenFund() {
+        location.href = '${pageContext.request.contextPath}/findOpenFund';
+    }
 </script>

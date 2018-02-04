@@ -73,11 +73,11 @@
         },{
             id: 'financingTab2',
             text: '我的理财',
-            url: "${pageContext.request.contextPath}/financing_login",
+            url: "${pageContext.request.contextPath}/financing_my",
         },{
             id: 'financingTab3',
             text: '交易明细',
-            url: "${pageContext.request.contextPath}/financing_login",
+            url: "${pageContext.request.contextPath}/financing_trade",
         }]
     })
 </script>
