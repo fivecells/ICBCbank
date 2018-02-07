@@ -113,9 +113,7 @@
             </div>
 
         </div>
-
     </div>
-
 </div>
 <script >
     Date.prototype.format = function(fmt) {

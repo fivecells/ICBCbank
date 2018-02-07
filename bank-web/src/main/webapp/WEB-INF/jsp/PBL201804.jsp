@@ -14,26 +14,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 引入 Bootstrap -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
+    <script src="${pageContext.request.contextPath}/js/jquery-3.2.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script>
+        $(function () {
+            $('button').css({'border-color':'rgb(227,42,48)','text-align':'center','height':'25px','width':'80px','margin':'3px','color':'rgb(227,42,48)'})
+            $('img').css({'width':'220px','height':'120px'})
+        })
+    </script>
 </head>
 <body>
 <div class="container">
     <div class="row clearfix">
         <div class="col-md-12 column">
-            <div style="padding-bottom: 50px;padding-top: 20px;"> <span class="glyphicon glyphicon-home" style="color: red;"></span><a href="#">我的网银</a><span class="glyphicon glyphicon-chevron-right" style="color: red;"></span><a href="#">卡包</a>
+            <div style="padding-bottom: 50px;padding-top: 20px;"> <span class="glyphicon glyphicon-home" style="color: rgb(227,42,48);"></span><a href="#">我的网银</a><span class="glyphicon glyphicon-chevron-right" style="color: rgb(227,42,48);"></span><a href="#">卡包</a>
 
                 <span style="float: right;">最近使用：<a href="#">我的网银</a>|<a href="#">卡列表</a></span>
             </div>
             <div class="tabbable" id="tabs-559762">
-                <ul class="nav nav-tabs">
+                <ul class="nav nav-tabs" style="border-bottom-color: rgb(227,42,48);border-bottom-width:medium">
                     <li class="active">
-                        <a href="#panel-01" data-toggle="tab" class="btn btn-info btn-lg"  style="background-color: red; color: white;" > <span class="glyphicon glyphicon-cog"></span> 卡列表</a>
+                        <a href="#panel-01" data-toggle="tab" class="btn btn-info btn-lg"  style="background-color: rgb(227,42,48); color: white;" > <span class="glyphicon glyphicon-cog"></span> 卡列表</a>
                     </li>
                     <li>
-                        <a href="#panel-02" data-toggle="tab" class="btn btn-info btn-lg"  style="background-color: red; color: white;"  ><span class="glyphicon glyphicon-cog"></span>资产</a>
+                        <a href="#panel-02" data-toggle="tab" class="btn btn-info btn-lg" style="background-color: white;color: black;border-color: beige"  ><span class="glyphicon glyphicon-cog"></span>资产</a>
                     </li>
                     <li>
-                        <a href="#panel-03" data-toggle="tab" class="btn btn-info btn-lg"  style="background-color: red; color: white;" ><span class="glyphicon glyphicon-cog"></span>负债</a>
+                        <a href="#panel-03" data-toggle="tab" class="btn btn-info btn-lg" style="background-color: white;color: black;border-color: beige"  ><span class="glyphicon glyphicon-cog"></span>负债</a>
                     </li>
                 </ul>
                 <div class="tab-content">
@@ -42,12 +49,12 @@
 
                         <c:forEach items="${cards}" var="card">
                         <div  class="row clearfix" style="padding-top: 50px; color:black; margin-top: 30px;">
-                            <div class="col-md-4 column">
-                                <img alt="120x120"  src="https://i.loli.net/2018/01/24/5a685fdd30a46.jpg">
+                            <div class="col-md-4 column" >
+                                <img alt="120x120"  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517495208692&di=4ce1a34d25c8034ea6d088646a04eccc&imgtype=0&src=http%3A%2F%2Ffinance.hnr.cn%2Fyh%2F201601%2FW020160128583697160880.jpg">
 
                             </div>
-                            <div class="col-md-6 column">
-                                <table border="0" width="400px" height="80px" >
+                            <div class="col-md-5 column" style="background-color: #DBE9D2;margin: 10px">
+                                <table border="0" width="400px" height="80px"  >
                                     <tr>
                                         <td>卡号</td>
                                         <td>币种</td>
@@ -65,11 +72,11 @@
                             <div class="col-md-2 column">
                                 <table width="150px" height="20px" >
                                     <tr><td>
-                                        <a href="${pageContext.request.contextPath}/PBL20074503?uid=${card.userCardId}"><button style="color: red;">明细</button></a>
+                                        <a href="${pageContext.request.contextPath}/PBL20074503?uid=${card.userCardId}"><button class="btn btn-default">明细</button></a>
 
-                                    </td><td><button style="color: red;">缴费</button></td></tr>
-                                    <tr><td><button style="color: red;">汇款</button></td><td><button style="color: red;">理财</button></td></tr>
-                                    <tr><td><button style="color: red;">开户网点</button></td><td><button style="color: red;">更多</button></td></tr>
+                                    </td><td><button class="btn btn-default" >缴费</button></td></tr>
+                                    <tr><td><button class="btn btn-default" >汇款</button></td><td><button class="btn btn-default" >理财</button></td></tr>
+                                    <tr><td><button class="btn btn-default" >开户网点</button></td><td><button class="btn btn-default" >更多</button></td></tr>
                                 </table>
                             </div>
                         </div>
@@ -99,7 +106,7 @@
                         </div>
 
 
-                        <button><span class="glyphicon glyphicon-plus"></span>添加注册卡</button>
+                        <button class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>添加注册卡</button>
                     </div>
 
 
@@ -160,7 +167,7 @@
                                         <td>人民币</td>
                                         <td>${card.userCardAmount}</td>
                                         <td>${card.userCardAmount}</td>
-                                        <td><button style="color: red;">更多</button> <button style="color: red;">更多</button></td>
+                                        <td><button class="btn btn-default" style="color: rgb(227,42,48);">更多</button> <button class="btn btn-default" style="color: rgb(227,42,48);">更多</button></td>
                                     </tr>
                                 </table>
                             </div>
@@ -199,7 +206,7 @@
                                         <td>人民币</td>
                                         <td>${card.userCardAmount}</td>
                                         <td>${card.userCardAmount}</td>
-                                        <td><button>注册</button> </td>
+                                        <td><button class="btn btn-default">注册</button> </td>
                                     </tr>
                                 </table>
 

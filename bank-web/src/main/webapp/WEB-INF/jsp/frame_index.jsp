@@ -5796,7 +5796,7 @@ DkggWQD7PZqclCfbVho7WFutMqxxDNt5wgEpw8Cz7ssPCDk=%2B"   target="_blank"
 <script>
 
      function myload() {
-         var ifm= document.getElementById("perbank-content-frame");
+         var ifm= document.("perbank-content-frame");
          ifm.height=document.documentElement.scrollHeight;
      }
 
