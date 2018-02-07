@@ -23,6 +23,7 @@ public class InterestService {
 
     public void addInterest() {
         //得到用户总额，计算利息，增加利息，生成订单
+        System.out.println(11111);
         List<UserCard> list = userCardDao.selectByExample(null);
         for (UserCard userCard : list) {
             //计算利息
@@ -37,7 +38,7 @@ public class InterestService {
             userCardDao.updateByExampleSelective(userCard1,example);
             //生成订单
             TransRecord transRecord = new TransRecord();
-            transRecord.setMoney(interest);
+            transRecord.setMoney(+interest);
             transRecord.setBalance(balance);
             transRecord.setType("利息");
             transRecord.setTransDate(new Date());

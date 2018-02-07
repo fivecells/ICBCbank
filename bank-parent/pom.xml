@@ -8,6 +8,8 @@
         <module>../bank-common</module>
         <module>../bank-manager</module>
         <module>../bank-web</module>
+        <module>../bank-mail</module>
+        <module>manager-web</module>
     </modules>
     <groupId>com.bank</groupId>
     <artifactId>bank-parent</artifactId>
