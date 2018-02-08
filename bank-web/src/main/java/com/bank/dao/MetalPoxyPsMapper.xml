@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.bank.dao.MetalPoxyPsMapper" >
-  <select id="findMetalPoxyPsList" resultType="com.bank.vo.MetalPoxyPs">
-     select metal_name,present_price,metal_status,fluctuation,deal_number,opening_price,yesterday_price,max_price,min_price
-     from metal_poxy;
-  </select>
-</mapper>
