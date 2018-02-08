@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+        <!--真正产生connectFactory的connectFactory,由对应的jms服务商提供-->
+        <bean id="targetconnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+                <property name="brokerURL" value="tcp://47.94.130.112:61616"/>
+        </bean>
+        <!--用于spring管理真正的connectFactory的connectFactory-->
+        <bean id="connectionFactory" class="org.springframework.jms.connection.SingleConnectionFactory">
+                <property name="targetConnectionFactory" ref="targetconnectionFactory"/>
+        </bean>
+        <!--主题目标对象，一对多-->
+        <bean id="topicDestination" class="org.apache.activemq.command.ActiveMQTopic">
+                <constructor-arg value="itemAddTopic"/>
+        </bean>
+        <!--配置消费者-->
+        <!--配置监听器，将自定义的监听器配置到ioc容器中-->
+        <bean id="myMessageListener" class="com.wme.ttmall.search.listener.MyMessageListener"></bean>
+        <!--配置监听器容器-->
+        <bean  class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+              <property name="connectionFactory" ref="connectionFactory"/>
+                <property name="destination" ref="topicDestination"/>
+                <property name="messageListener" ref="myMessageListener"/>
+        </bean>
+</beans>
