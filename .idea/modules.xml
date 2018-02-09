@@ -5,11 +5,12 @@
       <module fileurl="file://$PROJECT_DIR$/bank-common/bank-common.iml" filepath="$PROJECT_DIR$/bank-common/bank-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/bank-manager/bank-manager.iml" filepath="$PROJECT_DIR$/bank-manager/bank-manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/bank-parent/bank-parent.iml" filepath="$PROJECT_DIR$/bank-parent/bank-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bank-manager/bank-service/bank-service.iml" filepath="$PROJECT_DIR$/bank-manager/bank-service/bank-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/bank-web/bank-web.iml" filepath="$PROJECT_DIR$/bank-web/bank-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/bank-manager/dao/dao.iml" filepath="$PROJECT_DIR$/bank-manager/dao/dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/bank-manager/interface/interface.iml" filepath="$PROJECT_DIR$/bank-manager/interface/interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manager-web/manager-web.iml" filepath="$PROJECT_DIR$/manager-web/manager-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/bank-manager/pojo/pojo.iml" filepath="$PROJECT_DIR$/bank-manager/pojo/pojo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bank-manager/service/service.iml" filepath="$PROJECT_DIR$/bank-manager/service/service.iml" />
       <module fileurl="file://$PROJECT_DIR$/bank-manager/web/web.iml" filepath="$PROJECT_DIR$/bank-manager/web/web.iml" />
     </modules>
   </component>
