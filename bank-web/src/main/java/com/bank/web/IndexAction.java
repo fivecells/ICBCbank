@@ -1,15 +1,16 @@
 package com.bank.web;
 
-import com.bank.po.UserCard;
-import com.bank.po.Userinfo;
-import com.bank.service.IndexService;
-import com.bank.vo.DateAndBalance;
+import com.bank.pojo.po.UserCard;
+import com.bank.pojo.po.Userinfo;
+import com.bank.service.IndexInterface;
+import com.bank.pojo.vo.DateAndBalance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,8 +21,8 @@ import java.util.Date;
 @Controller
 public class IndexAction {
 
-    @Autowired
-    private IndexService indexService;
+    @Resource
+    private IndexInterface indexService;
 
     @RequestMapping("/")
     public String indexAction() {

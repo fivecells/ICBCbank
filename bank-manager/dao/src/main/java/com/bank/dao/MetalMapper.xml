@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.bank.dao.MetalMapper" >
-  <resultMap id="BaseResultMap" type="com.bank.po.Metal" >
+  <resultMap id="BaseResultMap" type="com.bank.pojo.po.Metal" >
     <id column="metal_id" property="metalId" jdbcType="INTEGER" />
     <result column="metal_name" property="metalName" jdbcType="VARCHAR" />
     <result column="metal_status" property="metalStatus" jdbcType="INTEGER" />
@@ -75,7 +75,7 @@
     metal_id, metal_name, metal_status, buy_price, sell_price, price_avg, fluctuation, 
     flu_per_day, flu_per_year, metal_user_id
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.bank.po.MetalExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.bank.pojo.po.MetalExample" >
     select
     <if test="distinct" >
       distinct
@@ -99,13 +99,13 @@
     delete from metal
     where metal_id = #{metalId,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.bank.po.MetalExample" >
+  <delete id="deleteByExample" parameterType="com.bank.pojo.po.MetalExample" >
     delete from metal
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.bank.po.Metal" >
+  <insert id="insert" parameterType="com.bank.pojo.po.Metal" >
     insert into metal (metal_id, metal_name, metal_status, 
       buy_price, sell_price, price_avg, 
       fluctuation, flu_per_day, flu_per_year, 
@@ -115,7 +115,7 @@
       #{fluctuation,jdbcType=DOUBLE}, #{fluPerDay,jdbcType=DOUBLE}, #{fluPerYear,jdbcType=DOUBLE}, 
       #{metalUserId,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.bank.po.Metal" >
+  <insert id="insertSelective" parameterType="com.bank.pojo.po.Metal" >
     insert into metal
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="metalId != null" >
@@ -182,7 +182,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.bank.po.MetalExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.bank.pojo.po.MetalExample" resultType="java.lang.Integer" >
     select count(*) from metal
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -242,7 +242,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.bank.po.Metal" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.bank.pojo.po.Metal" >
     update metal
     <set >
       <if test="metalName != null" >
@@ -275,7 +275,7 @@
     </set>
     where metal_id = #{metalId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.bank.po.Metal" >
+  <update id="updateByPrimaryKey" parameterType="com.bank.pojo.po.Metal" >
     update metal
     set metal_name = #{metalName,jdbcType=VARCHAR},
       metal_status = #{metalStatus,jdbcType=INTEGER},

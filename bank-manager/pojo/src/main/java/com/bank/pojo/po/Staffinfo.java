@@ -1,6 +1,8 @@
-package com.wenlong.pojo.po;
+package com.bank.pojo.po;
 
-public class Staffinfo {
+import java.io.Serializable;
+
+public class Staffinfo implements Serializable{
     private Integer staffId;
 
     private String staffName;

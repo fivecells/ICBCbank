@@ -1,8 +1,8 @@
 package com.bank.dao;
 
 
-import com.bank.po.UserCard;
-import com.bank.po.UserCardExample;
+import com.bank.pojo.po.UserCard;
+import com.bank.pojo.po.UserCardExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

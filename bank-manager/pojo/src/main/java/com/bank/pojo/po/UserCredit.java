@@ -1,6 +1,8 @@
-package com.wenlong.pojo.po;
+package com.bank.pojo.po;
 
-public class UserCredit {
+import java.io.Serializable;
+
+public class UserCredit implements Serializable{
     private Integer creditId;
 
     private Long creditNumber;

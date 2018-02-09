@@ -1,8 +1,8 @@
 package com.bank.web;
 
-import com.bank.po.Transferdetail;
-import com.bank.po.Userinfo;
-import com.bank.service.TransferService;
+import com.bank.pojo.po.Transferdetail;
+import com.bank.pojo.po.Userinfo;
+import com.bank.service.TransferInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
@@ -22,8 +22,8 @@ public class TransferAction {
     private JmsTemplate jmsTemplate;
     @Resource
     private Destination topicDestination;
-    @Autowired
-    private TransferService transferService;
+    @Resource
+    private TransferInterface transferService;
     //展示转账页面
     @RequestMapping("/PBL200811")
     public String showTraPage( HttpServletRequest request) {

@@ -1,6 +1,8 @@
-package com.wenlong.pojo.po;
+package com.bank.pojo.po;
 
-public class Metal {
+import java.io.Serializable;
+
+public class Metal implements Serializable{
     private Integer metalId;
 
     private String metalName;

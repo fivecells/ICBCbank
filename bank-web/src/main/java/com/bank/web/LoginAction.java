@@ -1,29 +1,25 @@
 package com.bank.web;
 
-import com.bank.service.LoginService;
-import com.bank.po.Userinfo;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.bank.service.LoginInterface;
+import com.bank.pojo.po.Userinfo;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletResponse;
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 @Controller
 public class LoginAction {
-    @Autowired
-    private LoginService loginService;
-
+    @Resource
+    LoginInterface loginService;
     @ResponseBody
     @RequestMapping("/loginin")
     public String doLogin(Userinfo userinfo, HttpSession session) {
         Userinfo user_result = null;
         try {
+
             user_result = loginService.doLogin(userinfo);
             if (user_result != null) {
                 String dse_sessionId = session.getId();

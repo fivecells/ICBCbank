@@ -1,7 +1,7 @@
 package com.bank.web;
 
 import cn.com.webxml.ChinaOpenFundWSSoap;
-import com.bank.vo.OpenFund;
+import com.bank.pojo.vo.OpenFund;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

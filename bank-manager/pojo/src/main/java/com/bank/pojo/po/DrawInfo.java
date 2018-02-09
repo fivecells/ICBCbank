@@ -1,8 +1,9 @@
-package com.wenlong.pojo.po;
+package com.bank.pojo.po;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class DrawInfo {
+public class DrawInfo implements Serializable{
     private Integer drawId;
 
     private Integer drawWaiterId;

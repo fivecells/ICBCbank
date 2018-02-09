@@ -1,10 +1,11 @@
-package com.wenlong.pojo.po;
+package com.bank.pojo.po;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class WaiterInfo {
+public class WaiterInfo implements Serializable{
     private Integer waiterId;
 
     private String waiterUsername;

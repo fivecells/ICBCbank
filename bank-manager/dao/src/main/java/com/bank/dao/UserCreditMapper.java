@@ -1,7 +1,7 @@
-package com.wenlong.dao;
+package com.bank.dao;
 
-import com.wenlong.pojo.po.UserCredit;
-import com.wenlong.pojo.po.UserCreditExample;
+import com.bank.pojo.po.UserCredit;
+import com.bank.pojo.po.UserCreditExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

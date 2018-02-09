@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wenlong.dao.CompanyInfoMapper" >
-  <resultMap id="BaseResultMap" type="com.wenlong.pojo.po.CompanyInfo" >
+<mapper namespace="com.bank.dao.CompanyInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.bank.pojo.po.CompanyInfo" >
     <id column="company_id" property="companyId" jdbcType="INTEGER" />
     <result column="company_username" property="companyUsername" jdbcType="VARCHAR" />
     <result column="company_password" property="companyPassword" jdbcType="INTEGER" />
@@ -75,7 +75,7 @@
     company_id, company_username, company_password, company_status, company_name, company_corporate, 
     company_createtime, company_phone, company_web, company_address
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.wenlong.pojo.po.CompanyInfoExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.bank.pojo.po.CompanyInfoExample" >
     select
     <if test="distinct" >
       distinct
@@ -99,13 +99,13 @@
     delete from company_info
     where company_id = #{companyId,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.wenlong.pojo.po.CompanyInfoExample" >
+  <delete id="deleteByExample" parameterType="com.bank.pojo.po.CompanyInfoExample" >
     delete from company_info
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.wenlong.pojo.po.CompanyInfo" >
+  <insert id="insert" parameterType="com.bank.pojo.po.CompanyInfo" >
     insert into company_info (company_id, company_username, company_password, 
       company_status, company_name, company_corporate, 
       company_createtime, company_phone, company_web, 
@@ -115,7 +115,7 @@
       #{companyCreatetime,jdbcType=DATE}, #{companyPhone,jdbcType=VARCHAR}, #{companyWeb,jdbcType=VARCHAR}, 
       #{companyAddress,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.wenlong.pojo.po.CompanyInfo" >
+  <insert id="insertSelective" parameterType="com.bank.pojo.po.CompanyInfo" >
     insert into company_info
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="companyId != null" >
@@ -182,7 +182,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.wenlong.pojo.po.CompanyInfoExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.bank.pojo.po.CompanyInfoExample" resultType="java.lang.Integer" >
     select count(*) from company_info
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -242,7 +242,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.wenlong.pojo.po.CompanyInfo" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.bank.pojo.po.CompanyInfo" >
     update company_info
     <set >
       <if test="companyUsername != null" >
@@ -275,7 +275,7 @@
     </set>
     where company_id = #{companyId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.wenlong.pojo.po.CompanyInfo" >
+  <update id="updateByPrimaryKey" parameterType="com.bank.pojo.po.CompanyInfo" >
     update company_info
     set company_username = #{companyUsername,jdbcType=VARCHAR},
       company_password = #{companyPassword,jdbcType=INTEGER},

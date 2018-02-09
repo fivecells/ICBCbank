@@ -1,8 +1,9 @@
-package com.wenlong.pojo.po;
+package com.bank.pojo.po;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class UserCard {
+public class UserCard implements Serializable{
     private Long userCardId;
 
     private Integer userCardPassword;

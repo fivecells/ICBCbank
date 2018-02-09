@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wenlong.dao.UserCreditMapper" >
-  <resultMap id="BaseResultMap" type="com.wenlong.pojo.po.UserCredit" >
+<mapper namespace="com.bank.dao.UserCreditMapper" >
+  <resultMap id="BaseResultMap" type="com.bank.pojo.po.UserCredit" >
     <id column="credit_id" property="creditId" jdbcType="INTEGER" />
     <result column="credit_number" property="creditNumber" jdbcType="BIGINT" />
     <result column="credit_password" property="creditPassword" jdbcType="INTEGER" />
@@ -72,7 +72,7 @@
     credit_id, credit_number, credit_password, credit_balance, credit_status, credit_integral, 
     credit_user_id
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.wenlong.pojo.po.UserCreditExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.bank.pojo.po.UserCreditExample" >
     select
     <if test="distinct" >
       distinct
@@ -96,13 +96,13 @@
     delete from user_credit
     where credit_id = #{creditId,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.wenlong.pojo.po.UserCreditExample" >
+  <delete id="deleteByExample" parameterType="com.bank.pojo.po.UserCreditExample" >
     delete from user_credit
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.wenlong.pojo.po.UserCredit" >
+  <insert id="insert" parameterType="com.bank.pojo.po.UserCredit" >
     insert into user_credit (credit_id, credit_number, credit_password, 
       credit_balance, credit_status, credit_integral, 
       credit_user_id)
@@ -110,7 +110,7 @@
       #{creditBalance,jdbcType=DOUBLE}, #{creditStatus,jdbcType=INTEGER}, #{creditIntegral,jdbcType=BIGINT}, 
       #{creditUserId,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.wenlong.pojo.po.UserCredit" >
+  <insert id="insertSelective" parameterType="com.bank.pojo.po.UserCredit" >
     insert into user_credit
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="creditId != null" >
@@ -159,7 +159,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.wenlong.pojo.po.UserCreditExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.bank.pojo.po.UserCreditExample" resultType="java.lang.Integer" >
     select count(*) from user_credit
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -207,7 +207,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.wenlong.pojo.po.UserCredit" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.bank.pojo.po.UserCredit" >
     update user_credit
     <set >
       <if test="creditNumber != null" >
@@ -231,7 +231,7 @@
     </set>
     where credit_id = #{creditId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.wenlong.pojo.po.UserCredit" >
+  <update id="updateByPrimaryKey" parameterType="com.bank.pojo.po.UserCredit" >
     update user_credit
     set credit_number = #{creditNumber,jdbcType=BIGINT},
       credit_password = #{creditPassword,jdbcType=INTEGER},

@@ -1,8 +1,9 @@
-package com.wenlong.pojo.po;
+package com.bank.pojo.po;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class SaveInfo {
+public class SaveInfo implements Serializable{
     private Integer saveId;
 
     private Integer saveWaiterId;

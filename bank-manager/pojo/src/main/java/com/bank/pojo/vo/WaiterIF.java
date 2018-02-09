@@ -1,11 +1,12 @@
-package com.wenlong.pojo.vo;
+package com.bank.pojo.vo;
 
-import com.wenlong.pojo.po.WaiterInfo;
 
 import javax.xml.crypto.Data;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import com.bank.pojo.po.WaiterInfo;
 //此实体类用于转换时间格式
-public class WaiterIF extends WaiterInfo {
+public class WaiterIF extends WaiterInfo implements Serializable{
     private String showHiredate;
 
     public String getShowHiredate() {

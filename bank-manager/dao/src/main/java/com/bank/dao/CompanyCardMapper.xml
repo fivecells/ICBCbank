@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wenlong.dao.CompanyCardMapper" >
-  <resultMap id="BaseResultMap" type="com.wenlong.pojo.po.CompanyCard" >
+<mapper namespace="com.bank.dao.CompanyCardMapper" >
+  <resultMap id="BaseResultMap" type="com.bank.pojo.po.CompanyCard" >
     <id column="company_card_id" property="companyCardId" jdbcType="BIGINT" />
     <result column="company_card_password" property="companyCardPassword" jdbcType="INTEGER" />
     <result column="company_licence_number" property="companyLicenceNumber" jdbcType="BIGINT" />
@@ -77,7 +77,7 @@
     company_corporate_name, company_name, company_card_amount, company_card_status, company_card_createtime, 
     company_address, company_id
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.wenlong.pojo.po.CompanyCardExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.bank.pojo.po.CompanyCardExample" >
     select
     <if test="distinct" >
       distinct
@@ -101,13 +101,13 @@
     delete from company_card
     where company_card_id = #{companyCardId,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="com.wenlong.pojo.po.CompanyCardExample" >
+  <delete id="deleteByExample" parameterType="com.bank.pojo.po.CompanyCardExample" >
     delete from company_card
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.wenlong.pojo.po.CompanyCard" >
+  <insert id="insert" parameterType="com.bank.pojo.po.CompanyCard" >
     insert into company_card (company_card_id, company_card_password, 
       company_licence_number, company_card_subbranch, 
       company_corporate_name, company_name, company_card_amount, 
@@ -119,7 +119,7 @@
       #{companyCardStatus,jdbcType=INTEGER}, #{companyCardCreatetime,jdbcType=TIMESTAMP}, 
       #{companyAddress,jdbcType=VARCHAR}, #{companyId,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.wenlong.pojo.po.CompanyCard" >
+  <insert id="insertSelective" parameterType="com.bank.pojo.po.CompanyCard" >
     insert into company_card
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="companyCardId != null" >
@@ -192,7 +192,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.wenlong.pojo.po.CompanyCardExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.bank.pojo.po.CompanyCardExample" resultType="java.lang.Integer" >
     select count(*) from company_card
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -256,7 +256,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.wenlong.pojo.po.CompanyCard" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.bank.pojo.po.CompanyCard" >
     update company_card
     <set >
       <if test="companyCardPassword != null" >
@@ -292,7 +292,7 @@
     </set>
     where company_card_id = #{companyCardId,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.wenlong.pojo.po.CompanyCard" >
+  <update id="updateByPrimaryKey" parameterType="com.bank.pojo.po.CompanyCard" >
     update company_card
     set company_card_password = #{companyCardPassword,jdbcType=INTEGER},
       company_licence_number = #{companyLicenceNumber,jdbcType=BIGINT},

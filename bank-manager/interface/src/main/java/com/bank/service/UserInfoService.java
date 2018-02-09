@@ -1,9 +1,9 @@
-package com.wenlong.service;
+package com.bank.service;
 
 import com.wenlong.dto.Page;
 import com.wenlong.dto.Result;
-import com.wenlong.pojo.po.Userinfo;
-import com.wenlong.pojo.vo.UserinfoSearch;
+import com.bank.pojo.po.Userinfo;
+import com.bank.pojo.vo.UserinfoSearch;
 
 import java.util.List;
 

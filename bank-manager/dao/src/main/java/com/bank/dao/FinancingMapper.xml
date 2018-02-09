@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.bank.dao.FinancingMapper" >
-  <resultMap id="BaseResultMap" type="com.bank.po.Financing" >
+  <resultMap id="BaseResultMap" type="com.bank.pojo.po.Financing" >
     <id column="financing_id" property="financingId" jdbcType="INTEGER" />
     <result column="financing_name" property="financingName" jdbcType="VARCHAR" />
     <result column="income_per" property="incomePer" jdbcType="DOUBLE" />
@@ -71,7 +71,7 @@
   <sql id="Base_Column_List" >
     financing_id, financing_name, income_per, begin_price, time_limit, risk_level, financing_user_id
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.bank.po.FinancingExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.bank.pojo.po.FinancingExample" >
     select
     <if test="distinct" >
       distinct
@@ -95,13 +95,13 @@
     delete from financing
     where financing_id = #{financingId,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.bank.po.FinancingExample" >
+  <delete id="deleteByExample" parameterType="com.bank.pojo.po.FinancingExample" >
     delete from financing
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.bank.po.Financing" >
+  <insert id="insert" parameterType="com.bank.pojo.po.Financing" >
     insert into financing (financing_id, financing_name, income_per, 
       begin_price, time_limit, risk_level, 
       financing_user_id)
@@ -109,7 +109,7 @@
       #{beginPrice,jdbcType=DOUBLE}, #{timeLimit,jdbcType=INTEGER}, #{riskLevel,jdbcType=INTEGER}, 
       #{financingUserId,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.bank.po.Financing" >
+  <insert id="insertSelective" parameterType="com.bank.pojo.po.Financing" >
     insert into financing
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="financingId != null" >
@@ -158,7 +158,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.bank.po.FinancingExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.bank.pojo.po.FinancingExample" resultType="java.lang.Integer" >
     select count(*) from financing
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -206,7 +206,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.bank.po.Financing" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.bank.pojo.po.Financing" >
     update financing
     <set >
       <if test="financingName != null" >
@@ -230,7 +230,7 @@
     </set>
     where financing_id = #{financingId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.bank.po.Financing" >
+  <update id="updateByPrimaryKey" parameterType="com.bank.pojo.po.Financing" >
     update financing
     set financing_name = #{financingName,jdbcType=VARCHAR},
       income_per = #{incomePer,jdbcType=DOUBLE},

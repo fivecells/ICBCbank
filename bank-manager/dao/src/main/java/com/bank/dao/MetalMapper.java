@@ -1,8 +1,8 @@
 package com.bank.dao;
 
 
-import com.bank.po.Metal;
-import com.bank.po.MetalExample;
+import com.bank.pojo.po.Metal;
+import com.bank.pojo.po.MetalExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

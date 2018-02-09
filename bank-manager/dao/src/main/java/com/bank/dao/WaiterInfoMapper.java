@@ -1,7 +1,7 @@
-package com.wenlong.dao;
+package com.bank.dao;
 
-import com.wenlong.pojo.po.WaiterInfo;
-import com.wenlong.pojo.po.WaiterInfoExample;
+import com.bank.pojo.po.WaiterInfo;
+import com.bank.pojo.po.WaiterInfoExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

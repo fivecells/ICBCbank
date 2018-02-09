@@ -1,8 +1,9 @@
-package com.wenlong.pojo.po;
+package com.bank.pojo.po;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class CompanyInfo {
+public class CompanyInfo implements Serializable{
     private Integer companyId;
 
     private String companyUsername;

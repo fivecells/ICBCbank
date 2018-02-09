@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+
+    <!-- service接口的实现类 -->
+    <bean id="loginService" class="com.bank.service.impl.LoginService" />
+    <bean id="fmfService" class="com.bank.service.impl.FMFService" />
+    <bean id="indexService" class="com.bank.service.impl.IndexService" />
+    <bean id="myAccountService" class="com.bank.service.impl.MyAccountService" />
+    <bean id="transferService" class="com.bank.service.impl.TransferService" />
+    <bean id="userInfoService" class="com.bank.service.impl.UserInfoServiceImpl" />
+    <bean id="waiterInfoService" class="com.bank.service.impl.WaiterInfoServiceImpl" />
+    <bean id="userLoginService" class="com.bank.service.impl.UserLoginServiceImpl" />
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="bank_provider"  />
+    <!-- 使用zookeeper注册中心暴露服务地址 -->
+    <dubbo:registry address="zookeeper://47.94.130.112:2181" />
+    <!-- 用dubbo协议在20880端口暴露服务 -->
+    <dubbo:protocol name="dubbo" port="20880" />
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service interface="com.bank.service.LoginInterface" ref="loginService"/>
+    <dubbo:service interface="com.bank.service.UserInfoService" ref="userInfoService"/>
+    <dubbo:service interface="com.bank.service.UserLoginService" ref="userLoginService"/>
+    <dubbo:service interface="com.bank.service.WaiterInfoService" ref="waiterInfoService"/>
+    <dubbo:service interface="com.bank.service.FMFInterface" ref="fmfService"/>
+    <dubbo:service interface="com.bank.service.IndexInterface" ref="indexService"/>
+    <dubbo:service interface="com.bank.service.MyAccountInterface" ref="myAccountService"/>
+    <dubbo:service interface="com.bank.service.TransferInterface" ref="transferService"/>
+
+</beans>

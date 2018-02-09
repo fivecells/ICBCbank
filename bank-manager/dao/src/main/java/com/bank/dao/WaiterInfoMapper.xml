@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wenlong.dao.WaiterInfoMapper" >
-  <resultMap id="BaseResultMap" type="com.wenlong.pojo.po.WaiterInfo" >
+<mapper namespace="com.bank.dao.WaiterInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.bank.pojo.po.WaiterInfo" >
     <id column="waiter_id" property="waiterId" jdbcType="INTEGER" />
     <result column="waiter_username" property="waiterUsername" jdbcType="VARCHAR" />
     <result column="waiter_password" property="waiterPassword" jdbcType="VARCHAR" />
@@ -74,7 +74,7 @@
     waiter_id, waiter_username, waiter_password, waiter_realname, waiter_identity, waiter_phone, 
     waiter_status, waiter_hiredate, waiter_email
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.wenlong.pojo.po.WaiterInfoExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.bank.pojo.po.WaiterInfoExample" >
     select
     <if test="distinct" >
       distinct
@@ -98,13 +98,13 @@
     delete from waiter_info
     where waiter_id = #{waiterId,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.wenlong.pojo.po.WaiterInfoExample" >
+  <delete id="deleteByExample" parameterType="com.bank.pojo.po.WaiterInfoExample" >
     delete from waiter_info
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.wenlong.pojo.po.WaiterInfo" >
+  <insert id="insert" parameterType="com.bank.pojo.po.WaiterInfo" >
     insert into waiter_info (waiter_id, waiter_username, waiter_password, 
       waiter_realname, waiter_identity, waiter_phone, 
       waiter_status, waiter_hiredate, waiter_email
@@ -114,7 +114,7 @@
       #{waiterStatus,jdbcType=INTEGER}, #{waiterHiredate,jdbcType=DATE}, #{waiterEmail,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.wenlong.pojo.po.WaiterInfo" >
+  <insert id="insertSelective" parameterType="com.bank.pojo.po.WaiterInfo" >
     insert into waiter_info
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="waiterId != null" >
@@ -175,7 +175,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.wenlong.pojo.po.WaiterInfoExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.bank.pojo.po.WaiterInfoExample" resultType="java.lang.Integer" >
     select count(*) from waiter_info
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -231,7 +231,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.wenlong.pojo.po.WaiterInfo" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.bank.pojo.po.WaiterInfo" >
     update waiter_info
     <set >
       <if test="waiterUsername != null" >
@@ -261,7 +261,7 @@
     </set>
     where waiter_id = #{waiterId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.wenlong.pojo.po.WaiterInfo" >
+  <update id="updateByPrimaryKey" parameterType="com.bank.pojo.po.WaiterInfo" >
     update waiter_info
     set waiter_username = #{waiterUsername,jdbcType=VARCHAR},
       waiter_password = #{waiterPassword,jdbcType=VARCHAR},

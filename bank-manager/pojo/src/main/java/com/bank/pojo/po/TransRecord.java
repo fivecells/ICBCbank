@@ -1,8 +1,9 @@
-package com.wenlong.pojo.po;
+package com.bank.pojo.po;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TransRecord {
+public class TransRecord implements Serializable{
     private Integer rid;
 
     private Date transDate;

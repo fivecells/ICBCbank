@@ -1,4 +1,4 @@
-package com.wenlong.pojo.po;
+package com.bank.pojo.po;
 
 import java.util.ArrayList;
 import java.util.List;

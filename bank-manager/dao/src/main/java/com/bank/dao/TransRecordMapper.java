@@ -1,10 +1,10 @@
 package com.bank.dao;
 
-import java.util.List;
-
-import com.bank.po.TransRecord;
-import com.bank.po.TransRecordExample;
+import com.bank.pojo.po.TransRecord;
+import com.bank.pojo.po.TransRecordExample;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface TransRecordMapper {
     long countByExample(TransRecordExample example);

@@ -1,6 +1,8 @@
-package com.wenlong.pojo.vo;
+package com.bank.pojo.vo;
 
-public class Loginvo {
+import java.io.Serializable;
+
+public class Loginvo implements Serializable{
 
     private String username;
 

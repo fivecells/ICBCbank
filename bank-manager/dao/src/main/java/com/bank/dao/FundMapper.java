@@ -1,8 +1,8 @@
 package com.bank.dao;
 
 
-import com.bank.po.Fund;
-import com.bank.po.FundExample;
+import com.bank.pojo.po.Fund;
+import com.bank.pojo.po.FundExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

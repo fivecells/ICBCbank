@@ -1,10 +1,10 @@
 package com.bank.web;
 
-import com.bank.po.TransRecord;
-import com.bank.po.UserCard;
-import com.bank.po.Userinfo;
-import com.bank.service.MyAccountService;
-import com.bank.transfer.vo.TransferDetail;
+import com.bank.pojo.po.TransRecord;
+import com.bank.pojo.po.UserCard;
+import com.bank.pojo.po.Userinfo;
+import com.bank.service.MyAccountInterface;
+import com.bank.pojo.vo.TransferDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
@@ -19,8 +20,8 @@ import java.util.List;
 
 public class MyAccountAction {
 
-    @Autowired
-    private MyAccountService myAccountService;
+    @Resource
+    private MyAccountInterface myAccountService;
 
     @RequestMapping("/PBL201804")
     public String MyAccount(Model model, HttpServletRequest request){

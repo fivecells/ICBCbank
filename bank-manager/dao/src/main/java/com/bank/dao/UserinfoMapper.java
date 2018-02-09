@@ -1,7 +1,7 @@
 package com.bank.dao;
 
-import com.bank.po.Userinfo;
-import com.bank.po.UserinfoExample;
+import com.bank.pojo.po.Userinfo;
+import com.bank.pojo.po.UserinfoExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

@@ -1,6 +1,8 @@
-package com.wenlong.pojo.po;
+package com.bank.pojo.po;
 
-public class Fund {
+import java.io.Serializable;
+
+public class Fund implements Serializable{
     private Integer fundId;
 
     private Long fundCode;

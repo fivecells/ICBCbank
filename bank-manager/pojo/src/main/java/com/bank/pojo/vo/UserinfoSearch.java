@@ -1,6 +1,8 @@
-package com.wenlong.pojo.vo;
+package com.bank.pojo.vo;
 
-public class UserinfoSearch {
+import java.io.Serializable;
+
+public class UserinfoSearch  implements Serializable{
 
     private String userName;
     private String userIdentity;

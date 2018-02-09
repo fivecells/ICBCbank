@@ -1,6 +1,8 @@
-package com.wenlong.pojo.vo;
+package com.bank.pojo.vo;
 
-public class WaiterInfoSearch {
+import java.io.Serializable;
+
+public class WaiterInfoSearch implements Serializable{
 
     private String waiterRealname;
     private String waiterIdentity;

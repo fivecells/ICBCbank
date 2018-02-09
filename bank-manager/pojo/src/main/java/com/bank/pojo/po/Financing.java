@@ -1,6 +1,8 @@
-package com.wenlong.pojo.po;
+package com.bank.pojo.po;
 
-public class Financing {
+import java.io.Serializable;
+
+public class Financing implements Serializable{
     private Integer financingId;
 
     private String financingName;
