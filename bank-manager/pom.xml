@@ -13,9 +13,8 @@
     <modules>
         <module>dao</module>
         <module>interface</module>
-        <module>service</module>
         <module>pojo</module>
-        <module>web</module>
+        <module>bank-service</module>
     </modules>
     <artifactId>bank-manager</artifactId>
     <dependencies>
